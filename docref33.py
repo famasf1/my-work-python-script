@@ -5,22 +5,26 @@ from tkinter import *
 import datetime
 import pyperclip
 ###################### Part 1 : Start the variable process
-root = Tk()
-root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-Out33', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
-workbook = openpyxl.load_workbook(root.excel, data_only=True)
-root.withdraw()
-worksheetname = workbook.sheetnames
-ID33_Data = workbook[worksheetname[1]]
-ID33BKK_Data = workbook[worksheetname[3]]
-ID49_Data = workbook[worksheetname[2]]
-ID49BKK_Data = workbook[worksheetname[6]]
-todate = datetime.date.today()
-yesterdate = todate - datetime.timedelta(days=1)
-yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
-receive = 'รับ'
+try:
+    root = Tk()
+    root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-Out33', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
+    workbook = openpyxl.load_workbook(root.excel, data_only=True)
+    root.withdraw()
+    worksheetname = workbook.sheetnames
+    ID33_Data = workbook[worksheetname[1]]
+    ID33BKK_Data = workbook[worksheetname[3]]
+    ID49_Data = workbook[worksheetname[2]]
+    ID49BKK_Data = workbook[worksheetname[6]]
+    todate = datetime.date.today()
+    yesterdate = todate - datetime.timedelta(days=1)
+    yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
+    receive = 'รับ'
+except Exception as e:
+    messagebox.showerror('Python Error', f'{e}')
+    exit()
 
 ################################ Part 2: Reading excel and Start writing
-def docref(yourfunc):
+def docref():
     def defaultref(): #Do this everytime i want to start.
         pyautogui.moveTo(45,255)
         pyautogui.sleep(1)
@@ -40,9 +44,10 @@ def docref(yourfunc):
 
     def docref49returnbkk(): #49 Return BKK
         for i in range(1,ID49BKK_Data.max_row+1):
+            date = ID49BKK_Data.cell(row=i, column=1).value
             id = ID49BKK_Data.cell(row=i,column=2).value
             branch = ID49BKK_Data.cell(row=i,column=3).value
-            zone = ID49BKK_Data.cell(row=i,column=4).value
+            zone = ID49BKK_Data.cell(row=i,column=4).value          
             if id:
                 pyautogui.sleep(1)
                 pyautogui.moveTo(278,87)
@@ -57,8 +62,7 @@ def docref(yourfunc):
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f'{yesterdate_string} | ')
-                #pyautogui.typewrite(str(date) + ' | ')
+                pyautogui.typewrite(f'{str(date)} | ')
                 pyperclip.copy(str(zone))
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)
@@ -70,16 +74,16 @@ def docref(yourfunc):
         
     def docref49return(): #49 Return DHL
         for i in range(1,ID49_Data.max_row+1):
-            out_sect = ID49_Data.cell(row=i,column=12).value
-            id = ID49_Data.cell(row=i,column=13).value
-            branch = ID49_Data.cell(row=i,column=14).value
+            out_sect = ID49_Data.cell(row=i,column=15).value
+            id = ID49_Data.cell(row=i,column=12).value
+            branch = ID49_Data.cell(row=i,column=13).value
             date = ID49_Data.cell(row=i, column=7).value
             try:
                 date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
             except Exception:
                 pass
-            formulae = f"=ifna(VLOOKUP(N{i},Data!C:G,5,0),"")"
-            ID49_Data.cell(row=i,column=12).value = formulae
+            formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
+            ID49_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
                 pyautogui.sleep(1)
@@ -106,7 +110,7 @@ def docref(yourfunc):
         
     def docref33bkk(): # 33 Service Headoffice BKK
         for i in range(1,ID33BKK_Data.max_row+1):
-            date = ID33BKK_Data.cell(row=i,column=3).value
+            date = ID33BKK_Data.cell(row=i,column=2).value
             id = ID33BKK_Data.cell(row=i,column=5).value
             branch = ID33BKK_Data.cell(row=i,column=6).value
             zone = ID33BKK_Data.cell(row=i,column=9).value
@@ -140,16 +144,16 @@ def docref(yourfunc):
     def docref33(): # 33 Service Headoffice DHL
         defaultref()
         for i in range(1,ID33_Data.max_row+1):
-            out_sect = ID33_Data.cell(row=i,column=12).value
-            id = ID33_Data.cell(row=i,column=13).value
-            branch = ID33_Data.cell(row=i,column=14).value
+            out_sect = ID33_Data.cell(row=i,column=15).value
+            id = ID33_Data.cell(row=i,column=12).value
+            branch = ID33_Data.cell(row=i,column=13).value
             date = ID33_Data.cell(row=i, column=7).value
             try:
                 date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
             except Exception:
                 pass
-            formulae = f"=ifna(VLOOKUP(N{i},Data!C:G,5,0),"")"
-            ID33_Data.cell(row=i,column=12).value = formulae
+            formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
+            ID33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
                 pyautogui.sleep(1)
@@ -174,6 +178,7 @@ def docref(yourfunc):
             else: break
         docref33bkk() 
     docref33()
+
 
 ############################ Finally  - Try running it. If there's error, print it out.
 try:

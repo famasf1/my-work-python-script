@@ -1,24 +1,28 @@
 import pyautogui
 import openpyxl
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 from tkinter import *
 import pyperclip
 import datetime
 ############################# Part 0 : Context Menu
 
 ############################# Part 1 : variable
-root = Tk()
-root.excel = filedialog.askopenfilename(initialdir='/',title='เลือกไฟล์ Excel สำหรับ Stock Out 33-insure', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
-workbook = openpyxl.load_workbook(root.excel, data_only=True)
-root.withdraw()
-worksheetname = workbook.sheetnames
-Insure_33_Data = workbook[worksheetname[0]]
-Info_33_Data = workbook[worksheetname[4]]
-ID49Tradein_BKK = workbook[worksheetname[7]]
-todate = datetime.date.today()
-yesterdate = todate - datetime.timedelta(days=1)
-yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
-receive = 'รับ'
+try:
+    root = Tk()
+    root.excel = filedialog.askopenfilename(initialdir='/',title='เลือกไฟล์ Excel สำหรับ Stock Out 33-insure', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
+    workbook = openpyxl.load_workbook(root.excel, data_only=True)
+    root.withdraw()
+    worksheetname = workbook.sheetnames
+    Insure_33_Data = workbook[worksheetname[0]]
+    Info_33_Data = workbook[worksheetname[4]]
+    ID49Tradein_BKK = workbook[worksheetname[7]]
+    todate = datetime.date.today()
+    yesterdate = todate - datetime.timedelta(days=1)
+    yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
+    receive = 'รับ'
+except Exception as e:
+    messagebox.showerror('Python Error', f'{e}')
+    exit()
 ################################# Part 2 : Function 
 def docref(): 
     def defaultref(): #default behavior
@@ -63,25 +67,23 @@ def docref():
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
-                pyautogui.sleep(0.8)
-                pyautogui.moveTo(855,505)
-                pyautogui.leftClick()
+                pyautogui.press('enter')
             else: break
         docref49tradeinbkk()
 
     def docref166(): # 33 ITEC Insure
         defaultref()
         for i in range(1,Insure_33_Data.max_row+1):
-            out_sect = Insure_33_Data.cell(row=i,column=12).value
-            id = Insure_33_Data.cell(row=i,column=13).value
-            branch = Insure_33_Data.cell(row=i,column=14).value
+            out_sect = Insure_33_Data.cell(row=i,column=15).value
+            id = Insure_33_Data.cell(row=i,column=12).value
+            branch = Insure_33_Data.cell(row=i,column=13).value
             date = Insure_33_Data.cell(row=i, column=7).value
             try:
                 date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
             except TypeError:
                 pass
-            formulae = f"=ifna(VLOOKUP(N{i},Data!C:G,5,0),"")"
-            Insure_33_Data.cell(row=i,column=12).value = formulae
+            formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
+            Insure_33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
                 pyautogui.sleep(3)
@@ -100,9 +102,7 @@ def docref():
                 pyautogui.typewrite(f"{date_obj.strftime('%d/%m/%y')} | {out_sect}")
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
-                pyautogui.sleep(0.8)
-                pyautogui.moveTo(855,505)
-                pyautogui.leftClick()
+                pyautogui.press('enter')
             else: break
         docref166bkk()
     
@@ -131,9 +131,12 @@ def docref():
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
-                pyautogui.sleep(0.8)
-                pyautogui.moveTo(855,505)
-                pyautogui.leftClick()
+                pyautogui.press('enter')
             else: break
     docref166()
-docref()
+
+
+try:
+    docref()
+except Exception as e:
+    messagebox.showerror('Python Error',f'{e}')
