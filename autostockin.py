@@ -15,6 +15,7 @@ try:
     numb = [0,1,2]
     receive = ['ครบ / ดิว','ครบ / ก็อต','ครบ / เอก']
     idnumber = ['22073','23017','23267']
+    readpicerrorfound = pyg.locateCenterOnScreen('checkerror.png')
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
@@ -31,23 +32,41 @@ def clickleft(numberoftimes):
         pyg.sleep(0.5)
         if i == numberoftimes:
             break
-        
+
 
 def defaultbeh():
-    for i in range(1, worksheet.max_row+1):
-        stockoutid = worksheet.cell(row=i, column=1).value
-        etc = worksheet.cell(row=i, column=2).value
-        istrueor = worksheet.cell(row=i,column=3).value
-        if stockoutid:
+
+    def firstStart(start):
+        if start == 1:
             pyg.moveTo(235,146)
             pyg.leftClick()
             pyg.sleep(3.5)
+        else:
+            pass
+    
+    def nextStart(next):
+        if next == 1:
+            pass
+        else:
+            pyg.moveTo(235,146)
+            pyg.leftClick()
+            pyg.sleep(3.5)
+
+    for i in range(1, worksheet.max_row+1):
+        stockoutid = worksheet.cell(row=i, column=1).value
+        etc = worksheet.cell(row=i, column=2).value
+        if stockoutid:
+            nextStart(i)
+            firstStart(i)
+            pyg.moveTo(180,64)
+            clickleft(2)
+            print('Start Stock In')
             if etc == 'm': 
                 pyg.typewrite('7538')
-            elif etc == 'โย้':
+            elif etc == 'โบ้':
                 pyg.typewrite('22608')
-            elif etc == 'j':
-                pyg.typewrite('23030')
+            elif etc == 'pairin':
+                pyg.typewrite('1815')
             elif etc == 'pan':
                 pyg.typewrite('22929')
             else: 
@@ -62,8 +81,8 @@ def defaultbeh():
             elif etc == 'โบ้':
                 pyperclip.copy('ครบ / โบ้')
                 pyg.hotkey('ctrl', 'v')
-            elif etc == 'j':
-                pyperclip.copy('ครบ / จุ๊ย')
+            elif etc == 'pairin':
+                pyperclip.copy('ครบ / ไพรินทร์')
                 pyg.hotkey('ctrl', 'v')
             elif etc == 'pan':
                 pyperclip.copy('ครบ / ปาน')
@@ -72,13 +91,23 @@ def defaultbeh():
                 pyperclip.copy(receive[r])
                 pyg.hotkey('ctrl', 'v')
             pyg.moveTo(68,833)
-            clickleft(1)
-            pressenter(1)
-            pyg.press('left')
-            pressenter(4)
-            pyg.sleep(2)
-        else: 
-            continue
+            clickleft(1) # this is where stock in started
+            print('Press Ok')
+            try:
+                if readpicerrorfound:
+                    pressenter(1)
+                    print('Found Error')
+                    continue
+                else:
+                    print('Error is not Found')
+                    pressenter(1)
+                    pyg.press('left')
+                    pressenter(4)
+                    pyg.sleep(2)
+                    continue
+            except Exception as e:
+                messagebox.showerror('Python Error', f'{e}')
+        else: break
 
 
 try:
