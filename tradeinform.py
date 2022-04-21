@@ -67,8 +67,8 @@ def readsheet():
                 serial = person[p].cell(row=o,column=2).value
                 supplier = person[p].cell(row=o,column=8).value
                 price = person[p].cell(row=o,column=9).value
-                vouchercode = person[p].cell(row=o,column=10).value
-                date2 = person[p].cell(row=o,column=11).value
+                vouchercode = person[p].cell(row=o,column=11).value
+                date2 = person[p].cell(row=o,column=12).value
                 if phyid:
                     def write():
                         form['C4'].value = '=INDEX(Sheet1!A1:A5,MATCH(C5,Sheet1!B1:B5,0))'
