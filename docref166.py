@@ -16,6 +16,7 @@ try:
     Insure_33_Data = workbook[worksheetname[0]]
     Info_33_Data = workbook[worksheetname[4]]
     ID49Tradein_BKK = workbook[worksheetname[7]]
+    ID49Tradein = workbook[worksheetname[8]]
     todate = datetime.date.today()
     yesterdate = todate - datetime.timedelta(days=1)
     yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
@@ -41,6 +42,45 @@ def docref():
         pyautogui.moveTo(278,87)
         pyautogui.doubleClick()
         pyautogui.leftClick()
+
+    def docref49():
+        for i in range(1,ID49Tradein.max_row+1):
+            out_sect = ID49Tradein.cell(row=i,column=15).value
+            id = ID49Tradein.cell(row=i,column=12).value
+            branch = ID49Tradein.cell(row=i,column=13).value
+            date = ID49Tradein.cell(row=i, column=7).value
+            try:
+                date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
+            except TypeError:
+                pass
+            formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
+            Insure_33_Data.cell(row=i,column=15).value = formulae
+            workbook.save('bitly+ready.xlsx')
+            if out_sect:
+                pyautogui.sleep(3)
+                pyautogui.moveTo(288,88)
+                pyautogui.sleep(1)
+                pyautogui.doubleClick()
+                pyautogui.typewrite(str(id))
+                pyautogui.press('enter')
+                pyautogui.typewrite(str(branch))
+                pyautogui.moveTo(1554,54)
+                pyautogui.leftClick()
+                pyautogui.moveTo(345,56)
+                pyautogui.leftClick()
+                pyautogui.hotkey('ctrl','c')
+                readData = pyperclip.paste()
+                if "SVCOM7" in str(readData):
+                    pyperclip.copy('')
+                    pass
+                else:
+                    pyperclip.copy(receive)
+                    pyautogui.hotkey('ctrl','v')
+                    pyautogui.typewrite(f"{date_obj.strftime('%d/%m/%y')} | {out_sect}")
+                pyautogui.moveTo(701,483)
+                pyautogui.leftClick()
+                pyautogui.press('enter')
+            else: break 
 
     def docref166bkk(): #33 ITEC Insure \ Bangkok
         for i in range(1,Insure_33_Data.max_row+1):
@@ -133,7 +173,8 @@ def docref():
                 pyautogui.leftClick()
                 pyautogui.press('enter')
             else: break
-    docref166()
+        docref49()
+    docref49()
 
 
 try:

@@ -192,8 +192,8 @@ payload = {
     },
     "textfield": "",
     "textSearch": "",
-    "textdateStart": "10/04/2022",
-    "textdateEnd": "19/04/2022",
+    "textdateStart": "20/04/2022",
+    "textdateEnd": "20/04/2022",
     "status": "3",
     "branchId": "0",
     "isExport": False
@@ -213,8 +213,8 @@ headers = {
 }
 
 response = requests.request("POST", url, json=payload, headers=headers)
-value = json.dumps(response.text, indent=2)
+value = json.dumps(response.json(), indent=4, separators=(',\ ', ': '))
 
-with open('test.json', 'w') as test:
+with open('test.json', 'w+') as test:
     test.write(value)
     
