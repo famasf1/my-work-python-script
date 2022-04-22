@@ -174,7 +174,7 @@ def docref():
                 pyautogui.press('enter')
             else: break
         docref49()
-    docref49()
+    docref166()
 
 
 try:
