@@ -6,7 +6,7 @@ def press_enter(number):
     for n in range(0,number):
         pyg.press('enter')
 
-directoryhere = r"C:\Users\jambo\Desktop\Trade In\my work python script\returndataready.xlsx"
+directoryhere = r"C:\Users\jambo\Desktop\Trade In\returndataready.xlsx"
 data = openpyxl.load_workbook(directoryhere, data_only=True)
 datasheet = data.sheetnames
 datasheet1 = data[datasheet[0]]
@@ -28,25 +28,25 @@ def bot_Start():
         if billtype == 18:
             pyg.sleep(0.50)
             pyg.write(str(product_Code))
-            pyg.sleep(0.30)
-            error = pyg.locateCenterOnScreen('ret_error.png')
-            nothing_Left = pyg.locateCenterOnScreen('nothing_left2.png')
-            if nothing_Left:
+            press_enter(1)
+            pyg.sleep(1)
+            try:
+                pyg.locateCenterOnScreen('not_found.png')
+                pyg.locateCenterOnScreen('nothing_left.png')
+                error = pyg.locateCenterOnScreen('not_found.png')
+                nothing_Left = pyg.locateCenterOnScreen('nothing_left.png')
+            except nothing_Left:
+                print('nothing')
                 pyg.press('Esc')
-                pyg.press('Esc')
-                pyg.press('Up')
-                pyg.press('Up')
-                pyg.press('Esc')
-                pyg.press('Esc')
+                pyg.press('Enter')
                 pyg.press('Down')
-                pyg.press('Down')
-            elif error:
+            except error:
+                print('error')
                 press_enter(1)
                 pyg.press('Up')
                 pyg.press('Down')
                 pyg.press('Down')
-            else:
-                press_enter(2)
+            press_enter(1)
 
 def start_here():
     pyg.write('22608')
