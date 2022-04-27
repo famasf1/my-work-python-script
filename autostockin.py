@@ -38,7 +38,7 @@ def defaultbeh():
 
     def firstStart(start):
         if start == 1:
-            pyg.moveTo(235,146)
+            pyg.moveTo(238,145)
             pyg.leftClick()
             pyg.sleep(3.5)
         else:
@@ -48,7 +48,7 @@ def defaultbeh():
         if next == 1:
             pass
         else:
-            pyg.moveTo(235,146)
+            pyg.moveTo(238,145)
             pyg.leftClick()
             pyg.sleep(3.5)
 
@@ -58,7 +58,7 @@ def defaultbeh():
         if stockoutid:
             nextStart(i)
             firstStart(i)
-            pyg.moveTo(180,64)
+            pyg.moveTo(184,65)
             clickleft(2)
             print('Start Stock In')
             if etc == 'm': 
@@ -67,7 +67,7 @@ def defaultbeh():
                 pyg.typewrite('22608')
             elif etc == 'pairin':
                 pyg.typewrite('1815')
-            elif etc == 'pan':
+            elif etc == 'ปาน':
                 pyg.typewrite('22929')
             else: 
                 r = random.choice(numb)
@@ -84,13 +84,13 @@ def defaultbeh():
             elif etc == 'pairin':
                 pyperclip.copy('ครบ / ไพรินทร์')
                 pyg.hotkey('ctrl', 'v')
-            elif etc == 'pan':
+            elif etc == 'ปาน':
                 pyperclip.copy('ครบ / ปาน')
                 pyg.hotkey('ctrl', 'v')           
             else:
                 pyperclip.copy(receive[r])
                 pyg.hotkey('ctrl', 'v')
-            pyg.moveTo(68,833)
+            pyg.moveTo(66,1023)
             clickleft(1) # this is where stock in started
             print('Press Ok')
             try:
