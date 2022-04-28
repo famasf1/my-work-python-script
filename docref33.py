@@ -12,17 +12,53 @@ try:
     root.withdraw()
     worksheetname = workbook.sheetnames
     ID33_Data = workbook[worksheetname[1]]
-    ID33BKK_Data = workbook[worksheetname[3]]
-    ID49_Data = workbook[worksheetname[2]]
-    ID49BKK_Data = workbook[worksheetname[6]]
-    todate = datetime.date.today()
-    yesterdate = todate - datetime.timedelta(days=1)
-    yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
+    ID33BKK_Data = workbook[worksheetname[5]]
+    ID49_Data = workbook[worksheetname[3]]
+    ID49BKK_Data = workbook[worksheetname[7]]
+    delivery_Failed_Data = workbook[worksheetname[4]]
     receive = 'รับ'
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
 
+def getdate_Obj(dateData):
+    try:
+        date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S.%f")
+    except:
+        date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S")
+    return date_obj.strftime('%d/%m/%y')
+
+################################ TEST ROOM ###############################
+
+def failed_toDeliver():
+    for row in range(1, delivery_Failed_Data.max_row+1):
+        reason = delivery_Failed_Data.cell(row=row, column=9).value
+        phyid = delivery_Failed_Data.cell(row=row, column=17).value
+        branch = delivery_Failed_Data.cell(row=row, column=18).value
+        date = delivery_Failed_Data.cell(row=row, column=12).value
+        if reason:
+            pyautogui.sleep(1)
+            pyautogui.moveTo(278,87)
+            pyautogui.sleep(1)
+            pyautogui.doubleClick()
+            pyautogui.typewrite(str(phyid))
+            pyautogui.press('enter')
+            pyautogui.typewrite(str(branch))
+            pyautogui.moveTo(1554,54)
+            pyautogui.leftClick()
+            pyautogui.moveTo(345,56)
+            pyautogui.leftClick()
+            pyperclip.copy(str(reason))
+            pyautogui.hotkey('ctrl','v')
+            pyautogui.write(f" | {getdate_Obj(str(date))}")
+            pyautogui.moveTo(701,483)
+            pyautogui.leftClick()
+            pyautogui.sleep(0.8)
+            pyautogui.moveTo(855,505)
+            pyautogui.leftClick()
+        else: break
+
+#########################################################################
 ################################ Part 2: Reading excel and Start writing
 def docref():
     def defaultref(): #Do this everytime i want to start.
@@ -41,6 +77,37 @@ def docref():
         pyautogui.moveTo(278,87)
         pyautogui.doubleClick()
         pyautogui.leftClick()
+
+    def failed_toDeliver():
+        for row in range(1, delivery_Failed_Data.max_row+1):
+            reason = delivery_Failed_Data.cell(row=row, column=9).value
+            phyid = delivery_Failed_Data.cell(row=row, column=17).value
+            branch = delivery_Failed_Data.cell(row=row, column=18).value
+            date = delivery_Failed_Data.cell(row=row, column=12).value
+            try:
+                date_object = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
+            except Exception:
+                pass
+            if reason:
+                pyautogui.sleep(1)
+                pyautogui.moveTo(278,87)
+                pyautogui.sleep(1)
+                pyautogui.doubleClick()
+                pyautogui.typewrite(str(phyid))
+                pyautogui.press('enter')
+                pyautogui.typewrite(str(branch))
+                pyautogui.moveTo(1554,54)
+                pyautogui.leftClick()
+                pyautogui.moveTo(345,56)
+                pyautogui.leftClick()
+                pyautogui.write(f"{str(reason)} | {date_object.strftime('%d/%m/%y')}")
+                pyautogui.moveTo(701,483)
+                pyautogui.leftClick()
+                pyautogui.sleep(0.8)
+                pyautogui.moveTo(855,505)
+                pyautogui.leftClick()
+            else: break
+
 
     def docref49returnbkk(): #49 Return BKK
         for i in range(1,ID49BKK_Data.max_row+1):
@@ -71,6 +138,7 @@ def docref():
                 pyautogui.moveTo(855,505)
                 pyautogui.leftClick()
             else: break
+        failed_toDeliver()
         
     def docref49return(): #49 Return DHL
         for i in range(1,ID49_Data.max_row+1):
@@ -182,7 +250,8 @@ def docref():
 
 ############################ Finally  - Try running it. If there's error, print it out.
 try:
-    docref()
+    failed_toDeliver()
+    #docref()
 except Exception as e:
     messagebox.showerror('Python Error',f'{e}')
 

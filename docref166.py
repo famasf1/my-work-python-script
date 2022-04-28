@@ -14,9 +14,9 @@ try:
     root.withdraw()
     worksheetname = workbook.sheetnames
     Insure_33_Data = workbook[worksheetname[0]]
-    Info_33_Data = workbook[worksheetname[4]]
-    ID49Tradein_BKK = workbook[worksheetname[7]]
-    ID49Tradein = workbook[worksheetname[8]]
+    Info_33_Data = workbook[worksheetname[6]]
+    ID49Tradein_BKK = workbook[worksheetname[8]]
+    ID49Tradein = workbook[worksheetname[2]]
     todate = datetime.date.today()
     yesterdate = todate - datetime.timedelta(days=1)
     yesterdate_string = str(yesterdate.strftime("%d/%m/%y"))
