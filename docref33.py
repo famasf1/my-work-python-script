@@ -25,38 +25,22 @@ def getdate_Obj(dateData):
     try:
         date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S.%f")
     except:
-        date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S")
+        try:
+            date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S")
+        except:
+            try:
+                date_obj = datetime.datetime.strptime(dateData, "%d-%m-%Y %H:%M:%S")
+            except:
+                try:
+                    date_obj = datetime.datetime.strptime(dateData, "%d/%m/%Y")
+                except Exception as e:
+                    print(e)
+                
     return date_obj.strftime('%d/%m/%y')
 
 ################################ TEST ROOM ###############################
 
-def failed_toDeliver():
-    for row in range(1, delivery_Failed_Data.max_row+1):
-        reason = delivery_Failed_Data.cell(row=row, column=9).value
-        phyid = delivery_Failed_Data.cell(row=row, column=17).value
-        branch = delivery_Failed_Data.cell(row=row, column=18).value
-        date = delivery_Failed_Data.cell(row=row, column=12).value
-        if reason:
-            pyautogui.sleep(1)
-            pyautogui.moveTo(278,87)
-            pyautogui.sleep(1)
-            pyautogui.doubleClick()
-            pyautogui.typewrite(str(phyid))
-            pyautogui.press('enter')
-            pyautogui.typewrite(str(branch))
-            pyautogui.moveTo(1554,54)
-            pyautogui.leftClick()
-            pyautogui.moveTo(345,56)
-            pyautogui.leftClick()
-            pyperclip.copy(str(reason))
-            pyautogui.hotkey('ctrl','v')
-            pyautogui.write(f" | {getdate_Obj(str(date))}")
-            pyautogui.moveTo(701,483)
-            pyautogui.leftClick()
-            pyautogui.sleep(0.8)
-            pyautogui.moveTo(855,505)
-            pyautogui.leftClick()
-        else: break
+
 
 #########################################################################
 ################################ Part 2: Reading excel and Start writing
@@ -68,7 +52,7 @@ def docref():
         pyautogui.sleep(3)
         pyautogui.moveTo(1432,192)
         pyautogui.leftClick()
-        pyautogui.moveTo(1434,215)
+        pyautogui.moveTo(1427,215)
         pyautogui.doubleClick()
         pyautogui.leftClick()
         pyautogui.press('down')
@@ -84,10 +68,6 @@ def docref():
             phyid = delivery_Failed_Data.cell(row=row, column=17).value
             branch = delivery_Failed_Data.cell(row=row, column=18).value
             date = delivery_Failed_Data.cell(row=row, column=12).value
-            try:
-                date_object = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-            except Exception:
-                pass
             if reason:
                 pyautogui.sleep(1)
                 pyautogui.moveTo(278,87)
@@ -100,7 +80,9 @@ def docref():
                 pyautogui.leftClick()
                 pyautogui.moveTo(345,56)
                 pyautogui.leftClick()
-                pyautogui.write(f"{str(reason)} | {date_object.strftime('%d/%m/%y')}")
+                pyperclip.copy(str(reason))
+                pyautogui.sleep(0.8)
+                pyautogui.write(f"{pyperclip.paste()} | {getdate_Obj(str(date))}")
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
                 pyautogui.sleep(0.8)
@@ -129,7 +111,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f'{str(date)} | ')
+                pyautogui.typewrite(f'{str(getdate_Obj(str(date)))} | ')
                 pyperclip.copy(str(zone))
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)
@@ -146,10 +128,6 @@ def docref():
             id = ID49_Data.cell(row=i,column=12).value
             branch = ID49_Data.cell(row=i,column=13).value
             date = ID49_Data.cell(row=i, column=7).value
-            try:
-                date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-            except Exception:
-                pass
             formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
             ID49_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
@@ -167,7 +145,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{date_obj.strftime('%d/%m/%y')} | {out_sect}")
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} | {out_sect}")
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
                 pyautogui.sleep(0.8)
@@ -196,8 +174,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f'{date} | ')
-                #pyautogui.typewrite(str(date) + ' | ')
+                pyautogui.typewrite(f'{getdate_Obj(str(date))} | ')
                 pyperclip.copy(str(zone))
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)
@@ -216,10 +193,6 @@ def docref():
             id = ID33_Data.cell(row=i,column=12).value
             branch = ID33_Data.cell(row=i,column=13).value
             date = ID33_Data.cell(row=i, column=7).value
-            try:
-                date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-            except Exception:
-                pass
             formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
             ID33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
@@ -237,7 +210,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{date_obj.strftime('%d/%m/%y')} | {out_sect}")
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} | {out_sect}")
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
                 pyautogui.sleep(0.8)
@@ -250,8 +223,7 @@ def docref():
 
 ############################ Finally  - Try running it. If there's error, print it out.
 try:
-    failed_toDeliver()
-    #docref()
+    docref()
 except Exception as e:
     messagebox.showerror('Python Error',f'{e}')
 

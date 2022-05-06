@@ -24,7 +24,35 @@ try:
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
+
+def getdate_Obj(dateData):
+    try:
+        date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S.%f")
+    except:
+        try:
+            date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S")
+        except:
+            try:
+                date_obj = datetime.datetime.strptime(dateData, "%d-%m-%Y %H:%M:%S")
+            except:
+                try:
+                    date_obj = datetime.datetime.strptime(dateData, "%d/%m/%Y")
+                except Exception as e:
+                    print(e)
+                
+    return date_obj.strftime('%d/%m/%y')
+
+
+################################ TEST ROOM ###############################
+
+
+
+#########################################################################
+################################ Part 2: Reading excel and Start writing
+
+
 ################################# Part 2 : Function 
+
 def docref(): 
     def defaultref(): #default behavior
         pyautogui.moveTo(45,255)
@@ -33,7 +61,7 @@ def docref():
         pyautogui.sleep(3)
         pyautogui.moveTo(1432,192)
         pyautogui.leftClick()
-        pyautogui.moveTo(1434,215)
+        pyautogui.moveTo(1427,215)
         pyautogui.doubleClick()
         pyautogui.leftClick()
         pyautogui.press('down')
@@ -49,10 +77,6 @@ def docref():
             id = ID49Tradein.cell(row=i,column=12).value
             branch = ID49Tradein.cell(row=i,column=13).value
             date = ID49Tradein.cell(row=i, column=7).value
-            try:
-                date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-            except TypeError:
-                pass
             formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
             Insure_33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
@@ -76,7 +100,7 @@ def docref():
                 else:
                     pyperclip.copy(receive)
                     pyautogui.hotkey('ctrl','v')
-                    pyautogui.typewrite(f"{date_obj.strftime('%d/%m/%y')} | {out_sect}")
+                    pyautogui.typewrite(f"{getdate_Obj(str(date))} | {out_sect}")
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
                 pyautogui.press('enter')
@@ -102,7 +126,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{date} | ")
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} | ")
                 pyperclip.copy(str(zone))
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)
@@ -118,10 +142,6 @@ def docref():
             id = Insure_33_Data.cell(row=i,column=12).value
             branch = Insure_33_Data.cell(row=i,column=13).value
             date = Insure_33_Data.cell(row=i, column=7).value
-            try:
-                date_obj = datetime.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-            except TypeError:
-                pass
             formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
             Insure_33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
@@ -139,7 +159,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{date_obj.strftime('%d/%m/%y')} | {out_sect}")
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} | {out_sect}")
                 pyautogui.moveTo(701,483)
                 pyautogui.leftClick()
                 pyautogui.press('enter')
@@ -166,7 +186,7 @@ def docref():
                 pyautogui.leftClick()
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{date} | ")
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} | ")
                 pyperclip.copy(str(zone))
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.moveTo(701,483)

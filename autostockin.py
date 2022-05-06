@@ -29,7 +29,7 @@ def pressenter(numberoftimes):
 def clickleft(numberoftimes):
     for i in range(0, numberoftimes):
         pyg.leftClick()
-        pyg.sleep(0.5)
+        pyg.sleep(1.5)
         if i == numberoftimes:
             break
 
@@ -50,7 +50,7 @@ def defaultbeh():
         else:
             pyg.moveTo(238,145)
             pyg.leftClick()
-            pyg.sleep(3.5)
+            pyg.sleep(7)
 
     for i in range(1, worksheet.max_row+1):
         stockoutid = worksheet.cell(row=i, column=1).value
@@ -90,7 +90,7 @@ def defaultbeh():
             else:
                 pyperclip.copy(receive[r])
                 pyg.hotkey('ctrl', 'v')
-            pyg.moveTo(66,1023)
+            pyg.moveTo(65,832)
             clickleft(1) # this is where stock in started
             print('Press Ok')
             try:
@@ -102,8 +102,10 @@ def defaultbeh():
                     print('Error is not Found')
                     pressenter(1)
                     pyg.press('left')
+                    pressenter(1)
+                    pyg.sleep(7)
                     pressenter(4)
-                    pyg.sleep(2)
+                    pyg.sleep(3)
                     continue
             except Exception as e:
                 messagebox.showerror('Python Error', f'{e}')

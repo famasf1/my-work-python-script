@@ -15,8 +15,6 @@ sheets = workbook.sheetnames
 readsheet = workbook[sheets[0]]
 
 def sentmail(): #dummy formula
-    attlist = []
-    row = 1 
     while True: #not sure why while work but ok
         #value1 = readsheet.cell(row=row,column=3).value #first, get value to use as your header
         email2 = readsheet.cell(row=row,column=2).value #second, get email row
@@ -66,9 +64,5 @@ def sentmail(): #dummy formula
             mail._oleobj_.Invoke(*(64209, 0, 8, 0, From))
         
         mail.Send()
-        row += 1
-        if email2 is 'None':
-            break
-        else:
-            continue
+        
 sentmail()
