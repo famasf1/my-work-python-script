@@ -1,6 +1,18 @@
 from pprint import pprint
 import json
 import requests
+import datetime
+import pygsheets
+
+####### get date for JSON below
+thisday = datetime.datetime.today()
+yesterdate = thisday - datetime.timedelta(days=1)
+yesterdatestrf = yesterdate.strftime("%d/%m/%Y")
+
+####### authorize google sheet
+gc = pygsheets.authorize(client_secret="client_secret_348239185606-dnb8ip8d003r4dbr81agb5e4l18b1dol.apps.googleusercontent.com.json", service_account_file="api-project-348239185606-ebaf98a94e75.json")
+sheet_ID = gc.open_by_key("18B-rlqDp9_UEGo3S1eob9EVlgStd_Ju-X6mEH4LgEs4")
+ss = sheet_ID.sheet1
 
 url = "http://techtrade.techhead.tech/Backoffice/Branch_history/branch_history_list.aspx/Getdata"
 
@@ -192,8 +204,8 @@ payload = {
     },
     "textfield": "",
     "textSearch": "",
-    "textdateStart": "20/04/2022",
-    "textdateEnd": "20/04/2022",
+    "textdateStart": f"{yesterdatestrf}",
+    "textdateEnd": f"{yesterdatestrf}",
     "status": "3",
     "branchId": "0",
     "isExport": False
@@ -215,6 +227,4 @@ headers = {
 response = requests.request("POST", url, json=payload, headers=headers)
 value = json.dumps(response.json(), indent=4, separators=(',\ ', ': '))
 
-with open('test.json', 'w+') as test:
-    test.write(value)
-    
+ss.update_values('A1',value)
