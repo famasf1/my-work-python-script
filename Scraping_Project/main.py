@@ -3,6 +3,7 @@ import json
 import requests
 import datetime
 import pygsheets
+import pandas as pd
 
 ####### get date for JSON below
 thisday = datetime.datetime.today()
@@ -203,13 +204,15 @@ payload = {
         "regex": False
     },
     "textfield": "",
-    "textSearch": "",
+    "textSearch": f"",
     "textdateStart": f"{yesterdatestrf}",
     "textdateEnd": f"{yesterdatestrf}",
     "status": "3",
     "branchId": "0",
     "isExport": False
 }
+
+
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0",
     "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -225,6 +228,17 @@ headers = {
 }
 
 response = requests.request("POST", url, json=payload, headers=headers)
-value = json.dumps(response.json(), indent=4, separators=(',\ ', ': '))
+value = json.dumps(response.json(), indent=6)
 
-ss.update_values('A1',value)
+
+with open(r'C:\Users\jambo\Desktop\Trade In\my work python script\Scraping_Project\test.json', 'w+') as test:
+    test.write(value)
+
+wrk = pd.read_json(r'C:\Users\jambo\Desktop\Trade In\my work python script\Scraping_Project\test.json')
+df = pd.json_normalize(wrk.d.data)
+
+df.to_excel('test.xlsx')
+
+
+
+
