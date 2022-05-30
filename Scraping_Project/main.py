@@ -111,26 +111,6 @@ payload = {
             }
         },
         {
-            "data": "cosmetic",
-            "name": "",
-            "searchable": True,
-            "orderable": False,
-            "search": {
-                "value": "",
-                "regex": False
-            }
-        },
-        {
-            "data": "gadget",
-            "name": "",
-            "searchable": True,
-            "orderable": False,
-            "search": {
-                "value": "",
-                "regex": False
-            }
-        },
-        {
             "data": "voucher",
             "name": "",
             "searchable": True,
@@ -159,36 +139,6 @@ payload = {
                 "value": "",
                 "regex": False
             }
-        },
-        {
-            "data": "campaign_name",
-            "name": "",
-            "searchable": True,
-            "orderable": False,
-            "search": {
-                "value": "",
-                "regex": False
-            }
-        },
-        {
-            "data": "destination_brand_name",
-            "name": "",
-            "searchable": True,
-            "orderable": False,
-            "search": {
-                "value": "",
-                "regex": False
-            }
-        },
-        {
-            "data": "ontop_amount",
-            "name": "",
-            "searchable": True,
-            "orderable": False,
-            "search": {
-                "value": "",
-                "regex": False
-            }
         }
     ],
     "order": [
@@ -198,14 +148,14 @@ payload = {
         }
     ],
     "start": 0,
-    "length": 1000,
+    "length": 100000,
     "search": {
         "value": "",
         "regex": False
     },
-    "textfield": "",
+    "textfield": f"",
     "textSearch": f"",
-    "textdateStart": f"{yesterdatestrf}",
+    "textdateStart": f"01/05/2022",
     "textdateEnd": f"{yesterdatestrf}",
     "status": "3",
     "branchId": "0",

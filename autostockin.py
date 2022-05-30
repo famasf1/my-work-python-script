@@ -20,6 +20,10 @@ except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
 
+def custom_comment(comment):
+    pyperclip.copy(comment)
+    pyg.hotkey('ctrl', 'v')
+
 def pressenter(numberoftimes):
     for i in range(0, numberoftimes):
         pyg.press('enter')
@@ -55,6 +59,7 @@ def defaultbeh():
     for i in range(1, worksheet.max_row+1):
         stockoutid = worksheet.cell(row=i, column=1).value
         etc = worksheet.cell(row=i, column=2).value
+        customcomment = 'MEM224076 ตัดยอดคืน supplier'
         if stockoutid:
             nextStart(i)
             firstStart(i)
@@ -64,6 +69,8 @@ def defaultbeh():
             if etc == 'm': 
                 pyg.typewrite('7538')
             elif etc == 'โบ้':
+                pyg.typewrite('22608')
+            elif etc == 'c':
                 pyg.typewrite('22608')
             elif etc == 'pairin':
                 pyg.typewrite('1815')
@@ -86,7 +93,9 @@ def defaultbeh():
                 pyg.hotkey('ctrl', 'v')
             elif etc == 'ปาน':
                 pyperclip.copy('ครบ / ปาน')
-                pyg.hotkey('ctrl', 'v')           
+                pyg.hotkey('ctrl', 'v')
+            elif etc == 'c':
+                custom_comment(customcomment)           
             else:
                 pyperclip.copy(receive[r])
                 pyg.hotkey('ctrl', 'v')

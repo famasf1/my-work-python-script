@@ -14,8 +14,8 @@ try:
     root.withdraw()
     worksheetname = workbook.sheetnames
     Insure_33_Data = workbook[worksheetname[0]]
-    Info_33_Data = workbook[worksheetname[6]]
-    ID49Tradein_BKK = workbook[worksheetname[8]]
+    Info_33_Data = workbook[worksheetname[7]]
+    ID49Tradein_BKK = workbook[worksheetname[9]]
     ID49Tradein = workbook[worksheetname[2]]
     todate = datetime.date.today()
     yesterdate = todate - datetime.timedelta(days=1)

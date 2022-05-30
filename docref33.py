@@ -12,10 +12,11 @@ try:
     root.withdraw()
     worksheetname = workbook.sheetnames
     ID33_Data = workbook[worksheetname[1]]
-    ID33BKK_Data = workbook[worksheetname[5]]
+    ID33BKK_Data = workbook[worksheetname[6]]
     ID49_Data = workbook[worksheetname[3]]
-    ID49BKK_Data = workbook[worksheetname[7]]
-    delivery_Failed_Data = workbook[worksheetname[4]]
+    ID49BKK_Data = workbook[worksheetname[8]]
+    ID747_Data = workbook[worksheetname[4]]
+    delivery_Failed_Data = workbook[worksheetname[5]]
     receive = 'รับ'
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
@@ -62,6 +63,37 @@ def docref():
         pyautogui.doubleClick()
         pyautogui.leftClick()
 
+    def docref747(): #49 Return DHL
+        for i in range(1,ID747_Data.max_row+1):
+            out_sect = ID747_Data.cell(row=i,column=15).value
+            id = ID747_Data.cell(row=i,column=12).value
+            branch = ID747_Data.cell(row=i,column=13).value
+            date = ID747_Data.cell(row=i, column=7).value
+            formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
+            ID747_Data.cell(row=i,column=15).value = formulae
+            workbook.save('bitly+ready.xlsx')
+            if out_sect:
+                pyautogui.sleep(1)
+                pyautogui.moveTo(278,87)
+                pyautogui.sleep(1)
+                pyautogui.doubleClick()
+                pyautogui.typewrite(str(id))
+                pyautogui.press('enter')
+                pyautogui.typewrite(str(branch))
+                pyautogui.moveTo(1554,54)
+                pyautogui.leftClick()
+                pyautogui.moveTo(345,56)
+                pyautogui.leftClick()
+                pyperclip.copy(receive)
+                pyautogui.hotkey('ctrl','v')
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} | {out_sect}")
+                pyautogui.moveTo(701,483)
+                pyautogui.leftClick()
+                pyautogui.sleep(0.8)
+                pyautogui.moveTo(855,505)
+                pyautogui.leftClick()
+            else: break
+
     def failed_toDeliver():
         for row in range(1, delivery_Failed_Data.max_row+1):
             reason = delivery_Failed_Data.cell(row=row, column=9).value
@@ -89,6 +121,7 @@ def docref():
                 pyautogui.moveTo(855,505)
                 pyautogui.leftClick()
             else: break
+        docref747()
 
 
     def docref49returnbkk(): #49 Return BKK
@@ -216,8 +249,8 @@ def docref():
                 pyautogui.sleep(0.8)
                 pyautogui.moveTo(855,505)
                 pyautogui.leftClick()
-            else: break
-        docref33bkk() 
+            else: break 
+        docref33bkk()
     docref33()
 
 
