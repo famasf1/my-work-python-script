@@ -28,3 +28,7 @@ def login():
             break
         else:
             pyg.sleep(1)
+
+if __name__ in '__main__':
+    while True:
+        login()

@@ -18,6 +18,14 @@ except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
 
+class function_ITEC:
+    
+    def search_button(self):
+        pyautogui.press('f12')
+    def docref_button(self):
+        pyautogui.press('f5')
+
+
 def notifyme(confirmtext):
     mytoken = 'kOcQyjPGgIAgTQ4qWjTlEJZFUj7GegzGefdDEiSsYJr'
     url = 'https://notify-api.line.me/api/notify'
@@ -54,15 +62,15 @@ def docref():
         pyautogui.sleep(1)
         pyautogui.leftClick()
         pyautogui.sleep(3)
-        pyautogui.moveTo(1432,192)
+        pyautogui.moveTo(1753,192)
         pyautogui.leftClick()
-        pyautogui.moveTo(1427,215)
+        pyautogui.moveTo(1752,215)
         pyautogui.doubleClick()
         pyautogui.leftClick()
         pyautogui.press('down')
         pyautogui.press('enter')
         pyautogui.sleep(3)
-        pyautogui.moveTo(278,87)
+        pyautogui.moveTo(294,89)
         pyautogui.doubleClick()
         pyautogui.leftClick()
     def docrefgreenbox(): # 49 Trade in \ Bangkok
@@ -79,15 +87,14 @@ def docref():
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
                 pyautogui.typewrite(str(branch))
-                pyautogui.moveTo(1554,54)
-                pyautogui.leftClick()
-                pyautogui.moveTo(345,56)
-                pyautogui.leftClick()
+                function_ITEC().search_button()
+                pyautogui.press('enter')
+                function_ITEC().docref_button()
                 pyperclip.copy(str(boxid))
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.typewrite(f"/{getdate_Obj(str(date))}")
-                pyautogui.moveTo(701,483)
-                pyautogui.leftClick()
+                pyautogui.press('tab')
+                pyautogui.press('enter')
                 pyautogui.press('enter')
             else: break
     defaultref()
