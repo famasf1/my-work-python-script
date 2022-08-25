@@ -12,10 +12,11 @@ try:
     root.withdraw()
     sheet = workbook.sheetnames
     worksheet = workbook[sheet[0]]
-    numb = [0,1,2]
-    receive = ['ครบ / ดิว','ครบ / ก็อต','ครบ / เอก']
-    idnumber = ['22073','23017','23267']
-    readpicerrorfound = pyg.locateCenterOnScreen('checkerror.png')
+    numb = [0,1,2,3]
+    receive = ['ครบ / โบ้','ครบ / ปาน','ครบ / มาร์ค','ครบ / ตั้ม']
+    idnumber = ['22608','23947','23800','24179']
+    readpicerrorfound = pyg.locateCenterOnScreen('asset/checkerror.png')
+    ok = pyg.locateOnScreen('asset/ok.png')
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
@@ -39,22 +40,18 @@ def clickleft(numberoftimes):
 
 
 def defaultbeh():
-
     def firstStart(start):
         if start == 1:
-            pyg.moveTo(238,145)
-            pyg.leftClick()
-            pyg.sleep(3.5)
+            pyg.hotkey('alt','k')
+            pyg.press('i')
         else:
             pass
-    
     def nextStart(next):
         if next == 1:
             pass
         else:
-            pyg.moveTo(238,145)
-            pyg.leftClick()
-            pyg.sleep(7)
+            pyg.hotkey('alt','k')
+            pyg.press('i')
 
     for i in range(1, worksheet.max_row+1):
         stockoutid = worksheet.cell(row=i, column=1).value
@@ -63,8 +60,6 @@ def defaultbeh():
         if stockoutid:
             nextStart(i)
             firstStart(i)
-            pyg.moveTo(184,65)
-            clickleft(2)
             print('Start Stock In')
             if etc == 'm': 
                 pyg.typewrite('7538')
@@ -99,9 +94,11 @@ def defaultbeh():
             else:
                 pyperclip.copy(receive[r])
                 pyg.hotkey('ctrl', 'v')
-            pyg.moveTo(65,832)
-            clickleft(1) # this is where stock in started
-            print('Press Ok')
+            ##ready
+                pyg.hotkey('alt','f')
+                pyg.press('o')
+
+
             try:
                 if readpicerrorfound:
                     pressenter(1)
@@ -112,9 +109,8 @@ def defaultbeh():
                     pressenter(1)
                     pyg.press('left')
                     pressenter(1)
-                    pyg.sleep(7)
-                    pressenter(4)
                     pyg.sleep(3)
+                    pressenter(4)
                     continue
             except Exception as e:
                 messagebox.showerror('Python Error', f'{e}')

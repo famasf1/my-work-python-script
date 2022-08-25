@@ -10,9 +10,11 @@ def calculate(line_):
                     value_list.append(value)
     result = ''.join(value_list)
     text.write(f'%s\n' % result)
+    value_list.clear()
+    
 
 if __name__ in "__main__":
-    with open(r"D:\Workstuff\my_work_script\thai_text.txt", "r+", encoding='UTF-8') as text:
+    with open(r"D:\Workstuff\my-work-python-script\thai_text.txt", "r+", encoding='UTF-8') as text:
         lines = text.readlines()
         for index, line in enumerate(lines):
             calculate(line)
