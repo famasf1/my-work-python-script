@@ -70,9 +70,9 @@ class function_ITEC:
 def docref():
     def defaultref(): #Do this everytime i want to start.
         pyautogui.moveTo(45,255)
-        pyautogui.sleep(1)
+        
         pyautogui.leftClick()
-        pyautogui.sleep(3)
+        
         pyautogui.moveTo(1753,192)
         pyautogui.leftClick()
         pyautogui.moveTo(1752,215)
@@ -80,7 +80,7 @@ def docref():
         pyautogui.leftClick()
         pyautogui.press('down')
         pyautogui.press('enter')
-        pyautogui.sleep(3)
+        
         pyautogui.moveTo(294,89)
         pyautogui.doubleClick()
         pyautogui.leftClick()
@@ -95,9 +95,9 @@ def docref():
             ID747_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
-                pyautogui.sleep(3)
+                
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -121,9 +121,9 @@ def docref():
             branch = delivery_Failed_Data.cell(row=row, column=18).value
             date = delivery_Failed_Data.cell(row=row, column=12).value
             if reason:
-                pyautogui.sleep(3)
+                
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -132,7 +132,7 @@ def docref():
                 pyautogui.press('enter')
                 function_ITEC().docref_button()
                 pyperclip.copy(str(reason))
-                pyautogui.sleep(0.8)
+                (0.8)
                 pyautogui.write(f"{pyperclip.paste()} | {getdate_Obj(str(date))}")
                 pyautogui.press('tab')
                 pyautogui.press('enter')
@@ -148,9 +148,9 @@ def docref():
             branch = ID49BKK_Data.cell(row=i,column=3).value
             zone = ID49BKK_Data.cell(row=i,column=4).value          
             if id:
-                pyautogui.sleep(3)
+                
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -179,9 +179,9 @@ def docref():
             ID49_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
-                pyautogui.sleep(3)
+                
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -205,9 +205,9 @@ def docref():
             branch = ID33BKK_Data.cell(row=i,column=3).value
             zone = ID33BKK_Data.cell(row=i,column=4).value
             if date:
-                pyautogui.sleep(3)
+                
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -238,9 +238,9 @@ def docref():
             ID33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
-                pyautogui.sleep(3)
+                
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')

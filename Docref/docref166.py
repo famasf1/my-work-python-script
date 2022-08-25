@@ -94,7 +94,7 @@ class function_ITEC:
 def docref(): 
     def defaultref(): #default behavior
         pyautogui.moveTo(45,255)
-        pyautogui.sleep(1)
+        pyautogui.sleep(.7)
         pyautogui.leftClick()
         pyautogui.sleep(3)
         pyautogui.moveTo(1753,192)
@@ -104,7 +104,7 @@ def docref():
         pyautogui.leftClick()
         pyautogui.press('down')
         pyautogui.press('enter')
-        pyautogui.sleep(3)
+        pyautogui.sleep(1)
         pyautogui.moveTo(294,89)
         pyautogui.doubleClick()
         pyautogui.leftClick()
@@ -119,9 +119,9 @@ def docref():
             Insure_33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
-                pyautogui.sleep(3)
+                pyautogui.sleep(.7)
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
+                pyautogui.sleep(.7)
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -154,9 +154,9 @@ def docref():
             branch = Info_33_Data.cell(row=i,column=3).value
             zone = Info_33_Data.cell(row=i,column=4).value
             if date:
-                pyautogui.sleep(1)
+                pyautogui.sleep(.7)
                 pyautogui.moveTo(278,87)
-                pyautogui.sleep(1)
+                pyautogui.sleep(.7)
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -187,9 +187,7 @@ def docref():
             Insure_33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
-                pyautogui.sleep(3)
                 pyautogui.moveTo(288,88)
-                pyautogui.sleep(1)
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
@@ -203,6 +201,7 @@ def docref():
                 pyautogui.press('tab')
                 pyautogui.press('enter')
                 pyautogui.press('enter')
+                continue
             else: break
         print("docref166 finished. up next, docref166bkk")
         docref166bkk()
@@ -214,9 +213,9 @@ def docref():
             branch = ID49Tradein_BKK.cell(row=i,column=3).value
             zone = ID49Tradein_BKK.cell(row=i,column=4).value
             if date:
-                pyautogui.sleep(1)
+                pyautogui.sleep(.7)
                 pyautogui.moveTo(278,87)
-                pyautogui.sleep(1)
+                pyautogui.sleep(.7)
                 pyautogui.doubleClick()
                 pyautogui.typewrite(str(id))
                 pyautogui.press('enter')
