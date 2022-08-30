@@ -10,7 +10,7 @@ import random
 ### List all employee ###
 class Employeelist:
     #เขียนครบ ตามด้วยไอดีพนักงาน
-    def __init__(self,index, name, staffid):
+    def __init__(self,index, name, staffid=str):
         self.name = name
         self.staffid = staffid
         self.index = index
@@ -32,13 +32,12 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id
-        global จิรายุทธ, วรัญญู, มรกต, วุฒิภัทร, numb
+        global จิรายุทธ, วรัญญู, มรกต, วุฒิภัทร
         ###################################### LIST EMPLOYEE #####################################
-        จิรายุทธ = Employeelist(0,'ครบ / โบ้', 22608) 
-        วรัญญู = Employeelist(1,'ครบ / ตั้ม', 24179)
-        มรกต = Employeelist(2,'ครบ / ปาน', 23947)
-        วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค',23800)
-        numb = [0,1,2,3]
+        จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
+        วรัญญู = Employeelist(1,'ครบ / ตั้ม', '24179')
+        มรกต = Employeelist(2,'ครบ / ปาน', '23947')
+        วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค','23800')
         employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index]
         ##########################################################################################
 
@@ -64,13 +63,15 @@ def main(): #short for default behavior
     ### First time starting
     start_script()
 
+## WTF?
+## if i remove it, will it break?
     def firstStart(start):
         if start == 1:
             pyg.hotkey('alt','k')
             pyg.press('i')
         else:
             pass
-    ### Nect
+    ### Next
     def nextStart(next):
         if next == 1:
             pass
@@ -89,32 +90,31 @@ def main(): #short for default behavior
 
             r = random.choice(employeelist_index)
             match r:
-                case จิรายุทธ.index:
+                case 0:
                     pyg.typewrite(จิรายุทธ.staffid)
-                case วรัญญู.index:
+                case 1:
                     pyg.typewrite(วรัญญู.staffid)
-                case มรกต.index:
+                case 2:
                     pyg.typewrite(มรกต.staffid)
-                case วุฒิภัทร.index:
+                case 3:
                     pyg.typewrite(วุฒิภัทร.staffid)
+                
 
             pressenter(2)
             pyg.typewrite(str(stockoutid)) #stockout
             pressenter(2)
 
             #name
-
             match r:
-                case จิรายุทธ.index:
+                case 0:
                     pyg.typewrite(จิรายุทธ.name)
-                case วรัญญู.index:
+                case 1:
                     pyg.typewrite(วรัญญู.name)
-                case มรกต.index:
+                case 2:
                     pyg.typewrite(มรกต.name)
-                case วุฒิภัทร.index:
+                case 3:
                     pyg.typewrite(วุฒิภัทร.name)
-            pyg.hotkey('ctrl', 'v')
-            pyg.sleep(15)
+            pyg.sleep(1)
             ##ready
 
             pyg.hotkey('alt','f')
@@ -161,10 +161,12 @@ def test():
     วรัญญู = Employeelist(1,'ครบ / ตั้ม', 24179)
     มรกต = Employeelist(2,'ครบ / ปาน', 23947)
     วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค',23800)
-    print(จิรายุทธ.name)
+    employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index]
+    r = random.choice(employeelist_index)
+    print(r)
 
 try:
-  #  test()
+    #test()
     main()
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
