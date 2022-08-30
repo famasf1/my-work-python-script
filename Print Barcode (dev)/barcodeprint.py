@@ -10,6 +10,13 @@ import win32com.client
 from barcode import Code128
 from barcode.writer import ImageWriter
 
+### CLASS TEST
+class FrontStickerTemplate:
+    def __init__(self, cell, data):
+        self.cell = cell
+        self.data = data
+
+
 ### MAIN
 def main():
     global all_data, test_sheet
