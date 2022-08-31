@@ -5,12 +5,9 @@
 mydayis = 0 #0 = today or 1 = yesterday?
 ###############################
 
-
-from imghdr import what
 import pandas as pd
 from tkinter import *
 from tkinter import filedialog
-from tkinter.filedialog import askopenfilename
 import datetime
 today = datetime.datetime.today().strftime("%d-%m-%y")
 yesterday = datetime.datetime.today() - datetime.timedelta(days=1)

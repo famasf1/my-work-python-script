@@ -64,5 +64,5 @@ def retrievetrackingcode():
 
 if __name__ in "__main__":
     ##tracker is the main function
-    tracker()
-    #retrievetrackingcode()
+    #tracker()
+    retrievetrackingcode()
