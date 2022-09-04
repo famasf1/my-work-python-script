@@ -1,0 +1,478 @@
+1661694066874	geckodriver	INFO	Listening on 127.0.0.1:58128
+1661694069908	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58129" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilekns2M3"
+1661694070115	Marionette	INFO	Marionette enabled
+1661694070118	Marionette	INFO	Listening on port 58140
+WebDriver BiDi listening on ws://localhost:58129
+Read port: 58140
+1661694070184	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilekns2M3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58129/devtools/browser/813668c6-db0c-4700-bee2-8141cf2ebd4d
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1661694081725	Marionette	INFO	Stopped listening on port 58140
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661694529783	geckodriver	INFO	Listening on 127.0.0.1:58673
+1661694532815	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58674" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofile3gYmtk"
+1661694533026	Marionette	INFO	Marionette enabled
+1661694533029	Marionette	INFO	Listening on port 58687
+WebDriver BiDi listening on ws://localhost:58674
+Read port: 58687
+1661694533099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofile3gYmtk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58674/devtools/browser/5003718e-4ec3-40a7-a507-a5c0110752e5
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1661694716908	Marionette	INFO	Stopped listening on port 58687
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "58965" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofile6bd7gB"
+1661694715048	Marionette	INFO	Marionette enabled
+1661694715051	Marionette	INFO	Listening on port 58978
+WebDriver BiDi listening on ws://localhost:58965
+Read port: 58978
+1661694715222	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofile6bd7gB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58965/devtools/browser/f84a7269-f69e-4967-a236-31c3c0518021
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1661694738342	Marionette	INFO	Stopped listening on port 58978
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661694749647	geckodriver	INFO	Listening on 127.0.0.1:59062
+1661694752708	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59063" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofiletwpCx1"
+1661694752928	Marionette	INFO	Marionette enabled
+1661694752931	Marionette	INFO	Listening on port 59078
+WebDriver BiDi listening on ws://localhost:59063
+Read port: 59078
+1661694753107	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1661694876492	geckodriver	INFO	Listening on 127.0.0.1:59226
+1661694879546	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59227" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilencfu3Q"
+1661694879753	Marionette	INFO	Marionette enabled
+1661694879756	Marionette	INFO	Listening on port 59240
+WebDriver BiDi listening on ws://localhost:59227
+Read port: 59240
+1661694879823	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilencfu3Q\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59227/devtools/browser/9cff57f7-afa8-4d0a-8917-3bddce2af9fa
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661695004837	Marionette	INFO	Stopped listening on port 59240
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661695018009	geckodriver	INFO	Listening on 127.0.0.1:59418
+1661695021068	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59419" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileedzjpu"
+1661695021295	Marionette	INFO	Marionette enabled
+1661695021297	Marionette	INFO	Listening on port 59432
+WebDriver BiDi listening on ws://localhost:59419
+Read port: 59432
+1661695021459	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileedzjpu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59419/devtools/browser/20df7694-6c1e-48ca-a0a5-03f8e26e3e8e
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661695076141	Marionette	INFO	Stopped listening on port 59432
+1661695079703	geckodriver	INFO	Listening on 127.0.0.1:59521
+1661695082764	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59522" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileuimNUv"
+1661695082968	Marionette	INFO	Marionette enabled
+1661695082971	Marionette	INFO	Listening on port 59537
+WebDriver BiDi listening on ws://localhost:59522
+Read port: 59537
+1661695083036	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileuimNUv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59522/devtools/browser/2b49d51d-45e3-4309-96aa-82194883154a
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661695115822	Marionette	INFO	Stopped listening on port 59537
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661695145820	geckodriver	INFO	Listening on 127.0.0.1:59633
+1661695148902	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59634" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilem4VB4n"
+1661695149108	Marionette	INFO	Marionette enabled
+1661695149111	Marionette	INFO	Listening on port 59649
+WebDriver BiDi listening on ws://localhost:59634
+Read port: 59649
+1661695149177	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilem4VB4n\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59634/devtools/browser/13284ecb-99b3-4553-b34d-c9c716054833
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661695161976	Marionette	INFO	Stopped listening on port 59649
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661695220060	geckodriver	INFO	Listening on 127.0.0.1:59750
+1661695223116	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59751" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofiled7fc5N"
+1661695223322	Marionette	INFO	Marionette enabled
+1661695223325	Marionette	INFO	Listening on port 59762
+WebDriver BiDi listening on ws://localhost:59751
+Read port: 59762
+1661695223390	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofiled7fc5N\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59751/devtools/browser/9b906b21-c48a-4fe0-895a-694c85fd0471
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1661695231273	Marionette	INFO	Stopped listening on port 59762
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 20288, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1661695538351	geckodriver	INFO	Listening on 127.0.0.1:60156
+1661695541409	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60157" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilepfQY6s"
+1661695541616	Marionette	INFO	Marionette enabled
+1661695541618	Marionette	INFO	Listening on port 60172
+WebDriver BiDi listening on ws://localhost:60157
+Read port: 60172
+1661695541684	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilepfQY6s\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60157/devtools/browser/327f3229-efc0-4531-859d-284cdf379d53
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: "Error while calling actor 'pagestyle's method 'getApplied'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 569))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal4294967298/pagestyle22 (resource://devtools/server/actors/page-style.js:569:5)", "resource://devtools/shared/protocol/Front.js", 376))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 2023 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 4068 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 4617 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661696510351	Marionette	INFO	Stopped listening on port 60172
+[Parent 14208, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1661696518172	geckodriver	INFO	Listening on 127.0.0.1:61314
+1661696521232	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61315" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileFBFmLt"
+1661696521440	Marionette	INFO	Marionette enabled
+1661696521442	Marionette	INFO	Listening on port 61327
+WebDriver BiDi listening on ws://localhost:61315
+Read port: 61327
+1661696521509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileFBFmLt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61315/devtools/browser/76488428-bb8c-41ef-91e6-47401d9eca1b
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661696552729	Marionette	INFO	Stopped listening on port 61327
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661697450380	geckodriver	INFO	Listening on 127.0.0.1:62432
+1661697453449	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62433" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilegc29V3"
+1661697453657	Marionette	INFO	Marionette enabled
+1661697453660	Marionette	INFO	Listening on port 62446
+WebDriver BiDi listening on ws://localhost:62433
+Read port: 62446
+1661697453726	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilegc29V3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62433/devtools/browser/0f33e9f2-01bb-4ccc-9600-b2a72b5f7507
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661697477501	Marionette	INFO	Stopped listening on port 62446
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661697483877	geckodriver	INFO	Listening on 127.0.0.1:62521
+1661697486944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62522" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileQUwacy"
+1661697487164	Marionette	INFO	Marionette enabled
+1661697487167	Marionette	INFO	Listening on port 62535
+WebDriver BiDi listening on ws://localhost:62522
+Read port: 62535
+1661697487338	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileQUwacy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62522/devtools/browser/3537ff7f-38a1-43bc-81b6-04f1a29c00e0
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 62: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661697576522	Marionette	INFO	Stopped listening on port 62535
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661697776173	geckodriver	INFO	Listening on 127.0.0.1:62937
+1661697779231	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62938" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileMPQZAp"
+1661697779436	Marionette	INFO	Marionette enabled
+1661697779439	Marionette	INFO	Listening on port 62952
+WebDriver BiDi listening on ws://localhost:62938
+Read port: 62952
+1661697779505	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileMPQZAp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62938/devtools/browser/390ea3a1-fcbc-49a3-8b85-001438a75af6
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661698141758	Marionette	INFO	Stopped listening on port 62952
+1661698154847	geckodriver	INFO	Listening on 127.0.0.1:63560
+1661698157889	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63561" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileeRNVfq"
+1661698158097	Marionette	INFO	Marionette enabled
+1661698158099	Marionette	INFO	Listening on port 63574
+WebDriver BiDi listening on ws://localhost:63561
+Read port: 63574
+1661698158166	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileeRNVfq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63561/devtools/browser/6ac57b72-aa70-40a8-93f8-70ee8a33730f
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 62: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: "Unable to find target with innerWindowId:4294967298"
+console.warn: "Error while destroying front:" "inspector" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967305/inspectorActor4, type getWalker failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\n_getWalker@resource://devtools/client/fronts/inspector.js:90:30\ninitialize@resource://devtools/client/fronts/inspector.js:79:12\n", "resource://devtools/shared/protocol/Front.js", 107))
+console.error: "Failed to start [root-node] legacy listener for target null" (new Error("Connection closed, pending request to server0.conn0.windowGlobal4294967305/inspectorActor4, type getWalker failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\n_getWalker@resource://devtools/client/fronts/inspector.js:90:30\ninitialize@resource://devtools/client/fronts/inspector.js:79:12\n", "resource://devtools/shared/protocol/Front.js", 107))
+JavaScript error: resource://devtools/shared/protocol/Front.js, line 107: Error: Connection closed, pending request to server0.conn0.windowGlobal4294967305/inspectorActor4, type getWalker failed
+
+Request stack:
+request@resource://devtools/shared/protocol/Front.js:293:14
+generateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19
+_getWalker@resource://devtools/client/fronts/inspector.js:90:30
+initialize@resource://devtools/client/fronts/inspector.js:79:12
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.e7ea4db0159680e6471f.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.e7ea4db0159680e6471f.js, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript error: https://www.blazemeter.com/blog/selenium-vs-beautiful-soup-python line 479 > injectedScript, line 1: ReferenceError: gtag is not defined
+JavaScript error: https://cdn.cookielaw.org/scripttemplates/6.39.0/otBannerSdk.js, line 7: TypeError: Bt.moduleInitializer is undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 92 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.error: (new SyntaxError("'return' outside of function. (1:206)", "resource://devtools/client/debugger/dist/parser-worker.js", 16906))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661699858348	Marionette	INFO	Stopped listening on port 63574
+\\rust_mozprofileiV6aU0"
+1661699766004	Marionette	INFO	Marionette enabled
+1661699766007	Marionette	INFO	Listening on port 49155
+WebDriver BiDi listening on ws://localhost:65524
+Read port: 49155
+1661699766174	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileiV6aU0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65524/devtools/browser/d20fbafb-448d-4305-b3ed-e9fd843db9f9
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661699859215	Marionette	INFO	Stopped listening on port 49155
+1661699863113	geckodriver	INFO	Listening on 127.0.0.1:49309
+1661699866151	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49310" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilelEWRjH"
+1661699866374	Marionette	INFO	Marionette enabled
+1661699866377	Marionette	INFO	Listening on port 49323
+WebDriver BiDi listening on ws://localhost:49310
+Read port: 49323
+1661699866551	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilelEWRjH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49310/devtools/browser/06e71d4e-c493-4307-81b5-0a49e49fc0e6
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1661699984352	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49761" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilenEJZpu"
+1661699984577	Marionette	INFO	Marionette enabled
+1661699984580	Marionette	INFO	Listening on port 49785
+WebDriver BiDi listening on ws://localhost:49761
+Read port: 49785
+1661699984755	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilenEJZpu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49761/devtools/browser/d155fd09-6eda-453a-a5db-4b0a7d967ed1
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661700234703	Marionette	INFO	Stopped listening on port 49785
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "49988" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilerqRYeG"
+1661700145097	Marionette	INFO	Marionette enabled
+1661700145100	Marionette	INFO	Listening on port 50062
+Read port: 50062
+WebDriver BiDi listening on ws://localhost:49988
+1661700145169	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilerqRYeG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49988/devtools/browser/68c9d596-12e3-46b7-a4bd-c09487fe431c
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 2449 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661700434464	Marionette	INFO	Stopped listening on port 50062
+[Parent 9112, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 9112, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+void 0)))
+DevTools listening on ws://localhost:50266/devtools/browser/17d0b876-6f11-495d-8591-266011805c86
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 5121 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1661700434584	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50534" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilejwQprt"
+1661700434832	Marionette	INFO	Marionette enabled
+1661700434835	Marionette	INFO	Listening on port 50547
+WebDriver BiDi listening on ws://localhost:50534
+Read port: 50547
+1661700435012	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilejwQprt\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50534/devtools/browser/b40a9714-89b8-4a61-896b-ed2b8faa2b89
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661700471349	Marionette	INFO	Stopped listening on port 50547
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1661700471930	geckodriver	INFO	Listening on 127.0.0.1:50616
+1661700474984	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50617" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilejaUFcz"
+1661700475194	Marionette	INFO	Marionette enabled
+1661700475197	Marionette	INFO	Listening on port 50631
+Read port: 50631
+WebDriver BiDi listening on ws://localhost:50617
+1661700475263	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilejaUFcz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50617/devtools/browser/986b4c54-48b3-4ae0-804b-fe781e5ef8d8
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 7452 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661700832683	Marionette	INFO	Stopped listening on port 50631
+1661700833034	geckodriver	INFO	Listening on 127.0.0.1:51074
+1661700836083	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51075" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileuwaJ2g"
+1661700836290	Marionette	INFO	Marionette enabled
+1661700836293	Marionette	INFO	Listening on port 51087
+WebDriver BiDi listening on ws://localhost:51075
+Read port: 51087
+1661700836360	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileuwaJ2g\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51075/devtools/browser/71fdc65e-df70-4edb-9677-39e047bc366c
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/oORtDv9EbGDZJqtoCU6ZUa1h2CU5mRmZpTeRJMx0_5U.js line 2 > eval line 3376 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661700987186	Marionette	INFO	Stopped listening on port 51087
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+	Marionette	INFO	Listening on port 51316
+WebDriver BiDi listening on ws://localhost:51303
+Read port: 51316
+1661700987181	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileilyxLI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51303/devtools/browser/9b9a89a6-23bb-43f8-9f4f-b70579a2b6fb
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661700989730	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1661701063266	Marionette	INFO	Stopped listening on port 51316
+1661701064150	geckodriver	INFO	Listening on 127.0.0.1:51422
+1661701067202	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51423" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilePiogna"
+1661701067421	Marionette	INFO	Marionette enabled
+1661701067424	Marionette	INFO	Listening on port 51435
+WebDriver BiDi listening on ws://localhost:51423
+Read port: 51435
+1661701067588	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofilePiogna\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51423/devtools/browser/eae7684f-01b3-48ee-b08d-793ea1ef40ec
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1661701106209	Marionette	INFO	Stopped listening on port 51435
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
