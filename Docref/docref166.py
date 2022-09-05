@@ -110,7 +110,7 @@ def docref():
         pyautogui.leftClick()
 
     def docref49():
-        for i in range(1,ID49Tradein.max_row+1):
+        for i in range(2,ID49Tradein.max_row+1):
             out_sect = ID49Tradein.cell(row=i,column=15).value
             id = ID49Tradein.cell(row=i,column=12).value
             branch = ID49Tradein.cell(row=i,column=13).value
@@ -148,7 +148,7 @@ def docref():
         notifyme('Docref166 Finished!')
 
     def docref166bkk(): #33 ITEC Insure \ Bangkok
-        for i in range(1,Info_33_Data.max_row+1):
+        for i in range(2,Info_33_Data.max_row+1):
             date = Info_33_Data.cell(row=i,column=1).value
             id = Info_33_Data.cell(row=i,column=2).value
             branch = Info_33_Data.cell(row=i,column=3).value
@@ -178,7 +178,7 @@ def docref():
 
     def docref166(): # 33 ITEC Insure
         defaultref()
-        for i in range(1,Insure_33_Data.max_row+1):
+        for i in range(2,Insure_33_Data.max_row+1):
             out_sect = Insure_33_Data.cell(row=i,column=15).value
             id = Insure_33_Data.cell(row=i,column=12).value
             branch = Insure_33_Data.cell(row=i,column=13).value
@@ -207,7 +207,7 @@ def docref():
         docref166bkk()
     
     def docref49tradeinbkk(): # 49 Trade in \ Bangkok
-        for i in range(1,ID49Tradein_BKK.max_row+1):
+        for i in range(2,ID49Tradein_BKK.max_row+1):
             date = ID49Tradein_BKK.cell(row=i,column=1).value
             id = ID49Tradein_BKK.cell(row=i,column=2).value
             branch = ID49Tradein_BKK.cell(row=i,column=3).value

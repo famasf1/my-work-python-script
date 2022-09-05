@@ -86,7 +86,7 @@ def docref():
         pyautogui.leftClick()
 
     def docref747(): #49 Return DHL
-        for i in range(1,ID747_Data.max_row+1):
+        for i in range(2,ID747_Data.max_row+1):
             out_sect = ID747_Data.cell(row=i,column=15).value
             id = ID747_Data.cell(row=i,column=12).value
             branch = ID747_Data.cell(row=i,column=13).value
@@ -115,7 +115,7 @@ def docref():
         notifyme('docref33 finished!')
 
     def failed_toDeliver():
-        for row in range(1, delivery_Failed_Data.max_row+1):
+        for row in range(2, delivery_Failed_Data.max_row+1):
             reason = delivery_Failed_Data.cell(row=row, column=9).value
             phyid = delivery_Failed_Data.cell(row=row, column=17).value
             branch = delivery_Failed_Data.cell(row=row, column=18).value
@@ -142,7 +142,7 @@ def docref():
 
 
     def docref49returnbkk(): #49 Return BKK
-        for i in range(1,ID49BKK_Data.max_row+1):
+        for i in range(2,ID49BKK_Data.max_row+1):
             date = ID49BKK_Data.cell(row=i, column=1).value
             id = ID49BKK_Data.cell(row=i,column=2).value
             branch = ID49BKK_Data.cell(row=i,column=3).value
@@ -170,7 +170,7 @@ def docref():
         failed_toDeliver()
         
     def docref49return(): #49 Return DHL
-        for i in range(1,ID49_Data.max_row+1):
+        for i in range(2,ID49_Data.max_row+1):
             out_sect = ID49_Data.cell(row=i,column=15).value
             id = ID49_Data.cell(row=i,column=12).value
             branch = ID49_Data.cell(row=i,column=13).value
@@ -199,7 +199,7 @@ def docref():
         docref49returnbkk()
         
     def docref33bkk(): # 33 Service Headoffice BKK
-        for i in range(1,ID33BKK_Data.max_row+1):
+        for i in range(2,ID33BKK_Data.max_row+1):
             date = ID33BKK_Data.cell(row=i,column=1).value
             id = ID33BKK_Data.cell(row=i,column=2).value
             branch = ID33BKK_Data.cell(row=i,column=3).value
@@ -229,7 +229,7 @@ def docref():
     # THIS IS WHERE EVERYTHING STARTED!
     def docref33(): # 33 Service Headoffice DHL
         defaultref()
-        for i in range(1,ID33_Data.max_row+1):
+        for i in range(2,ID33_Data.max_row+1):
             out_sect = ID33_Data.cell(row=i,column=15).value
             id = ID33_Data.cell(row=i,column=12).value
             branch = ID33_Data.cell(row=i,column=13).value
