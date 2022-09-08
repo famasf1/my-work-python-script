@@ -1,14 +1,16 @@
+import sys
+
 from tkinter import filedialog, messagebox
 import pyautogui as pyg
 import openpyxl
 import pyperclip
-import tkinter as tk       
+import tkinter as tk
+from line_notify_me.line_notify_sourcecode import notifyme
 
 ## image
 
 isthisnull = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png")
 nothingleft = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\nothing_error.png")
-
 
 
 ### create label above entry
@@ -103,7 +105,7 @@ def Vat_start_here():
                 pyg.press('Down')
                 pyg.press('Down')
                 pyg.sleep(1)
-                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\nothing_error.png', confidence=.9): 
+                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\nothing_error.png', confidence=.9): 
                     pyg.press('Esc')
                     press_enter(1)
                     pyg.press('Down')
@@ -112,13 +114,13 @@ def Vat_start_here():
                 pyg.leftClick()
                 press_enter(1)
                 pyg.sleep(1)
-                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\ret_error.png', grayscale=True):
+                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error.png', grayscale=True):
                     print('error')
                     press_enter(1)
                     pyg.press('Up')
                     pyg.press('Down')
                     pyg.press('Down')
-                elif pyg.locateCenterOnScreen(r'D:\Workstuff\my-work-python-script\Return\ret_error2.png', grayscale=True):
+                elif pyg.locateCenterOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error2.png', grayscale=True):
                     pyg.press('Esc')
                     pyg.press('Esc')
                     pyg.press('Esc')
@@ -145,6 +147,7 @@ def Vat_start_here():
     pyg.press('Up')
     pyg.hotkey('ctrl','a')
     pyg.hotkey('ctrl','c')
+    notifyme('ตัดยอดสำเร็จ พร้อมใส่จำนวน')
     root.state('normal')
 
 
@@ -152,40 +155,49 @@ def Vat_start_here():
 def NOVAT_start_here():
     root.state('iconic')
     pyg.sleep(3)
+### Vat bot (มี Vat)
     def bot_Start():
         pyg.sleep(2)
-        for i in range(readData.getnumRow,readData.datasheet3.max_row+1): #skip row 1
-            product_Code = readData.datasheet3.cell(row=i,column=2).value
-            number = readData.datasheet3.cell(row=i,column=5).value
-            billtype = readData.datasheet3.cell(row=i,column=23).value
-            if billtype == 18:
+        for i in range(readData.getnumRow,readData.datasheet1.max_row+1): #skip row 1
+            product_Code = readData.datasheet1.cell(row=i,column=2).value
+            number = readData.datasheet1.cell(row=i,column=5).value
+            billtype = readData.datasheet1.cell(row=i,column=23).value
+            serial = readData.datasheet1.cell(row=i, column=4).value
+            if billtype == "18":
                 pyg.sleep(0.50)
                 pyg.write(str(product_Code))
                 pyg.press('Down')
                 pyg.press('Down')
-                pyg.sleep(0.8)
+                pyg.sleep(1)
+                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\nothing_error.png', confidence=.9): 
+                    pyg.press('Esc')
+                    press_enter(1)
+                    pyg.press('Down')
+                    continue
+                pyg.moveTo(360,455)
+                pyg.leftClick()
                 press_enter(1)
                 pyg.sleep(1)
-                pyg.locateOnScreen('ret_error.png', grayscale=True)
-                pyg.locateCenterOnScreen('ret_error2.png', grayscale=True)
-                if pyg.locateOnScreen('ret_error.png', grayscale=True):
+                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error.png', grayscale=True):
                     print('error')
                     press_enter(1)
                     pyg.press('Up')
                     pyg.press('Down')
                     pyg.press('Down')
-                elif pyg.locateCenterOnScreen('ret_error2.png', grayscale=True):
+                elif pyg.locateCenterOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error2.png', grayscale=True):
                     pyg.press('Esc')
                     pyg.press('Esc')
                     pyg.press('Esc')
                     pyg.press('Down')
-                    pyg.press('Down')    
+                    pyg.press('Down')
+        root.state('normal')   
     pyg.write('22608')
     press_enter(2)
     pyg.write(readData.supcode)
     press_enter(2)
     pyg.write(readData.com7rts)
-    press_enter(1)
+    press_enter(2)
+    pyg.press('Down')
     pyg.moveTo(166,139)
     pyg.leftClick()
     press_enter(1)
@@ -199,6 +211,7 @@ def NOVAT_start_here():
     pyg.press('Up')
     pyg.hotkey('ctrl','a')
     pyg.hotkey('ctrl','c')
+    notifyme('ตัดยอดสำเร็จ พร้อมใส่จำนวน')
     root.state('normal')
 
 
@@ -212,11 +225,13 @@ def number_Input():
     pyg.sleep(2)
     for i in range(readData.getnumRow, readData.datasheet2.max_row+1):
         numberitem = readData.datasheet2.cell(row=i, column=31).value #column 31
-        if numberitem == "0":
-            break
-        pyg.typewrite(str(numberitem))
-        press_enter(1)
-        pyg.sleep(0.56)
+        if numberitem:
+            pyg.typewrite(str(numberitem))
+            press_enter(1)
+            pyg.sleep(0.56)
+        else:
+            br
+    notifyme('ใส่จำนวนสำเร็จแล้ว')
     root.state('normal')
 
 # Stock out to 73
@@ -312,6 +327,7 @@ def stock_to73():
                         #pyg.press('Left')  
                 else:
                     continue
+    notifyme('ตัดยอด 73 เสร็จสิ้น')
     root.state('normal')
 
 def stock_to73_Noserial():

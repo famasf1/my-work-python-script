@@ -1,7 +1,4 @@
-
-
 import requests
-
 ### Notify me when the script is completed to LINE.
 def notifyme(confirmtext):
     """
@@ -9,6 +6,7 @@ def notifyme(confirmtext):
     parameter :
     confirmtext: str (required)
     """
+    
     mytoken = 'kOcQyjPGgIAgTQ4qWjTlEJZFUj7GegzGefdDEiSsYJr'
     url = 'https://notify-api.line.me/api/notify'
     data = {
