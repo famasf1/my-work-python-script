@@ -1,10 +1,15 @@
 from tkinter import filedialog, messagebox
-from venv import create
-from numpy import place
 import pyautogui as pyg
 import openpyxl
 import pyperclip
 import tkinter as tk       
+
+## image
+
+isthisnull = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png")
+nothingleft = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\nothing_error.png")
+
+
 
 ### create label above entry
 def createlabel(text1,placex,placey):
@@ -98,7 +103,7 @@ def Vat_start_here():
                 pyg.press('Down')
                 pyg.press('Down')
                 pyg.sleep(1)
-                if pyg.locateOnScreen('nothing_error.png', confidence=.9): 
+                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\nothing_error.png', confidence=.9): 
                     pyg.press('Esc')
                     press_enter(1)
                     pyg.press('Down')
@@ -107,13 +112,13 @@ def Vat_start_here():
                 pyg.leftClick()
                 press_enter(1)
                 pyg.sleep(1)
-                if pyg.locateOnScreen('ret_error.png', grayscale=True):
+                if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\ret_error.png', grayscale=True):
                     print('error')
                     press_enter(1)
                     pyg.press('Up')
                     pyg.press('Down')
                     pyg.press('Down')
-                elif pyg.locateCenterOnScreen('ret_error2.png', grayscale=True):
+                elif pyg.locateCenterOnScreen(r'D:\Workstuff\my-work-python-script\Return\ret_error2.png', grayscale=True):
                     pyg.press('Esc')
                     pyg.press('Esc')
                     pyg.press('Esc')
@@ -207,15 +212,19 @@ def number_Input():
     pyg.sleep(2)
     for i in range(readData.getnumRow, readData.datasheet2.max_row+1):
         numberitem = readData.datasheet2.cell(row=i, column=31).value #column 31
+        if numberitem == "0":
+            break
         pyg.typewrite(str(numberitem))
         press_enter(1)
         pyg.sleep(0.56)
-        if numberitem == None:
-            break
     root.state('normal')
 
 # Stock out to 73
 def stock_to73():
+    ### Function to press down until you can't
+    def press_down_again(times):
+        pyg.press('Down',presses=times)
+
     root.state('iconic')
     pyg.sleep(3)
     pyg.write('22608')
@@ -228,21 +237,81 @@ def stock_to73():
     pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.supcode} | {readData.docdatedata} ")
     pyg.moveTo(231,216)
     pyg.leftClick()
+    press_Again = 1
+    number_Item_sofar = 1
+
+    def itemalreadytakenException(presses):
+        press_enter(1)
+        pyg.press('Down')
+        press_down_again(presses)
+        press_enter(1)
+        pyg.sleep(1)
+
     for i in range(readData.getnumRow, readData.data66.max_row+1):
-        product_Code = readData.data66.cell(row=i,column=2).value
-        number_Item = readData.data66.cell(row=i, column=5).value
-        serial_Item = readData.data66.cell(row=i, column=4).value
-        null_list = ['null', 'NULL']
-        for id, val in enumerate(null_list):
-            if serial_Item != val:
+        product_Code = readData.data66.cell(row=i,column=1).value
+        product_Name = readData.data66.cell(row=i,column=2).value
+        column3toint = readData.data66.cell(row=i, column=3).value
+        number_Item = int(column3toint)
+        #serial_Item = readData.data66.cell(row=i, column=4).value
+        ### if productcode is found
+        if product_Code:
+            if number_Item == 1:
                 pyg.write(str(product_Code))
                 pyg.press('Right')
-                pyg.press('Right')
-                pyg.write(str(number_Item))
-                pyg.press('Left')
-                pyg.press('Left')
-                pyg.press('Left')            
                 press_enter(1)
+                pyg.sleep(0.5)
+                print(number_Item)
+                continue
+            else:
+                print(f'Start {product_Name} {number_Item_sofar}/{number_Item}' )
+                pyg.sleep(0.5)
+                while number_Item_sofar <= number_Item: ## while number of total item and number of item so far is not 0, press time start at 1
+                    try: #write product code, press right and then enter
+                        pyg.write(str(product_Code))
+                        pyg.press('Right')
+                        press_enter(1)
+                        pyg.sleep(1.2)
+                        if pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.9): #If image input value found and this is not null, add number of items by 1 then continues
+                            print('Image Found!')
+                            press_enter(1)
+                            pyg.sleep(1.2)
+                            if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\ret_error.png"): #mean item already taken
+                                print('There is nothing left!')
+                                itemalreadytakenException(press_Again)
+                                press_Again += 1
+                                number_Item_sofar += 1
+                                print(f"Select another list completed. Currently i have to press down {press_Again} times")
+                                print(f'Continues {number_Item_sofar}/{number_Item}' )
+                                if number_Item_sofar > number_Item: #if number of items so far is more than total number, reset.
+                                    print('Resetting back to 1')
+                                    number_Item_sofar = 1
+                                    press_Again = 1
+                                    break
+                            else:
+                                number_Item_sofar += 1
+                                print('Enter | Pass')
+                                print(f'Continues {number_Item_sofar}/{number_Item}' )
+                        else:
+                            number_Item_sofar += 1
+                            print(f'Continues {number_Item_sofar}/{number_Item}' )
+                            print('Operation Completed! Continues...')
+                            if number_Item_sofar > number_Item: #if number of items so far is more than total number, reset.
+                                print('Resetting back to 1')
+                                number_Item_sofar = 1
+                                press_Again = 1
+                                break
+                            else:
+                                continue
+                        
+        
+                    except Exception:
+                        pass
+                        #pyg.write(str(number_Item))
+                        #pyg.press('Left')
+                        #pyg.press('Left')
+                        #pyg.press('Left')  
+                else:
+                    continue
     root.state('normal')
 
 def stock_to73_Noserial():
