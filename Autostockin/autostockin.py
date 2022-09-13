@@ -1,6 +1,7 @@
 from netrc import NetrcParseError
 from tkinter import filedialog, messagebox
 from tkinter import *
+from tracemalloc import start
 import pyautogui as pyg
 import openpyxl
 import pyperclip
@@ -31,7 +32,7 @@ class Employeelist:
 
 def start_script():
     try:
-        global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id
+        global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id, checking
         global จิรายุทธ, วรัญญู, มรกต, วุฒิภัทร
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
@@ -65,6 +66,7 @@ def main(): #short for default behavior
 
 ## WTF?
 ## if i remove it, will it break?
+
     def firstStart(start):
         if start == 1:
             pyg.hotkey('alt','k')
@@ -72,6 +74,7 @@ def main(): #short for default behavior
         else:
             pass
     ### Next
+
     def nextStart(next):
         if next == 1:
             pass
@@ -79,67 +82,67 @@ def main(): #short for default behavior
             pyg.hotkey('alt','k')
             pyg.press('i')
 
-    for i in range(1, worksheet.max_row+1):
-        stockoutid = worksheet.cell(row=i, column=1).value
-        if stockoutid:
-            nextStart(i)
-            firstStart(i)
-            print('Start Stock In')
+    def start_in():
+        for i in range(1, worksheet.max_row+1):
+            stockoutid = worksheet.cell(row=i, column=1).value
+            if stockoutid:
+                nextStart(i)
+                firstStart(i)
+                print('Start Stock In')
 
-            #pick staff id
+                #pick staff id
+                r = random.choice(employeelist_index)
+                match r:
+                    case 0:
+                        pyg.typewrite(จิรายุทธ.staffid)
+                    case 1:
+                        pyg.typewrite(วรัญญู.staffid)
+                    case 2:
+                        pyg.typewrite(มรกต.staffid)
+                    case 3:
+                        pyg.typewrite(วุฒิภัทร.staffid)
+                pressenter(2)
+                pyg.typewrite(str(stockoutid)) #stockout
+                pressenter(2)
 
-            r = random.choice(employeelist_index)
-            match r:
-                case 0:
-                    pyg.typewrite(จิรายุทธ.staffid)
-                case 1:
-                    pyg.typewrite(วรัญญู.staffid)
-                case 2:
-                    pyg.typewrite(มรกต.staffid)
-                case 3:
-                    pyg.typewrite(วุฒิภัทร.staffid)
-                
+                #name
+                match r:
+                    case 0:
+                        pyperclip.copy(จิรายุทธ.name)
+                        pyg.hotkey('ctrl','v')
+                    case 1:
+                        pyperclip.copy(วรัญญู.name)
+                        pyg.hotkey('ctrl','v')
+                    case 2:
+                        pyperclip.copy(มรกต.name)
+                        pyg.hotkey('ctrl','v')
+                    case 3:
+                        pyperclip.copy(วุฒิภัทร.name)
+                        pyg.hotkey('ctrl','v')
+                ##ready
+                ##now check if value exist
+                pyg.hotkey('alt','f')
+                pyg.press('o')
+                pyg.sleep(5)
+                try:
+                    if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\ret_error.png", grayscale=True):
+                        pressenter(1)
+                        print('Found Error')
+                        pyg.press('esc')
+                        continue
 
-            pressenter(2)
-            pyg.typewrite(str(stockoutid)) #stockout
-            pressenter(2)
+                    else:
+                        print('Error is not Found')
+                        pressenter(1)
+                        pyg.press('left')
+                        pressenter(1)
+                        pressenter(4)
+                        continue
+                except Exception as e:
+                    messagebox.showerror('Python Error', f'{e}')
+            else: break
 
-            #name
-            match r:
-                case 0:
-                    pyperclip.copy(จิรายุทธ.name)
-                    pyg.hotkey('ctrl','v')
-                case 1:
-                    pyperclip.copy(วรัญญู.name)
-                    pyg.hotkey('ctrl','v')
-                case 2:
-                    pyperclip.copy(มรกต.name)
-                    pyg.hotkey('ctrl','v')
-                case 3:
-                    pyperclip.copy(วุฒิภัทร.name)
-                    pyg.hotkey('ctrl','v')
-            pyg.sleep(1)
-            ##ready
-
-            pyg.hotkey('alt','f')
-            pyg.press('o')
-            try:
-                if readpicerrorfound:
-                    pressenter(1)
-                    print('Found Error')
-                    continue
-                else:
-                    print('Error is not Found')
-                    pressenter(1)
-                    pyg.press('left')
-                    pressenter(1)
-                    pyg.sleep(3)
-                    pressenter(4)
-                    continue
-            except Exception as e:
-                messagebox.showerror('Python Error', f'{e}')
-        else: break
-
+    start_in()
 ####################################################################
 ######### Extra Function that doesn't involve with any of the above
 

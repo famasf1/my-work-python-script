@@ -476,3 +476,395 @@ JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILUR
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
 1661701106209	Marionette	INFO	Stopped listening on port 51435
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702666626	geckodriver	INFO	Listening on 127.0.0.1:63835
+1662702669673	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63836" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileEMrxjy"
+1662702670197	Marionette	INFO	Marionette enabled
+1662702670202	Marionette	INFO	Listening on port 63849
+WebDriver BiDi listening on ws://localhost:63836
+Read port: 63849
+1662702670353	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileEMrxjy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63836/devtools/browser/c3d7260f-ffff-4e0a-b0fd-1f7fc622ccf9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662702690768	Marionette	INFO	Stopped listening on port 63849
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702707369	geckodriver	INFO	Listening on 127.0.0.1:63887
+1662702710400	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63888" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilekWkxpB"
+1662702710785	Marionette	INFO	Marionette enabled
+1662702710789	Marionette	INFO	Listening on port 63898
+WebDriver BiDi listening on ws://localhost:63888
+Read port: 63898
+1662702710919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilekWkxpB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63888/devtools/browser/05c268a5-5855-44a7-9d90-f281f78620a6
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662702718852	Marionette	INFO	Stopped listening on port 63898
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702764864	geckodriver	INFO	Listening on 127.0.0.1:63936
+1662702767909	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63937" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilenRM2Qo"
+1662702768210	Marionette	INFO	Marionette enabled
+1662702768213	Marionette	INFO	Listening on port 63946
+WebDriver BiDi listening on ws://localhost:63937
+Read port: 63946
+1662702768316	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilenRM2Qo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63937/devtools/browser/2814341e-1fd8-4da2-b450-b6beeeb261f7
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662702795354	Marionette	INFO	Stopped listening on port 63946
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702813781	geckodriver	INFO	Listening on 127.0.0.1:63984
+1662702816833	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63985" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileQdiXZA"
+1662702817165	Marionette	INFO	Marionette enabled
+1662702817168	Marionette	INFO	Listening on port 63997
+WebDriver BiDi listening on ws://localhost:63985
+Read port: 63997
+1662702817395	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileQdiXZA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63985/devtools/browser/15f090b0-05c6-43f9-8370-3b8ad81444e0
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662702822885	Marionette	INFO	Stopped listening on port 63997
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702909024	geckodriver	INFO	Listening on 127.0.0.1:64054
+1662702912099	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64055" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilenFmEaa"
+1662702912379	Marionette	INFO	Marionette enabled
+1662702912383	Marionette	INFO	Listening on port 64064
+WebDriver BiDi listening on ws://localhost:64055
+Read port: 64064
+1662702912483	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilenFmEaa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64055/devtools/browser/6933d6a4-e0b9-480d-be87-a2e86ff4b577
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662702930073	Marionette	INFO	Stopped listening on port 64064
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702959645	geckodriver	INFO	Listening on 127.0.0.1:64115
+1662702962678	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64116" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilelYXtas"
+1662702962965	Marionette	INFO	Marionette enabled
+1662702962970	Marionette	INFO	Listening on port 64128
+WebDriver BiDi listening on ws://localhost:64116
+Read port: 64128
+1662702963075	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilelYXtas\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64116/devtools/browser/f0c06d63-70df-46b6-9dbb-761cdca2f0a5
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662702970753	Marionette	INFO	Stopped listening on port 64128
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662702990919	geckodriver	INFO	Listening on 127.0.0.1:64161
+1662702993986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64162" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileC6i6L9"
+1662702994259	Marionette	INFO	Marionette enabled
+1662702994265	Marionette	INFO	Listening on port 64174
+WebDriver BiDi listening on ws://localhost:64162
+Read port: 64174
+1662702994391	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileC6i6L9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64162/devtools/browser/690b504f-9cc0-4508-816f-984df86acc7a
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703010404	Marionette	INFO	Stopped listening on port 64174
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703023926	geckodriver	INFO	Listening on 127.0.0.1:64210
+1662703026974	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64211" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileNNwlkT"
+1662703027245	Marionette	INFO	Marionette enabled
+1662703027249	Marionette	INFO	Listening on port 64222
+WebDriver BiDi listening on ws://localhost:64211
+Read port: 64222
+1662703027347	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileNNwlkT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64211/devtools/browser/770ec446-c828-4dee-8150-e6aaba71106d
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662703036504	Marionette	INFO	Stopped listening on port 64222
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703045498	geckodriver	INFO	Listening on 127.0.0.1:64252
+1662703048560	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64253" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileuDaV5n"
+1662703048839	Marionette	INFO	Marionette enabled
+1662703048843	Marionette	INFO	Listening on port 64266
+WebDriver BiDi listening on ws://localhost:64253
+Read port: 64266
+1662703048944	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileuDaV5n\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64253/devtools/browser/f6b1a18a-219f-4e8c-9003-c092ea551179
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662703070747	Marionette	INFO	Stopped listening on port 64266
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703099035	geckodriver	INFO	Listening on 127.0.0.1:64303
+1662703102097	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64304" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilee8mRCk"
+1662703102371	Marionette	INFO	Marionette enabled
+1662703102376	Marionette	INFO	Listening on port 64313
+WebDriver BiDi listening on ws://localhost:64304
+Read port: 64313
+1662703102490	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilee8mRCk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64304/devtools/browser/8c236eb2-b4f8-478f-af8f-e81aae8ca1b4
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703110787	Marionette	INFO	Stopped listening on port 64313
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703137838	geckodriver	INFO	Listening on 127.0.0.1:64348
+1662703140871	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64349" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileISC99e"
+1662703141183	Marionette	INFO	Marionette enabled
+1662703141187	Marionette	INFO	Listening on port 64360
+WebDriver BiDi listening on ws://localhost:64349
+Read port: 64360
+1662703141308	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileISC99e\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64349/devtools/browser/e5b5123f-873b-4bba-b73b-67daa2a1aa01
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703148445	Marionette	INFO	Stopped listening on port 64360
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703162372	geckodriver	INFO	Listening on 127.0.0.1:64396
+1662703165416	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64397" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileMKqd8h"
+1662703165684	Marionette	INFO	Marionette enabled
+1662703165688	Marionette	INFO	Listening on port 64408
+WebDriver BiDi listening on ws://localhost:64397
+Read port: 64408
+1662703165870	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileMKqd8h\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64397/devtools/browser/76055b55-8d2f-4c3f-8eb3-9a34ee526815
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703174657	Marionette	INFO	Stopped listening on port 64408
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703184550	geckodriver	INFO	Listening on 127.0.0.1:64438
+1662703187602	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64439" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilep0dj1j"
+1662703187877	Marionette	INFO	Marionette enabled
+1662703187883	Marionette	INFO	Listening on port 64450
+WebDriver BiDi listening on ws://localhost:64439
+Read port: 64450
+1662703187986	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilep0dj1j\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64439/devtools/browser/f82c669f-baa4-4f23-9fc7-e7312e497283
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703192455	Marionette	INFO	Stopped listening on port 64450
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703200366	geckodriver	INFO	Listening on 127.0.0.1:64481
+1662703203421	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64482" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileao480z"
+1662703203697	Marionette	INFO	Marionette enabled
+1662703203700	Marionette	INFO	Listening on port 64492
+WebDriver BiDi listening on ws://localhost:64482
+Read port: 64492
+1662703203801	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileao480z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64482/devtools/browser/5601221a-cb12-4ee5-94a3-067ba1397dc9
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703343450	Marionette	INFO	Stopped listening on port 64492
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "64528" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileW7H8s0"
+1662703251893	Marionette	INFO	Marionette enabled
+1662703251898	Marionette	INFO	Listening on port 64539
+WebDriver BiDi listening on ws://localhost:64528
+Read port: 64539
+1662703251995	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileW7H8s0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64528/devtools/browser/1360228e-4c54-4a30-9d54-69cf66b99a3e
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662703257777	Marionette	INFO	Stopped listening on port 64539
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703311622	geckodriver	INFO	Listening on 127.0.0.1:64595
+1662703314685	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64596" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileM2zBZB"
+1662703315033	Marionette	INFO	Marionette enabled
+1662703315036	Marionette	INFO	Listening on port 64606
+WebDriver BiDi listening on ws://localhost:64596
+Read port: 64606
+1662703315264	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileM2zBZB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64596/devtools/browser/ed0cd148-862e-467b-98cc-c449b68f71be
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703341855	Marionette	INFO	Stopped listening on port 64606
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703346786	geckodriver	INFO	Listening on 127.0.0.1:64645
+1662703349842	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64646" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileX8a5Lp"
+1662703350139	Marionette	INFO	Marionette enabled
+1662703350142	Marionette	INFO	Listening on port 64657
+WebDriver BiDi listening on ws://localhost:64646
+Read port: 64657
+1662703350240	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileX8a5Lp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64646/devtools/browser/3c1f8d67-b35b-4c8d-97d9-4175b4f090a2
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703357040	Marionette	INFO	Stopped listening on port 64657
+[Parent 4864, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703376743	geckodriver	INFO	Listening on 127.0.0.1:64690
+1662703379789	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64691" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilecg6LpG"
+1662703380063	Marionette	INFO	Marionette enabled
+1662703380067	Marionette	INFO	Listening on port 64703
+WebDriver BiDi listening on ws://localhost:64691
+Read port: 64703
+1662703380166	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilecg6LpG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64691/devtools/browser/736904b1-db97-4e06-a47b-2054876d1c05
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703384743	Marionette	INFO	Stopped listening on port 64703
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662703415398	geckodriver	INFO	Listening on 127.0.0.1:64740
+1662703418451	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64741" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile1i1DxW"
+1662703418725	Marionette	INFO	Marionette enabled
+1662703418729	Marionette	INFO	Listening on port 64751
+WebDriver BiDi listening on ws://localhost:64741
+Read port: 64751
+1662703418831	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile1i1DxW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64741/devtools/browser/4233f652-3850-45a0-861f-a7c9cdc84479
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662703424289	Marionette	INFO	Stopped listening on port 64751
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662707570016	geckodriver	INFO	Listening on 127.0.0.1:65293
+1662707573065	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65294" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilecNd3rj"
+1662707573524	Marionette	INFO	Marionette enabled
+1662707573528	Marionette	INFO	Listening on port 65303
+WebDriver BiDi listening on ws://localhost:65294
+Read port: 65303
+1662707573781	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilecNd3rj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65294/devtools/browser/e8f2d494-b77e-4abf-8da5-6ceeff118e7f
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662707583939	Marionette	INFO	Stopped listening on port 65303
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662707606005	geckodriver	INFO	Listening on 127.0.0.1:65339
+1662707609067	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65340" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilecHf9aG"
+1662707609446	Marionette	INFO	Marionette enabled
+1662707609452	Marionette	INFO	Listening on port 65349
+WebDriver BiDi listening on ws://localhost:65340
+Read port: 65349
+1662707609578	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilecHf9aG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65340/devtools/browser/f44a254c-c7bc-4e8a-bbbb-d194458b4191
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662707615618	Marionette	INFO	Stopped listening on port 65349
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662707649999	geckodriver	INFO	Listening on 127.0.0.1:65384
+1662707653032	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65385" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilernfwtE"
+1662707653327	Marionette	INFO	Marionette enabled
+1662707653332	Marionette	INFO	Listening on port 65395
+WebDriver BiDi listening on ws://localhost:65385
+Read port: 65395
+1662707653441	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilernfwtE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65385/devtools/browser/c311ba87-1538-455a-9267-20fd1b6c3d9b
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 1443 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 4733 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 120 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 4912 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 4415 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 2329 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 3421 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 7283 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 866 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/JRDtgcUl_7OUjJ4QO8bVbwNuRTRqDUxuSBYCwiPHS6U.js line 2 > eval line 5173 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1662707983077	Marionette	INFO	Stopped listening on port 65395
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 4164, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1662707991099	geckodriver	INFO	Listening on 127.0.0.1:64168
+1662707994171	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64169" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile3U7KrH"
+1662707994492	Marionette	INFO	Marionette enabled
+1662707994495	Marionette	INFO	Listening on port 64178
+WebDriver BiDi listening on ws://localhost:64169
+Read port: 64178
+1662707994593	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile3U7KrH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64169/devtools/browser/6563a7f6-fda8-4e29-9cc3-4af667391375
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662708003464	Marionette	INFO	Stopped listening on port 64178
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662708032147	geckodriver	INFO	Listening on 127.0.0.1:64215
+1662708035197	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64216" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileVcFGgs"
+1662708035491	Marionette	INFO	Marionette enabled
+1662708035494	Marionette	INFO	Listening on port 64227
+WebDriver BiDi listening on ws://localhost:64216
+Read port: 64227
+1662708035592	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileVcFGgs\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64216/devtools/browser/1ad51729-d326-4bc6-ab78-7ce4ae70b978
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662708043328	Marionette	INFO	Stopped listening on port 64227
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662708061650	geckodriver	INFO	Listening on 127.0.0.1:64261
+1662708064674	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64262" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileaPGCax"
+1662708064997	Marionette	INFO	Marionette enabled
+1662708065001	Marionette	INFO	Listening on port 64272
+WebDriver BiDi listening on ws://localhost:64262
+Read port: 64272
+1662708065230	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileaPGCax\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64262/devtools/browser/eb491184-7835-4d91-800a-6181343cb9e3
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662708069791	Marionette	INFO	Stopped listening on port 64272
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662708075300	geckodriver	INFO	Listening on 127.0.0.1:64303
+1662708078347	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64304" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileht3lj6"
+1662708078618	Marionette	INFO	Marionette enabled
+1662708078622	Marionette	INFO	Listening on port 64314
+WebDriver BiDi listening on ws://localhost:64304
+Read port: 64314
+1662708078719	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileht3lj6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64304/devtools/browser/e13d0618-a805-4f9f-a15f-236fafc81a26
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1662708090000	Marionette	INFO	Stopped listening on port 64314
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662708164412	geckodriver	INFO	Listening on 127.0.0.1:64365
+1662708167460	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64366" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile5p2ioo"
+1662708167746	Marionette	INFO	Marionette enabled
+1662708167750	Marionette	INFO	Listening on port 64375
+WebDriver BiDi listening on ws://localhost:64366
+Read port: 64375
+1662708167846	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile5p2ioo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64366/devtools/browser/30e349c1-3779-4514-8a5c-31c5e60ef362
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662708177835	Marionette	INFO	Stopped listening on port 64375
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662708846220	geckodriver	INFO	Listening on 127.0.0.1:64518
+1662708849275	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64519" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileNAdIJU"
+1662708849693	Marionette	INFO	Marionette enabled
+1662708849697	Marionette	INFO	Listening on port 64528
+WebDriver BiDi listening on ws://localhost:64519
+Read port: 64528
+1662708849813	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileNAdIJU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64519/devtools/browser/8efabbaa-d4cb-4e1e-8ee2-2faadf3d0209
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662708868811	Marionette	INFO	Stopped listening on port 64528
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1662708893676	geckodriver	INFO	Listening on 127.0.0.1:64562
+1662708896724	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64563" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileiZkfMw"
+1662708897025	Marionette	INFO	Marionette enabled
+1662708897028	Marionette	INFO	Listening on port 64573
+WebDriver BiDi listening on ws://localhost:64563
+Read port: 64573
+1662708897135	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileiZkfMw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64563/devtools/browser/e49531e6-4e0f-4b09-9cd6-d96662a85154
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1662708905651	Marionette	INFO	Stopped listening on port 64573
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
