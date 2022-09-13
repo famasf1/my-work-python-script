@@ -136,6 +136,7 @@ def main(): #short for default behavior
                         pressenter(1)
                         pyg.press('left')
                         pressenter(1)
+                        
                         pressenter(4)
                         continue
                 except Exception as e:
