@@ -44,22 +44,15 @@ def tracker():
     global driver
     driver = launch_browser().launch_browser_firefox() ##change firefox to chrome to use chrome instead
     driver.get("https://ecommerceportal.dhl.com/track/")
-    with fragile(open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+')) as text:
-        ## First 50 numbers will be in different page.
-        for index, value in enumerate(text):
-            if index+1 % 49 != 0:
-                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
-                print(index)
-
-        driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
-        WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:searchSkuBtn")))
-        refid = driver.find_element(By.XPATH,"label[@class='ui-outputlabel ui-widget TrackStatus']").text
+    retrievetrackingcode()
+    #WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:searchSkuBtn")))
+    #refid = driver.find_element(By.XPATH,"label[@class='ui-outputlabel ui-widget TrackStatus']").text
             #if index > 0:
             #    WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:searchSkuBtn")))
             #    driver.find_element(By.ID,"trackItNowForm:trackItNowSearchBox").send_keys(value)
             #    driver.find_element(By.ID,"trackItNowForm:searchSkuBtn").click()
             #    break
-    print(refid)
+    #print(refid)
     status = driver.find_element(By.ID,'trackItNowForm:j_idt523:0:Status').text
     dateandtime = driver.find_element(By.ID,'trackItNowForm:j_idt523:0:dateandtime').text
     ##trackItNowForm:trackSearchBox_content == sidebar search
@@ -74,16 +67,27 @@ def retrievetrackingcode():
 
     with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text:
         for index, value in enumerate(text):
-            for v in value:
-                print(f'{index}. : {value}')
-            if index % 50 == 0 and index != 0:
-                print('WE REACH THE END')
-                break
+            while index % len(value) != 0:
+                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
+                if index % 49 == 0 and index != 0:
+                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
 
+def test_room():
 
+    ##################################### ##################################### #####################################
+    '''
+    This function is purely for testing. Delete after production-ready
+    '''
+    ##################################### ##################################### #####################################
+    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text:
+        for index, value in enumerate(text):
+            print(value)
 
 
 if __name__ in "__main__":
     ##tracker is the main function
-    tracker()
+
+    #tracker()
     #retrievetrackingcode()
+
+    test_room()
