@@ -133,17 +133,17 @@ def main(): #short for default behavior
                         pass
                     else:
                         pressenter(1)
+                        pyg.press('left')
+                        pressenter(1)
                         foundstockbill = None
                         while (foundstockbill == None):
                             try:
-                                foundstockbill = pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\foundstockbill.png", grayscale=True, confidence=.7)
+                                foundstockbill = pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\foundstockbill.png", grayscale=True, confidence=.77)
                             except Exception as e:
                                 print(e)
                                 continue
                         if foundstockbill:
                             print('Error is not Found')
-                            pyg.press('left')
-                            pressenter(1)
                             pressenter(4)
                             continue
                 except Exception as e:
