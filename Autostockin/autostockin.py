@@ -136,7 +136,7 @@ def main(): #short for default behavior
                         foundstockbill = None
                         while (foundstockbill == None):
                             try:
-                                foundstockbill = pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\foundstockbill.png", grayscale=True, confidence=.9)
+                                foundstockbill = pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\foundstockbill.png", grayscale=True, confidence=.7)
                             except Exception as e:
                                 print(e)
                                 continue
