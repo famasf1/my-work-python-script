@@ -922,3 +922,272 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://localhost:53181/devtools/browser/0834d958-d08d-44a2-941d-ddf4512b5f2c
 JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1663156313895	Marionette	INFO	Stopped listening on port 53190
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663240530382	geckodriver	INFO	Listening on 127.0.0.1:56816
+1663240533423	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56817" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilex0FZG8"
+1663240533776	Marionette	INFO	Marionette enabled
+1663240533780	Marionette	INFO	Listening on port 56828
+WebDriver BiDi listening on ws://localhost:56817
+Read port: 56828
+1663240534005	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilex0FZG8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56817/devtools/browser/db6a1ff6-4526-460f-adab-a0e554d800d6
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663240581522	geckodriver	INFO	Listening on 127.0.0.1:56856
+1663240584556	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56857" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileOfoNsS"
+1663240584891	Marionette	INFO	Marionette enabled
+1663240584895	Marionette	INFO	Listening on port 56868
+WebDriver BiDi listening on ws://localhost:56857
+Read port: 56868
+1663240585158	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileOfoNsS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56857/devtools/browser/0518ae80-2fb6-4447-9673-fcc93673b741
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663241547946	geckodriver	INFO	Listening on 127.0.0.1:57160
+1663241551013	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57161" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilelcbPZG"
+1663241551359	Marionette	INFO	Marionette enabled
+1663241551363	Marionette	INFO	Listening on port 57171
+WebDriver BiDi listening on ws://localhost:57161
+Read port: 57171
+1663241551576	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilelcbPZG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57161/devtools/browser/8386bac6-876b-42f5-970e-dcec7cf51915
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: "Error while calling actor 'pagestyle's method 'getApplied'" "node is null"
+console.error: (new TypeError("node is null", "resource://devtools/server/actors/page-style.js", 569))
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.error: (new Error("Protocol error (TypeError): node is null from: server0.conn0.windowGlobal4294967298/pagestyle22 (resource://devtools/server/actors/page-style.js:569:5)", "resource://devtools/shared/protocol/Front.js", 376))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 7287 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=1A75A4A906A869433AF5B689076F6892, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=1A75A4A906A869433AF5B689076F6892, line 5: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 6427 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 7065 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 4828 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 3371 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 2515 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 7803 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1663241910840	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57534" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilee2Hl98"
+1663241911161	Marionette	INFO	Marionette enabled
+1663241911165	Marionette	INFO	Listening on port 57545
+WebDriver BiDi listening on ws://localhost:57534
+Read port: 57545
+1663241911262	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilee2Hl98\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57534/devtools/browser/28573923-9b1b-47a5-a0eb-139269ce28af
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, 1663241974977	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57581" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileZ1Ge2w"
+1663241975257	Marionette	INFO	Marionette enabled
+1663241975261	Marionette	INFO	Listening on port 57590
+WebDriver BiDi listening on ws://localhost:57581
+Read port: 57590
+1663241975368	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileZ1Ge2w\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57581/devtools/browser/1c04fc4f-06ea-42b6-97b5-d07e996f793a
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=2D7186C92FAF60783C9E94E92E0461FA, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=2D7186C92FAF60783C9E94E92E0461FA, line 5: NS_ERROR_FAILURE: 
+console.error: "Unable to find target with innerWindowId:4294967298"
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3439: TypeError: data.frameData.id is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663242113666	Marionette	INFO	Stopped listening on port 57590
+1663242117442	geckodriver	INFO	Listening on 127.0.0.1:57695
+1663242120481	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57696" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile3i6m17"
+1663242120754	Marionette	INFO	Marionette enabled
+1663242120757	Marionette	INFO	Listening on port 57707
+WebDriver BiDi listening on ws://localhost:57696
+Read port: 57707
+1663242120932	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile3i6m17\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57696/devtools/browser/bc92a425-34bb-4d7a-9f21-580c7c8a4256
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=3066407D852E6FE4347F525D84E96E95, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=3066407D852E6FE4347F525D84E96E95, line 5: NS_ERROR_FAILURE: 
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 4725 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 5027 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 7612 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 1279 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 2740 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 6107 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 220 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 2989 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 5219 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 1540 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://addons.mozilla.org."
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 4994 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 5176 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 239 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 7523 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 7032 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript error: , line 0: uncaught exception: 7
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 2480 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 6163 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://addons.mozilla.org."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://addons.mozilla.org."
+console.log: "Already loaded reducer: extensionsSidebar"
+console.log: "Already loaded reducer: objectInspector"
+console.error: (new Error("Connection closed, pending request to server0.conn0.cookies45, type getStoreObjects failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:293:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:49:19\nfetchStorageObjects@resource://devtools/client/storage/ui.js:935:45\nhandleChangedItems@resource://devtools/client/storage/ui.js:874:18\n_onStoreUpdate@resource://devtools/client/storage/ui.js:676:18\n_emit@resource://devtools/shared/event-emitter.js:242:32\nemit@resource://devtools/shared/event-emitter.js:186:18\nemit@resource://devtools/shared/event-emitter.js:330:18\nonPacket@resource://devtools/shared/protocol/Front.js:342:13\nonPacket@resource://devtools/client/devtools-client.js:482:13\nsend/<@resource://devtools/shared/transport/local-transport.js:68:25\nexports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22\nexports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22\n", "resource://devtools/shared/protocol/Front.js", 107))
+console.error: "Tried to call unwatchFronts for the 'accessibility' type on an already destroyed front 'windowGlobalTarget'."
+console.error: "Unable to find target with innerWindowId:4294967298"
+console.warn: ({})
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3439: TypeError: data.frameData.id is null
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663242534246	Marionette	INFO	Stopped listening on port 57707
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663242537788	geckodriver	INFO	Listening on 127.0.0.1:49263
+1663242540867	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49264" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileTVX9Ej"
+1663242541181	Marionette	INFO	Marionette enabled
+1663242541185	Marionette	INFO	Listening on port 49273
+WebDriver BiDi listening on ws://localhost:49264
+Read port: 49273
+1663242541279	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileTVX9Ej\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49264/devtools/browser/0412a127-eec5-46bf-8e79-91ad2b262252
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource:///modules/BrowserUsageTelemetry.jsm, line 832: TypeError: node.getAttribute is not a function
+JavaScript error: resource:///modules/BrowserUsageTelemetry.jsm, line 832: TypeError: node.getAttribute is not a function
+JavaScript error: resource:///modules/BrowserUsageTelemetry.jsm, line 832: TypeError: node.getAttribute is not a function
+JavaScript error: resource:///modules/BrowserUsageTelemetry.jsm, line 832: TypeError: node.getAttribute is not a function
+JavaScript error: resource:///modules/BrowserUsageTelemetry.jsm, line 832: TypeError: node.getAttribute is not a function
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663242769100	Marionette	INFO	Stopped listening on port 49273
+emp\\rust_mozprofilebIeHbD"
+1663242663995	Marionette	INFO	Marionette enabled
+1663242663999	Marionette	INFO	Listening on port 49324
+WebDriver BiDi listening on ws://localhost:49314
+Read port: 49324
+1663242664102	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilebIeHbD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49314/devtools/browser/b67b02ac-6021-47ba-a822-10a067fbffd8
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663242767880	Marionette	INFO	Stopped listening on port 49324
+1663242768211	geckodriver	INFO	Listening on 127.0.0.1:49371
+1663242771248	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49372" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiledUSPVV"
+1663242771570	Marionette	INFO	Marionette enabled
+1663242771575	Marionette	INFO	Listening on port 49383
+WebDriver BiDi listening on ws://localhost:49372
+Read port: 49383
+1663242771675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiledUSPVV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49372/devtools/browser/65489abb-845d-4ba5-a070-74785b1ec46f
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=22B0AE6DD0E066372EC9BC4DD14B67A9, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=22B0AE6DD0E066372EC9BC4DD14B67A9, line 5: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 5286 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663242991465	Marionette	INFO	Stopped listening on port 49383
+1663242995181	geckodriver	INFO	Listening on 127.0.0.1:49733
+1663242998246	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49734" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileKndvcy"
+1663242998505	Marionette	INFO	Marionette enabled
+1663242998509	Marionette	INFO	Listening on port 49745
+WebDriver BiDi listening on ws://localhost:49734
+Read port: 49745
+1663242998684	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileKndvcy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49734/devtools/browser/c7f29b99-e6aa-4687-a4f6-72e66b3cf85f
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663243161368	Marionette	INFO	Stopped listening on port 49745
+1663243164194	geckodriver	INFO	Listening on 127.0.0.1:49793
+1663243167273	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49794" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilediEYr2"
+1663243167544	Marionette	INFO	Marionette enabled
+1663243167548	Marionette	INFO	Listening on port 49806
+WebDriver BiDi listening on ws://localhost:49794
+Read port: 49806
+1663243167722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilediEYr2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49794/devtools/browser/9c03c28b-ad5a-4dd1-a022-7393a6da724e
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663243422170	Marionette	INFO	Stopped listening on port 49806
+emp\\rust_mozprofile748go4"
+1663243300471	Marionette	INFO	Marionette enabled
+1663243300475	Marionette	INFO	Listening on port 49875
+WebDriver BiDi listening on ws://localhost:49866
+Read port: 49875
+1663243300661	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofile748go4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49866/devtools/browser/7ff4243a-e8e2-44a0-9b1a-a66dcc67617e
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 576: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663243370625	Marionette	INFO	Stopped listening on port 49875
+1663243428745	geckodriver	INFO	Listening on 127.0.0.1:49914
+1663243431795	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49915" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileflgYYp"
+1663243432107	Marionette	INFO	Marionette enabled
+1663243432111	Marionette	INFO	Listening on port 49926
+WebDriver BiDi listening on ws://localhost:49915
+Read port: 49926
+1663243432204	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileflgYYp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49915/devtools/browser/6bf067ad-9a11-4993-a00c-926b12791256
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabWRx1F_1C_sXVOjrUI6-UzV2sE.js line 2 > eval line 4074 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=225E00DA933A6695024B12FA92FD67C7, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=225E00DA933A6695024B12FA92FD67C7, line 5: NS_ERROR_FAILURE: 
+1663244540409	Marionette	INFO	Stopped listening on port 49926

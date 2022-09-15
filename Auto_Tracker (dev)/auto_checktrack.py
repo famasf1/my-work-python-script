@@ -65,12 +65,14 @@ def retrievetrackingcode():
     '''
     ##################################### ##################################### #####################################
 
-    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text:
-        for index, value in enumerate(text):
-            while index % len(value) != 0:
-                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
-                if index % 49 == 0 and index != 0:
-                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+        for index, value in enumerate(text): #iterate through all of them first
+            driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
+            if index % 49 == 0 and index != 0:
+                driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+                content = driver.find_element(By.XPATH,"//*[@id='trackItNowForm:j_idt529:0:j_idt535']").text
+                for c in content:
+                    print(c)
 
 def test_room():
 
@@ -81,13 +83,16 @@ def test_room():
     ##################################### ##################################### #####################################
     with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text:
         for index, value in enumerate(text):
+            print(index)
             print(value)
+            if index % 49 == 0 and index != 0:
+                print('Break')
 
 
 if __name__ in "__main__":
     ##tracker is the main function
 
-    #tracker()
+    tracker()
     #retrievetrackingcode()
 
-    test_room()
+    #test_room()
