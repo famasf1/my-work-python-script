@@ -11,6 +11,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from subprocess import CREATE_NO_WINDOW
 from selenium.webdriver.chrome.options import Options
+import pandastable
+import pandas as pd
+import auto_checktrack
+import openpyxl
 
 ##Tried to practice how to use class in Python by create a nested function lmao
 class launch_browser():
@@ -34,45 +38,62 @@ class launch_browser():
         driver.maximize_window()
         return driver
 
+def gather_Data():
+    ##################################### ##################################### #####################################
+    '''
+    This function will gather data from the clipboard, Flitered everything out then pass along all the values to calculate in 'tracker' function
+    '''
+    ##################################### ##################################### #####################################    
+
+    global result
+
+    df_data = pd.DataFrame(pd.read_clipboard(sep='\t'))
+
+    header = list(df_data.columns)
+    donotdrop = ['Doc Date','Branch (Name)','Branch To (Name)','Booking ID']
+    new_data = df_data[donotdrop]
+    new_data['Booking ID'] = new_data['Booking ID'].str.replace('Booking-DHL ID : ','')
+    new = new_data.dropna()['Booking ID']   #.to_csv('retrieve_tracking.txt', header=None, index=None)
+    new = pd.DataFrame(new)
+    new['Booking ID'] = new.apply(lambda x: x['Booking ID'].split(' , '), axis=1)
+    result = new.explode('Booking ID').to_clipboard(index=False)
+    tracker()
+
 
 def tracker():
     ##################################### ##################################### #####################################
     '''
-    Launch Browser, find element in the web and search it.
+    Launch Browser, find element in the web and search it. Then call 'retrievetrackingcode' to fetch all the data into pandastable
     '''
     ##################################### ##################################### #####################################
     global driver
     driver = launch_browser().launch_browser_firefox() ##change firefox to chrome to use chrome instead
     driver.get("https://ecommerceportal.dhl.com/track/")
+
+    def retrievetrackingcode():
+
+        ##################################### ##################################### #####################################
+        '''
+        This function will fetch all value in txt files, then loop it before sending the result into tracker()
+        '''
+        ##################################### ##################################### #####################################
+
+        with open(r'C:\ITEC_Support\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+            for index, value in enumerate(text): #iterate through all of them first
+                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
+                if index % 49 == 0 and index != 0:
+                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+                    WebDriverWait(driver,6).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+                    # ^ = start-with
+                    # * = contains
+                    #Is this regex?
+                    for i in range(0,50):
+                        tracknumber = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingNumber']").text
+                        status = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingStatus']").text
+                        timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackTimeAndDate']").text
+                        continue
+    
     retrievetrackingcode()
-    #WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:searchSkuBtn")))
-    #refid = driver.find_element(By.XPATH,"label[@class='ui-outputlabel ui-widget TrackStatus']").text
-            #if index > 0:
-            #    WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:searchSkuBtn")))
-            #    driver.find_element(By.ID,"trackItNowForm:trackItNowSearchBox").send_keys(value)
-            #    driver.find_element(By.ID,"trackItNowForm:searchSkuBtn").click()
-            #    break
-    #print(refid)
-    status = driver.find_element(By.ID,'trackItNowForm:j_idt523:0:Status').text
-    dateandtime = driver.find_element(By.ID,'trackItNowForm:j_idt523:0:dateandtime').text
-    ##trackItNowForm:trackSearchBox_content == sidebar search
-
-def retrievetrackingcode():
-
-    ##################################### ##################################### #####################################
-    '''
-    This function will fetch all value in txt files, then loop it before sending the result into tracker()
-    '''
-    ##################################### ##################################### #####################################
-
-    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
-        for index, value in enumerate(text): #iterate through all of them first
-            driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
-            if index % 49 == 0 and index != 0:
-                driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
-                content = driver.find_element(By.XPATH,"//*[@id='trackItNowForm:j_idt529:0:j_idt535']").text
-                for c in content:
-                    print(c)
 
 def test_room():
 
@@ -91,8 +112,8 @@ def test_room():
 
 if __name__ in "__main__":
     ##tracker is the main function
-
-    tracker()
+    gather_Data()
+    #tracker()
     #retrievetrackingcode()
 
     #test_room()

@@ -1191,3 +1191,30 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/FHpShV1mxK7-vEDgabW
 JavaScript warning: https://fpt.microsoft.com/tags?session_id=225E00DA933A6695024B12FA92FD67C7, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript error: https://fpt.microsoft.com/tags?session_id=225E00DA933A6695024B12FA92FD67C7, line 5: NS_ERROR_FAILURE: 
 1663244540409	Marionette	INFO	Stopped listening on port 49926
+1663513029066	geckodriver	INFO	Listening on 127.0.0.1:64562
+1663513032124	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64563" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofiletgWBHk"
+1663513032362	Marionette	INFO	Marionette enabled
+1663513032365	Marionette	INFO	Listening on port 64576
+WebDriver BiDi listening on ws://localhost:64563
+Read port: 64576
+1663513032535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofiletgWBHk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64563/devtools/browser/c0521ca4-e16a-4acf-b203-8abaa1a8f32f
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663513039556	Marionette	INFO	Stopped listening on port 64576
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663513248768	geckodriver	INFO	Listening on 127.0.0.1:64832
+1663513251820	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64833" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileQd5D2D"
+1663513252037	Marionette	INFO	Marionette enabled
+1663513252040	Marionette	INFO	Listening on port 64845
+WebDriver BiDi listening on ws://localhost:64833
+Read port: 64845
+1663513252207	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jambo\\AppData\\Local\\Temp\\rust_mozprofileQd5D2D\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64833/devtools/browser/0eb2bc5a-ecac-450d-aa53-55da742b0df2
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1663513273242	Marionette	INFO	Stopped listening on port 64845
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
