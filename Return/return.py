@@ -258,6 +258,7 @@ def stock_to73():
     def itemalreadytakenException(presses):
         press_enter(1)
         pyg.press('Down')
+        pyg.sleep(1.3)
         press_down_again(presses)
         press_enter(1)
         pyg.sleep(1)
@@ -286,11 +287,11 @@ def stock_to73():
                         pyg.press('Right')
                         press_enter(1)
                         pyg.sleep(1.2)
-                        if pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.9): #If image input value found and this is not null, add number of items by 1 then continues
+                        if pyg.locateAllOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.9): #If image input value found and this is not null, add number of items by 1 then continues
                             print('Image Found!')
                             press_enter(1)
-                            pyg.sleep(1.2)
-                            if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\ret_error.png"): #mean item already taken
+                            pyg.sleep(1.3)
+                            if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\ret_error.png", grayscale=True, confidence=.9): #mean item already taken
                                 print('There is nothing left!')
                                 itemalreadytakenException(press_Again)
                                 press_Again += 1
