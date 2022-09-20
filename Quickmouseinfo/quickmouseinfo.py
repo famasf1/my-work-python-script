@@ -5,13 +5,10 @@ def one():
     image = None
     while (image == None):
         try:
-            image = pyg.locateAllOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", grayscale=True, confidence=.9)
+            image = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.7, grayscale=True)
         except Exception as e:
             print(e)
             continue
-    print(image)
-    pyg.mouseInfo()
-
-
+    pyg.moveTo(image)
 
 one()

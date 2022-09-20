@@ -287,7 +287,7 @@ def stock_to73():
                         pyg.press('Right')
                         press_enter(1)
                         pyg.sleep(1.2)
-                        if pyg.locateAllOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.9): #If image input value found and this is not null, add number of items by 1 then continues
+                        if pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.7, grayscale=True): #If image input value found and this is not null, add number of items by 1 then continues
                             print('Image Found!')
                             press_enter(1)
                             pyg.sleep(1.3)
