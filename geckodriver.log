@@ -1218,3 +1218,541 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
 1663513273242	Marionette	INFO	Stopped listening on port 64845
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663742397576	geckodriver	INFO	Listening on 127.0.0.1:49344
+1663742400625	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49345" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiler2Q1RB"
+1663742401075	Marionette	INFO	Marionette enabled
+1663742401080	Marionette	INFO	Listening on port 49354
+WebDriver BiDi listening on ws://localhost:49345
+Read port: 49354
+1663742401373	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiler2Q1RB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49345/devtools/browser/08ef8d69-9706-412f-a070-19a979d54c4d
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/public-suffix-list Signature failed  InvalidSignatureError: Invalid content signature (main/public-suffix-list)
+console.error: services.settings: 
+  main/public-suffix-list local data was corrupted
+console.warn: services.settings: main/public-suffix-list Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/public-suffix-list Signature failed again InvalidSignatureError: Invalid content signature (main/public-suffix-list)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/public-suffix-list)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed  InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 local data was corrupted
+console.warn: services.settings: main/pioneer-study-addons-v1 Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed again InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/doh-providers Signature failed  InvalidSignatureError: Invalid content signature (main/doh-providers)
+console.error: sconsole.error: services.settings: 
+  main/public-suffix-list Signature failed  InvalidSignatureError: Invalid content signature (main/public-suffix-list)
+console.error: services.settings: 
+  main/public-suffix-list local data was corrupted
+console.warn: services.settings: main/public-suffix-list Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/public-suffix-list Signature failed again InvalidSignatureError: Invalid content signature (main/public-suffix-list)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/public-suffix-list)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed  InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 local data was corrupted
+console.warn: services.settings: main/pioneer-study-addons-v1 Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed again InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/doh-providers Signature failed  InvalidSignatureError: Invalid content signature (main/doh-providers)
+console.error: services.settings: 
+  main/doh-providers local data was corrupted
+console.warn: services.settings: main/doh-providers Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/doh-providers Signature failed again InvalidSignatureError: Invalid content signature (main/doh-providers)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/doh-providers)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/addons-manager-settings Signature failed  InvalidSignatureError: Invalid content signatureJavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1663753110341	Marionette	INFO	Stopped listening on port 49354
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+console.error: services.settings: 
+  main/addons-manager-settings Signature failed again InvalidSignatureError: Invalid content signature (main/addons-manager-settings)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/addons-manager-settings)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/doh-config Signature failed  InvalidSignatureError: Invalid content signature (main/doh-config)
+console.error: services.settings: 
+  main/doh-config local data was corrupted
+console.warn: services.settings: main/doh-config Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/query-stripping)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: "Failed to add session data entry for frame targets in browsing context" 4294967299
+console.warn: (new AbortError("Actor 'DevToolsFrame' destroyed before query 'DevToolsFrameParent:addSessionDataEntry' was resolved", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:242:32
+emit@resource://devtools/shared/event-emitter.js:186:18
+emit@resource://devtools/shared/event-emitter.js:330:18
+getMutations@resource://devtools/client/fronts/walker.js:312:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2320))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.error: "Unable to find target with innerWindowId:4294967303"
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3439: TypeError: data.frameData.id is null
+console.error: "Unable to find target with innerWindowId:4294967308"
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3439: TypeError: data.frameData.id is null
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+console.error: "Unable to find target with innerWindowId:4294967313"
+console.error: "Unable to find target with innerWindowId:4294967313"
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=01C25C25724B6E1130794E03738C6F7C, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=01C25C25724B6E1130794E03738C6F7C, line 5: NS_ERROR_FAILURE: 
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1663755769219	Marionette	INFO	Stopped listening on port 49406
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663759649682	geckodriver	INFO	Listening on 127.0.0.1:51878
+1663759652776	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51879" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiledHAaYc"
+1663759653135	Marionette	INFO	Marionette enabled
+1663759653140	Marionette	INFO	Listening on port 51888
+WebDriver BiDi listening on ws://localhost:51879
+Read port: 51888
+1663759653369	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiledHAaYc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51879/devtools/browser/ecd4909e-5e9a-4fa4-9f1e-1c5df39f986b
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1663759707709	Marionette	INFO	Stopped listening on port 51888
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663759708593	geckodriver	INFO	Listening on 127.0.0.1:51929
+1663759711648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51930" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileQ9pzNe"
+1663759711929	Marionette	INFO	Marionette enabled
+1663759711932	Marionette	INFO	Listening on port 51940
+WebDriver BiDi listening on ws://localhost:51930
+Read port: 51940
+1663759712025	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileQ9pzNe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51930/devtools/browser/596f554d-722d-4102-9865-f09f7039017a
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1663759742672	Marionette	INFO	Stopped listening on port 51940
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663759887492	geckodriver	INFO	Listening on 127.0.0.1:52002
+1663759890562	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52003" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilefetw25"
+1663759890863	Marionette	INFO	Marionette enabled
+1663759890867	Marionette	INFO	Listening on port 52012
+WebDriver BiDi listening on ws://localhost:52003
+Read port: 52012
+1663759890959	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilefetw25\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52003/devtools/browser/ba8721ea-d6b1-4909-b7ea-991493873128
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1663759896359	Marionette	INFO	Stopped listening on port 52012
+1663759926808	geckodriver	INFO	Listening on 127.0.0.1:52050
+1663759929877	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52051" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilek8Rfh2"
+1663759930150	Marionette	INFO	Marionette enabled
+1663759930153	Marionette	INFO	Listening on port 52061
+WebDriver BiDi listening on ws://localhost:52051
+Read port: 52061
+1663759930248	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilek8Rfh2\\search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+DevTools listening on ws://localhost:52051/devtools/browser/00772995-d903-48c0-92c2-2cd64f7d5b40
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663759937994	Marionette	INFO	Stopped listening on port 52061
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663759950494	geckodriver	INFO	Listening on 127.0.0.1:52097
+1663759953550	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52098" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileO16M2U"
+1663759953843	Marionette	INFO	Marionette enabled
+1663759953847	Marionette	INFO	Listening on port 52108
+WebDriver BiDi listening on ws://localhost:52098
+Read port: 52108
+1663759953941	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileO16M2U\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52098/devtools/browser/f6e2041a-a511-425b-9f0c-df77de8ecfcf
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1663759958379	Marionette	INFO	Stopped listening on port 52108
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663759996257	geckodriver	INFO	Listening on 127.0.0.1:52149
+1663759999318	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52150" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileEYFUyJ"
+1663759999620	Marionette	INFO	Marionette enabled
+1663759999623	Marionette	INFO	Listening on port 52160
+WebDriver BiDi listening on ws://localhost:52150
+Read port: 52160
+1663759999714	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileEYFUyJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52150/devtools/browser/f9634fe9-76dd-4f92-827e-e4b1b5a4a49a
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ecommerceportal.dhl.com."
+1663760005032	Marionette	INFO	Stopped listening on port 52160
+1663760040623	geckodriver	INFO	Listening on 127.0.0.1:52197
+1663760043648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52198" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileucD6iC"
+1663760043953	Marionette	INFO	Marionette enabled
+1663760043957	Marionette	INFO	Listening on port 52208
+WebDriver BiDi listening on ws://localhost:52198
+Read port: 52208
+1663760044060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileucD6iC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52198/devtools/browser/450f8762-5656-4a48-8998-0a7b6d921868
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663760049815	Marionette	INFO	Stopped listening on port 52208
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663760076823	geckodriver	INFO	Listening on 127.0.0.1:52247
+1663760079875	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52248" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileNCgcb4"
+1663760080139	Marionette	INFO	Marionette enabled
+1663760080143	Marionette	INFO	Listening on port 52259
+WebDriver BiDi listening on ws://localhost:52248
+Read port: 52259
+1663760080320	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileNCgcb4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52248/devtools/browser/774fd79a-bb9a-4e33-a13a-f76b4be994bf
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663760084708	Marionette	INFO	Stopped listening on port 52259
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663760131621	geckodriver	INFO	Listening on 127.0.0.1:52301
+1663760134676	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52302" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileVNwyQk"
+1663760134939	Marionette	INFO	Marionette enabled
+1663760134943	Marionette	INFO	Listening on port 52312
+WebDriver BiDi listening on ws://localhost:52302
+Read port: 52312
+1663760135119	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileVNwyQk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52302/devtools/browser/6a7be249-dd6a-4f64-bc37-d87d80a2afc8
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.microsoftonline.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 3614 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://fpt.microsoft.com/tags?session_id=1C77B96977E164F23206AB4F762665F1, line 5: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://fpt.microsoft.com/tags?session_id=1C77B96977E164F23206AB4F762665F1, line 5: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 4045 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed  InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 local data was corrupted
+console.warn: services.settings: main/pioneer-study-addons-v1 Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/pioneer-study-addons-v1 Signature failed again InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/pioneer-study-addons-v1)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/doh-providers Signature failed  InvalidSignatureError: Invalid content signature (main/doh-providers)
+console.error: services.settings: 
+  main/doh-providers local data was corrupted
+console.warn: services.settings: main/doh-providers Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/doh-providers Signature failed again InvalidSignatureError: Invalid content signature (main/doh-providers)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/doh-providers)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/addons-manager-settings Signature failed  InvalidSignatureError: Invalid content signature (main/addons-manager-settings)
+console.error: services.settings: 
+  main/addons-manager-settings local data was corrupted
+console.warn: services.settings: main/addons-manager-settings Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/addons-manager-settings Signature failed again InvalidSignatureError: Invalid content signature (main/addons-manager-settings)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/addons-manager-settings)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+console.error: services.settings: 
+  main/doh-config Signature failed  InvalidSignatureError: Invalid content signature (main/doh-config)
+console.error: services.settings: 
+  main/doh-config local data was corrupted
+console.warn: services.settings: main/doh-config Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  Message: InvalidSignatureError: Invalid content signature (main/query-stripping)
+  Stack:
+    InvalidSignatureError@resource://services-settings/RemoteSettingsClient.jsm:169:5
+_validateCollectionSignature@resource://services-settings/RemoteSettingsClient.jsm:977:13
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 4950 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.codecademy.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://tr.snapchat.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 1404 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.bing.com."
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 1935 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 371 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/IIqf1vOd-6pW952NlRsbn4M3wW5PqZJVav1GItm6W8s.js line 2 > eval line 4325 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1663760937979	Marionette	INFO	Stopped listening on port 52312
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[Parent 27968, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:723
+[Parent 27968, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 27968, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+t: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofiler40jV0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52573/devtools/browser/c766fde4-a2e8-4be1-a64f-49e0d0731187
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1663760377990	Marionette	INFO	Stopped listening on port 52583
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663760411318	geckodriver	INFO	Listening on 127.0.0.1:52622
+1663760414361	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52623" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileyDMoFc"
+1663760414672	Marionette	INFO	Marionette enabled
+1663760414676	Marionette	INFO	Listening on port 52633
+WebDriver BiDi listening on ws://localhost:52623
+Read port: 52633
+1663760414770	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileyDMoFc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52623/devtools/browser/5d92f9c5-55d7-4db3-adac-ccf3a942c87b
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663760422214	Marionette	INFO	Stopped listening on port 52633
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663760514562	geckodriver	INFO	Listening on 127.0.0.1:52670
+1663760517611	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52671" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilePxikdL"
+1663760517903	Marionette	INFO	Marionette enabled
+1663760517907	Marionette	INFO	Listening on port 52681
+WebDriver BiDi listening on ws://localhost:52671
+Read port: 52681
+1663760518014	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilePxikdL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52671/devtools/browser/34eb16fc-ef97-43ef-b1ca-41fe87894436
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1663760524983	Marionette	INFO	Stopped listening on port 52681
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663760645432	geckodriver	INFO	Listening on 127.0.0.1:52757
+1663760648502	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52758" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilee84Yhj"
+1663760648776	Marionette	INFO	Marionette enabled
+1663760648781	Marionette	INFO	Listening on port 52769
+WebDriver BiDi listening on ws://localhost:52758
+Read port: 52769
+1663760648875	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilee84Yhj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52758/devtools/browser/a36543f6-9667-49e6-afc1-8014270a7dea
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663760655746	Marionette	INFO	Stopped listening on port 52769
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663760938754	geckodriver	INFO	Listening on 127.0.0.1:62111
+1663760941840	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62112" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileT5g7nv"
+1663760942209	Marionette	INFO	Marionette enabled
+1663760942215	Marionette	INFO	Listening on port 62122
+WebDriver BiDi listening on ws://localhost:62112
+Read port: 62122
+1663760942327	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileT5g7nv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62112/devtools/browser/3226e3ff-dcd9-43f2-b9ca-5d9b7dff3645
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663761104037	Marionette	INFO	Stopped listening on port 62122
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "62162" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileHeWYme"
+1663761016238	Marionette	INFO	Marionette enabled
+1663761016242	Marionette	INFO	Listening on port 62172
+WebDriver BiDi listening on ws://localhost:62162
+Read port: 62172
+1663761016416	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileHeWYme\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62162/devtools/browser/339da73f-0d15-4f4a-a615-91a0523d8c66
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663761021065	Marionette	INFO	Stopped listening on port 62172
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1663761028144	geckodriver	INFO	Listening on 127.0.0.1:62204
+1663761031204	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62205" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilerYbCmw"
+1663761031477	Marionette	INFO	Marionette enabled
+1663761031481	Marionette	INFO	Listening on port 62214
+WebDriver BiDi listening on ws://localhost:62205
+Read port: 62214
+1663761031662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofilerYbCmw\\search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+DevTools listening on ws://localhost:62205/devtools/browser/4d199683-b578-4a14-8dbe-fc1aa236775e
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+1663761102996	Marionette	INFO	Stopped listening on port 62214
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "62252" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileF62Wj9"
+1663761087559	Marionette	INFO	Marionette enabled
+1663761087563	Marionette	INFO	Listening on port 62262
+WebDriver BiDi listening on ws://localhost:62252
+Read port: 62262
+1663761087657	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Comseven\\AppData\\Local\\Temp\\rust_mozprofileF62Wj9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62252/devtools/browser/f510bf7a-8cfe-4694-bfd3-178e1a1d322f
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 292: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1663761092184	Marionette	INFO	Stopped listening on port 62262
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.

@@ -78,21 +78,24 @@ def tracker():
         '''
         ##################################### ##################################### #####################################
 
-        with open(r'C:\ITEC_Support\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+        with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
             for index, value in enumerate(text): #iterate through all of them first
+                print(f'Total Line :{len(text.readlines())}')
+                print(f'Index = {index}')
                 driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
                 if index % 49 == 0 and index != 0:
-                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
-                    WebDriverWait(driver,6).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()  
                     # ^ = start-with
                     # * = contains
                     #Is this regex?
-                    for i in range(0,50):
-                        tracknumber = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingNumber']").text
-                        status = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingStatus']").text
-                        timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackTimeAndDate']").text
-                        continue
-    
+                elif index % len(text.readlines()) == 0 and index != 0:
+                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+                WebDriverWait(driver,6).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+                for i in range(0,50):
+                    tracknumber = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingNumber']").text
+                    status = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingStatus']").text
+                    timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackTimeAndDate']").text
+                    continue
     retrievetrackingcode()
 
 def test_room():
@@ -112,8 +115,8 @@ def test_room():
 
 if __name__ in "__main__":
     ##tracker is the main function
-    gather_Data()
-    #tracker()
+    #gather_Data()
+    tracker()
     #retrievetrackingcode()
 
     #test_room()
