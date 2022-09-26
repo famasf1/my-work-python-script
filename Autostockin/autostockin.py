@@ -1,8 +1,6 @@
-from distutils.command.config import config
-from netrc import NetrcParseError
+from line_notify_me.line_notify_sourcecode import notifyme
 from tkinter import filedialog, messagebox
 from tkinter import *
-from tracemalloc import start
 import pyautogui as pyg
 import openpyxl
 import pyperclip
@@ -128,7 +126,7 @@ def main(): #short for default behavior
                 try:
                     if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\ret_error.png", grayscale=True):
                         pressenter(1)
-                        print('Found Error')
+                        worksheet.cell(row=i, column=2).value = 'Failed'
                         pyg.press('esc')
                         pass
                     else:
@@ -143,7 +141,7 @@ def main(): #short for default behavior
                                 print(e)
                                 continue
                         if foundstockbill:
-                            print('Error is not Found')
+                            worksheet.cell(row=i, column=2).value = 'Success'
                             pressenter(4)
                             continue
                 except Exception as e:
@@ -151,6 +149,9 @@ def main(): #short for default behavior
             else: break
 
     start_in()
+    workbook.save(r"D:\Workstuff\my-work-python-script\Autostockin\stockin49.xlsx")
+    notifyme('Stock In Complete!')
+
 ####################################################################
 ######### Extra Function that doesn't involve with any of the above
 

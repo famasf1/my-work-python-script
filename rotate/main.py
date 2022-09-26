@@ -18,8 +18,22 @@ def main():
     def only_first():
         pyg.click(306,139) ##only for first time
         pyg.click(602,297)
-    
+
     def aging_Cat():
+        
+        '''
+        first check if next row in col A is empty.
+
+        if empty = not next product yet. Do the loop.
+
+        in the loop, copy a row from centralized page. then search if
+        it match first value in col B.
+
+        if it's not match, try next row in col B.
+        if match, insert number.
+        
+        '''
+
         pyg.write(branch)
         pyg.press('tab',3)
         pyg.write(productcode)
