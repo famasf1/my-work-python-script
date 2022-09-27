@@ -1,4 +1,3 @@
-from optparse import Option
 from selenium import webdriver
 import pyperclip
 from selenium.webdriver.common.by import By
@@ -15,6 +14,7 @@ import pandastable
 import pandas as pd
 import auto_checktrack
 import openpyxl
+from selenium.common.exceptions import NoSuchElementException
 
 ##Tried to practice how to use class in Python by create a nested function lmao
 class launch_browser():
@@ -78,25 +78,46 @@ def tracker():
         '''
         ##################################### ##################################### #####################################
 
+        global ws
+        ws = openpyxl.Workbook()
+        ws1 = ws.create_sheet('Result',0)
+
         with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+            file_len = len(text.readlines())
+            text.seek(0)
             for index, value in enumerate(text): #iterate through all of them first
-                print(f'Total Line :{len(text.readlines())}')
-                print(f'Index = {index}')
+                index_add_one = index + 1
                 driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
                 if index % 49 == 0 and index != 0:
                     driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()  
                     # ^ = start-with
                     # * = contains
                     #Is this regex?
-                elif index % len(text.readlines()) == 0 and index != 0:
+                elif index_add_one % file_len == 0 and index != 0:
                     driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
-                WebDriverWait(driver,6).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
-                for i in range(0,50):
-                    tracknumber = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingNumber']").text
-                    status = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackingStatus']").text
-                    timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackTimeAndDate']").text
+                else:
                     continue
+            WebDriverWait(driver,6).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+            for i in range(0,50):
+                try:
+                    element = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"[id^='trackItNowForm'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
+                    driver.execute_script("arguments[0].click();", element)
+                    refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
+                    tracknumber = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackStatus']").text
+                    timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
+                    lastest_status = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='d-lg-non']").text
+                    ws1.cell(row=i+1, column=1).value = refid
+                    ws1.cell(row=i+1, column=2).value = tracknumber
+                    ws1.cell(row=i+1, column=3).value = timeanddate
+                    ws1.cell(row=i+1, column=4).value = lastest_status
+                    quit = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:backbutton")))
+                    driver.execute("arguments[0].click();",quit)
+                    continue
+                except NoSuchElementException as e:
+                    print(e)
+
     retrievetrackingcode()
+    ws.save("get_data_dhl.xlsx")
 
 def test_room():
 
@@ -105,12 +126,14 @@ def test_room():
     This function is purely for testing. Delete after production-ready
     '''
     ##################################### ##################################### #####################################
-    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text:
-        for index, value in enumerate(text):
-            print(index)
-            print(value)
-            if index % 49 == 0 and index != 0:
-                print('Break')
+    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+        file_len = len(text.readlines())
+        text.seek(0)
+        for ind, val in enumerate(text):
+            ind_mod = ind+1
+            print(f'{ind_mod} & {file_len}')
+            if ind_mod % file_len == 0:
+                print(f'{ind+1 % file_len}but it work wtf?')
 
 
 if __name__ in "__main__":

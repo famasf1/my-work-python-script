@@ -2,7 +2,7 @@
 
 ###############################
 # WHAT DAY IS TODAY?
-mydayis = 1 #0 = today or 1 = yesterday or 2 = yesterday of yesterday
+mydayis = 0 #0 = today or 1 = yesterday or 2 = yesterday of yesterday
 ###############################
 
 import pandas as pd
@@ -23,7 +23,7 @@ def read():
     sheet = pd.read_excel(root.excel)
     remove_word = sheet['CCN'].replace(['PHYIDINSURE','PHYID'],'', regex=True).str.split('-')
     rw_df = pd.DataFrame(remove_word)
-    rw_df2 = rw_df[['ID','Branch','Box Num','ETC']] = pd.DataFrame(rw_df.CCN.to_list(), index=rw_df.index)
+    rw_df2 = rw_df[['ID','Branch','Box Num']] = pd.DataFrame(rw_df.CCN.to_list(), index=rw_df.index)
     #combine frame
     frames = [sheet, rw_df2]
     sheet = pd.concat(frames, axis=1)
