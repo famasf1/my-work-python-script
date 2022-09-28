@@ -43,6 +43,7 @@ def start_script():
 
         root = Tk()
         root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-Out33', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
+
         workbook = openpyxl.load_workbook(root.excel, data_only=True)
         root.withdraw()
         sheet = workbook.sheetnames
@@ -149,7 +150,7 @@ def main(): #short for default behavior
             else: break
 
     start_in()
-    workbook.save(r"D:\Workstuff\my-work-python-script\Autostockin\stockin49.xlsx")
+    workbook.save(r"D:\Workstuff\my-work-python-script\Autostockin\stockin49_1.xlsx")
     notifyme('Stock In Complete!')
 
 ####################################################################

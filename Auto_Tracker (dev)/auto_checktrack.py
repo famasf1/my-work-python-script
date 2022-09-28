@@ -1,4 +1,7 @@
+from operator import le
+from re import L
 from selenium import webdriver
+from time import sleep
 import pyperclip
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -16,6 +19,15 @@ import auto_checktrack
 import openpyxl
 from selenium.common.exceptions import NoSuchElementException
 
+#### I will separate the whole thing into 2 section. Prepatation, Interface and Logic.
+## - Preparation will be code from test_idea_tracker
+## - Interface part is for production
+## - Logic is everything below Preparation
+
+###############################
+######## : Logic : ############
+###############################
+
 ##Tried to practice how to use class in Python by create a nested function lmao
 class launch_browser():
      ##################################### ##################################### #####################################
@@ -28,7 +40,8 @@ class launch_browser():
     def launch_browser_chrome(self):
         chrome_service = ChromeService(ChromeDriverManager().install())
         chrome_service.creationflags = CREATE_NO_WINDOW
-        chrome_option = Options().add_experimental_option("detach",True)
+        chrome_option = Options()
+        chrome_option.add_experimental_option("detach",True)
         driver = webdriver.Chrome(options=chrome_option,service=chrome_service)
         driver.maximize_window()
         return driver
@@ -67,8 +80,9 @@ def tracker():
     '''
     ##################################### ##################################### #####################################
     global driver
-    driver = launch_browser().launch_browser_firefox() ##change firefox to chrome to use chrome instead
+    driver = launch_browser().launch_browser_chrome()##change firefox to chrome to use chrome instead
     driver.get("https://ecommerceportal.dhl.com/track/")
+
 
     def retrievetrackingcode():
 
@@ -80,44 +94,83 @@ def tracker():
 
         global ws
         ws = openpyxl.Workbook()
-        ws1 = ws.create_sheet('Result',0)
+        ws1 = ws.create_sheet('Result')
+        ws1.cell(row=1, column=1).value = "PHYID"
+        ws1.cell(row=1, column=2).value = "Tracking Number"
+        ws1.cell(row=1, column=3).value = "สถานะล่าสุด"
+        ws1.cell(row=1, column=4).value = "รายละเอียด"
+        ws1.cell(row=1, column=5).value = "น้ำหนัก"
+        ws1.cell(row=1, column=6).value = "วันที่"
 
         with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
             file_len = len(text.readlines())
-            text.seek(0)
-            for index, value in enumerate(text): #iterate through all of them first
-                index_add_one = index + 1
-                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
-                if index % 49 == 0 and index != 0:
-                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()  
-                    # ^ = start-with
-                    # * = contains
-                    #Is this regex?
-                elif index_add_one % file_len == 0 and index != 0:
-                    driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+            time_cyc = int(file_len / 50) + 1
+            for loop_times in range(1,time_cyc):
+                i = 0
+                if loop_times > 1:
+                    text.seek(i + 50 * loop_times)
                 else:
-                    continue
-            WebDriverWait(driver,6).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
-            for i in range(0,50):
-                try:
-                    element = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"[id^='trackItNowForm'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
-                    driver.execute_script("arguments[0].click();", element)
-                    refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
-                    tracknumber = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='TrackStatus']").text
-                    timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
-                    lastest_status = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='d-lg-non']").text
-                    ws1.cell(row=i+1, column=1).value = refid
-                    ws1.cell(row=i+1, column=2).value = tracknumber
-                    ws1.cell(row=i+1, column=3).value = timeanddate
-                    ws1.cell(row=i+1, column=4).value = lastest_status
-                    quit = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:backbutton")))
-                    driver.execute("arguments[0].click();",quit)
-                    continue
-                except NoSuchElementException as e:
-                    print(e)
+                    text.seek(i)
+                for index, value in enumerate(text): #iterate through all of them first
+                    index_add_one = index + 1
+                    driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
+                    if index % 49 == 0 and index != 0:
+                        driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+                        break
+                        # ^ = start-with
+                        # * = contains
+                        #Is this regex?
+                    elif index_add_one % file_len == 0 and index != 0:
+                        driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+                        break
+                    else:
+                        continue
+                WebDriverWait(driver,20).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+                
+                #### In each cycle, get data and then for every 50 rows refresh DHL Pages.
+
+                def get_data_to_Excel(cycle):
+                    for i in range(0,49): ##test 
+                        try:
+                            if loop_times > 1:
+                                i += 50
+                            element = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
+                            driver.execute_script("arguments[0].click();", element)
+                            sleep(1.5)
+                            refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
+                            status_track = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][class*='TrackStatus']").text
+                            trackid = driver.find_element(By.CSS_SELECTOR,"[id*='trackItNowForm:j_idt125']").text
+                            weight = driver.find_element(By.CSS_SELECTOR,"[id*='trackItNowForm:j_idt129']").text
+                            timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
+                            receiver = driver.find_element(By.CSS_SELECTOR, "[id*='trackItNowForm:j_idt78:0:j_idt82:0:j_idt99']").text
+                            ws1.cell(row=i+2, column=1).value = refid
+                            ws1.cell(row=i+2, column=2).value = trackid
+                            ws1.cell(row=i+2, column=3).value = status_track
+                            ws1.cell(row=i+2, column=4).value = receiver
+                            ws1.cell(row=i+2, column=5).value = weight
+                            ws1.cell(row=i+2, column=6).value = timeanddate                                    
+                            sleep(.7)
+                            driver.find_element(By.ID, "trackItNowForm:backbutton").click()
+                            #quit = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:backbutton")))
+                            #driver.execute("arguments[0].click();",quit)
+                            if i > 49:
+                                driver.refresh()
+                            else:
+                                continue
+                        except NoSuchElementException as e:
+                            print(e)
+                get_data_to_Excel(time_cyc)
+
 
     retrievetrackingcode()
     ws.save("get_data_dhl.xlsx")
+    sheet = pd.read_excel("get_data_dhl.xlsx")
+    remove_word = sheet['PHYID'].replace(['PHYIDINSURE','PHYID'],'', regex=True)
+    ws.save("get_data_dhl.xlsx")
+
+
+    
+
 
 def test_room():
 
@@ -128,13 +181,7 @@ def test_room():
     ##################################### ##################################### #####################################
     with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
         file_len = len(text.readlines())
-        text.seek(0)
-        for ind, val in enumerate(text):
-            ind_mod = ind+1
-            print(f'{ind_mod} & {file_len}')
-            if ind_mod % file_len == 0:
-                print(f'{ind+1 % file_len}but it work wtf?')
-
+        print(int(file_len / 50) + 1)
 
 if __name__ in "__main__":
     ##tracker is the main function
