@@ -42,7 +42,7 @@ def start_script():
         วรวุฒิ = Employeelist(4, 'ครบ / ดิว','22073')
         กิตติคุณ = Employeelist(5,'ครบ / ก็อต', '24021')
         สราวุธ = Employeelist(6,'ครบ / เอก','23267')
-        employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index, วรวุฒิ.index, กิตติคุณ.index, สราวุธ,index]
+        employeelist_index = [วรวุฒิ.index, กิตติคุณ.index, สราวุธ,index]
         ##########################################################################################
 
         root = Tk()
@@ -182,7 +182,7 @@ def test():
     วรัญญู = Employeelist(1,'ครบ / ตั้ม', 24179)
     มรกต = Employeelist(2,'ครบ / ปาน', 23947)
     วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค',23800)
-    employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index]
+    employeelist_index = [วรวุฒิ.index, กิตติคุณ.index, สราวุธ,index]
     r = random.choice(employeelist_index)
     print(r)
 
