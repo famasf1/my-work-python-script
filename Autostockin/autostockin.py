@@ -42,7 +42,7 @@ def start_script():
         วรวุฒิ = Employeelist(4, 'ครบ / ดิว','22073')
         กิตติคุณ = Employeelist(5,'ครบ / ก็อต', '24021')
         สราวุธ = Employeelist(6,'ครบ / เอก','23267')
-        employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index, วรวุฒิ.index, กิตติคุณ.index, สราวุธ,index]
+        employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index]
         ##########################################################################################
 
         root = Tk()

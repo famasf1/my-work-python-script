@@ -98,13 +98,11 @@ def main(): #short for default behavior
                 r = random.choice(employeelist_index)
                 match r:
                     case 0:
-                        pyg.typewrite(จิรายุทธ.staffid)
+                        pyg.typewrite(วรวุฒิ.staffid)
                     case 1:
-                        pyg.typewrite(วรัญญู.staffid)
+                        pyg.typewrite(กิตติคุณ.staffid)
                     case 2:
-                        pyg.typewrite(มรกต.staffid)
-                    case 3:
-                        pyg.typewrite(วุฒิภัทร.staffid)
+                        pyg.typewrite(สราวุธ.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
                 pressenter(2)
@@ -112,16 +110,13 @@ def main(): #short for default behavior
                 #name
                 match r:
                     case 0:
-                        pyperclip.copy(จิรายุทธ.name)
+                        pyperclip.copy(วรวุฒิ.name)
                         pyg.hotkey('ctrl','v')
                     case 1:
-                        pyperclip.copy(วรัญญู.name)
+                        pyperclip.copy(กิตติคุณ.name)
                         pyg.hotkey('ctrl','v')
                     case 2:
-                        pyperclip.copy(มรกต.name)
-                        pyg.hotkey('ctrl','v')
-                    case 3:
-                        pyperclip.copy(วุฒิภัทร.name)
+                        pyperclip.copy(สราวุธ.name)
                         pyg.hotkey('ctrl','v')
                 ##ready
                 ##now check if value exist
