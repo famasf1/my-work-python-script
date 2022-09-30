@@ -46,7 +46,7 @@ def start_script():
         ##########################################################################################
 
         root = Tk()
-        root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-Out33', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
+        root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-In', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
 
         workbook = openpyxl.load_workbook(root.excel, data_only=True)
         root.withdraw()

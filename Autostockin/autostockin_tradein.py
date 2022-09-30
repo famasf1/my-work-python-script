@@ -33,20 +33,20 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, มรกต, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ
+        global Worrawut, Kittikun , Sarawut
         ###################################### LIST EMPLOYEE #####################################
-        จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
-        วรัญญู = Employeelist(1,'ครบ / ตั้ม', '24179')
-        มรกต = Employeelist(2,'ครบ / ปาน', '23947')
-        วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค','23800')
-        วรวุฒิ = Employeelist(4, 'ครบ / ดิว','22073')
-        กิตติคุณ = Employeelist(5,'ครบ / ก็อต', '24021')
-        สราวุธ = Employeelist(6,'ครบ / เอก','23267')
-        employeelist_index = [วรวุฒิ.index, กิตติคุณ.index, สราวุธ,index]
+        #จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
+        #วรัญญู = Employeelist(1,'ครบ / ตั้ม', '24179')
+        #มรกต = Employeelist(2,'ครบ / ปาน', '23947')
+        #วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค','23800')
+        Worrawut = Employeelist(0, 'ครบ / ดิว','22073')
+        Kittikun = Employeelist(1,'ครบ / ก็อต', '24021')
+        Sarawut = Employeelist(2,'ครบ / เอก','23267')
+        employeelist_index = [Worrawut.index, Kittikun.index, Sarawut.index]
         ##########################################################################################
 
         root = Tk()
-        root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-Out33', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
+        root.excel = filedialog.askopenfilename(initialdir='/Desktop',title='เลือกไฟล์ Excel สำหรับ Stock-In', filetypes=(('Excel','*.xlsx'),('All Files','*.*')))
 
         workbook = openpyxl.load_workbook(root.excel, data_only=True)
         root.withdraw()
@@ -98,11 +98,11 @@ def main(): #short for default behavior
                 r = random.choice(employeelist_index)
                 match r:
                     case 0:
-                        pyg.typewrite(วรวุฒิ.staffid)
+                        pyg.typewrite(Worrawut.staffid)
                     case 1:
-                        pyg.typewrite(กิตติคุณ.staffid)
+                        pyg.typewrite(Kittikun.staffid)
                     case 2:
-                        pyg.typewrite(สราวุธ.staffid)
+                        pyg.typewrite(Sarawut.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
                 pressenter(2)
@@ -110,19 +110,19 @@ def main(): #short for default behavior
                 #name
                 match r:
                     case 0:
-                        pyperclip.copy(วรวุฒิ.name)
+                        pyperclip.copy(Worrawut.name)
                         pyg.hotkey('ctrl','v')
                     case 1:
-                        pyperclip.copy(กิตติคุณ.name)
+                        pyperclip.copy(Kittikun.name)
                         pyg.hotkey('ctrl','v')
                     case 2:
-                        pyperclip.copy(สราวุธ.name)
+                        pyperclip.copy(Sarawut.name)
                         pyg.hotkey('ctrl','v')
                 ##ready
                 ##now check if value exist
                 pyg.hotkey('alt','f')
                 pyg.press('o')
-                pyg.sleep(5)
+                pyg.sleep(3)
                 try:
                     if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\ret_error.png", grayscale=True):
                         pressenter(1)
@@ -168,18 +168,17 @@ def pressenter(numberoftimes):
 def clickleft(numberoftimes):
     for i in range(0, numberoftimes):
         pyg.leftClick()
-        pyg.sleep(1.5)
+        pyg.sleep(1.1)
         if i == numberoftimes:
             break
 
 def test():
-    จิรายุทธ = Employeelist(0,'ครบ / โบ้', 22608) 
-    วรัญญู = Employeelist(1,'ครบ / ตั้ม', 24179)
-    มรกต = Employeelist(2,'ครบ / ปาน', 23947)
-    วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค',23800)
-    employeelist_index = [วรวุฒิ.index, กิตติคุณ.index, สราวุธ,index]
+    Worrawut = Employeelist(0, 'ครบ / ดิว','22073')
+    Kittikun = Employeelist(1,'ครบ / ก็อต', '24021')
+    Sarawut = Employeelist(2,'ครบ / เอก','23267')
+    employeelist_index = [Worrawut.index, Kittikun.index, Sarawut.index]
     r = random.choice(employeelist_index)
-    print(r)
+    print(int(r))
 
 try:
     #test()

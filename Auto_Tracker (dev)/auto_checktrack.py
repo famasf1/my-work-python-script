@@ -1,5 +1,7 @@
+from logging import logProcesses
 from operator import le
 from re import L
+from turtle import right
 from selenium import webdriver
 from time import sleep
 import pyperclip
@@ -42,6 +44,8 @@ class launch_browser():
         chrome_service.creationflags = CREATE_NO_WINDOW
         chrome_option = Options()
         chrome_option.add_experimental_option("detach",True)
+        chrome_option.add_experimental_option("useAutomationExtension", False)
+        chrome_option.add_experimental_option("excludeSwitches",["enable-automation"])
         driver = webdriver.Chrome(options=chrome_option,service=chrome_service)
         driver.maximize_window()
         return driver
@@ -94,7 +98,7 @@ def tracker():
 
         global ws
         ws = openpyxl.Workbook()
-        ws1 = ws.create_sheet('Result')
+        ws1 = ws.create_sheet('Result',0)
         ws1.cell(row=1, column=1).value = "PHYID"
         ws1.cell(row=1, column=2).value = "Tracking Number"
         ws1.cell(row=1, column=3).value = "สถานะล่าสุด"
@@ -103,12 +107,15 @@ def tracker():
         ws1.cell(row=1, column=6).value = "วันที่"
 
         with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+            global file_len
             file_len = len(text.readlines())
-            time_cyc = int(file_len / 50) + 1
+            time_cyc = int(file_len / 50) + 2
             for loop_times in range(1,time_cyc):
                 i = 0
-                if loop_times > 1:
-                    text.seek(i + 50 * loop_times)
+                if loop_times > 1: #as soon as loop_times is more than first time.
+                    text.seek(i + 900 * (loop_times - 1)) #go to character 900
+                    print(text.seek(i + 900 * (loop_times - 1)))
+                    driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
                 else:
                     text.seek(i)
                 for index, value in enumerate(text): #iterate through all of them first
@@ -125,49 +132,64 @@ def tracker():
                         break
                     else:
                         continue
-                WebDriverWait(driver,20).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+                WebDriverWait(driver,10000).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
                 
                 #### In each cycle, get data and then for every 50 rows refresh DHL Pages.
 
-                def get_data_to_Excel(cycle):
+                def get_data_to_Excel():
                     for i in range(0,49): ##test 
                         try:
-                            if loop_times > 1:
-                                i += 50
-                            element = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i}:'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
+                            element = WebDriverWait(driver,10000).until(EC.element_to_be_clickable((By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i-1}:'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
                             driver.execute_script("arguments[0].click();", element)
-                            sleep(1.5)
+                            sleep(1.8)
                             refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
                             status_track = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][class*='TrackStatus']").text
-                            trackid = driver.find_element(By.CSS_SELECTOR,"[id*='trackItNowForm:j_idt125']").text
-                            weight = driver.find_element(By.CSS_SELECTOR,"[id*='trackItNowForm:j_idt129']").text
+                            track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails']").text
                             timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
-                            receiver = driver.find_element(By.CSS_SELECTOR, "[id*='trackItNowForm:j_idt78:0:j_idt82:0:j_idt99']").text
-                            ws1.cell(row=i+2, column=1).value = refid
-                            ws1.cell(row=i+2, column=2).value = trackid
-                            ws1.cell(row=i+2, column=3).value = status_track
-                            ws1.cell(row=i+2, column=4).value = receiver
-                            ws1.cell(row=i+2, column=5).value = weight
-                            ws1.cell(row=i+2, column=6).value = timeanddate                                    
-                            sleep(.7)
+                            receiver = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget d-lg-none']").text
+                            if file_len < 50:
+                                end = file_len
+                            else:
+                                end = 50
+                            if loop_times > 1:
+                                start = 50 * (loop_times - 1)
+                                end = 50 * loop_times
+                            else:
+                                start = 0
+                                end = 50
+                            ws1.cell(row=start+2, column=1).value = refid
+                            ws1.cell(row=start+2, column=2).value = status_track
+                            ws1.cell(row=start+2, column=3).value = receiver
+                            ws1.cell(row=start+2, column=4).value = track_details
+                            ws1.cell(row=start+2, column=5).value = timeanddate
+                            start += 1
+                            print([ws1.cell(row=i+2, column=1).value,ws1.cell(row=i+2, column=2).value,ws1.cell(row=i+2, column=3).value,ws1.cell(row=i+2, column=4).value,ws1.cell(row=i+2, column=5).value])
+                            ### Go to excel row
+                            ### for every cycle, take 50 and times with loop cycle amouth.
+                            ### leaving i undisturbed                                  
+                            sleep(.9)
                             driver.find_element(By.ID, "trackItNowForm:backbutton").click()
+                            sleep(.4)
                             #quit = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:backbutton")))
                             #driver.execute("arguments[0].click();",quit)
                             if i > 49:
+                                i = 0
                                 driver.refresh()
+                                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
+                                break
+                            elif i % file_len == 0 and i != 0:
+                                print('break')
+                                break
                             else:
+                                i += 1
+                                print(i)
                                 continue
                         except NoSuchElementException as e:
                             print(e)
-                get_data_to_Excel(time_cyc)
-
-
+                get_data_to_Excel()
+        ws.save("get_data_dhl.xlsx")
     retrievetrackingcode()
-    ws.save("get_data_dhl.xlsx")
-    sheet = pd.read_excel("get_data_dhl.xlsx")
-    remove_word = sheet['PHYID'].replace(['PHYIDINSURE','PHYID'],'', regex=True)
-    ws.save("get_data_dhl.xlsx")
-
+    
 
     
 
@@ -179,9 +201,47 @@ def test_room():
     This function is purely for testing. Delete after production-ready
     '''
     ##################################### ##################################### #####################################
+    driver = launch_browser().launch_browser_chrome()##change firefox to chrome to use chrome instead
+    driver.get("https://ecommerceportal.dhl.com/track/")
     with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
         file_len = len(text.readlines())
-        print(int(file_len / 50) + 1)
+        time_cyc = int(file_len / 50) + 2
+        for loop_times in range(1,time_cyc):
+            i = 0
+            if loop_times > 1: #as soon as loop_times is more than first time.
+                text.seek(i + 900 * (loop_times - 1)) #go to character 900
+                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
+            else:
+                text.seek(i)
+            for index, value in enumerate(text): #iterate through all of them first
+                index_add_one = index + 1
+                driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
+                if index_add_one % 50 == 0 and index != 0:
+                    print('hit 50')
+                    break
+                    # ^ = start-with
+                    # * = contains
+                    #Is this regex?
+                elif index_add_one % file_len == 0 and index != 0:
+                    print('EOL')
+                    break
+                else:
+                    continue    
+            sleep(2)  
+            end = 50
+            if loop_times > 1:
+                start = 50 * (loop_times - 1)
+                end = 50 * loop_times
+                print(f"{start} || {end}")
+            else:
+                start = 0
+                end = 50
+            for r in range(start,end): ##excel row
+                print(f'{r} / {end}' )
+                if r == 50:
+                    driver.refresh()
+                    driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
+                    sleep(.7)
 
 if __name__ in "__main__":
     ##tracker is the main function
