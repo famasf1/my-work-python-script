@@ -19,7 +19,7 @@ import pandastable
 import pandas as pd
 import auto_checktrack
 import openpyxl
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 #### I will separate the whole thing into 2 section. Prepatation, Interface and Logic.
 ## - Preparation will be code from test_idea_tracker
@@ -113,7 +113,7 @@ def tracker():
             for loop_times in range(1,time_cyc):
                 i = 0
                 if loop_times > 1: #as soon as loop_times is more than first time.
-                    text.seek(i + 900 * (loop_times - 1)) #go to character 900
+                    text.seek(i + 900 * (loop_times - 1)) #go to character 900 times whatever loop currently in
                     print(text.seek(i + 900 * (loop_times - 1)))
                     driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
                 else:
@@ -127,42 +127,49 @@ def tracker():
                         # ^ = start-with
                         # * = contains
                         #Is this regex?
-                    elif index_add_one % file_len == 0 and index != 0:
+                    elif index_add_one % int(file_len) == 0 and index != 0:
                         driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
                         break
                     else:
                         continue
-                WebDriverWait(driver,10000).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
+                WebDriverWait(driver,30).until(EC.visibility_of_element_located((By.XPATH, "//label[contains(@id,'trackItNowForm') and(contains(@class,'TrackingNumber'))]"))).text
                 
                 #### In each cycle, get data and then for every 50 rows refresh DHL Pages.
 
                 def get_data_to_Excel():
-                    for i in range(0,49): ##test 
+                    start = 0
+                    end = 50
+                    row_dhl = 0
+                    if int(file_len) < 50: #if file is more than 50 lines, return end as all lines lenght
+                        end = int(file_len)
+                    else: 
+                        if loop_times > 1: #if loop times is more than once, return 50 times whatever loop you're in.
+                            start = 50 * (loop_times - 1)
+                            end = 50 * loop_times
+                        else: #else use default 50
+                            start = 0
+                            end = 50
+                    for i in range(start,end): ##test       
                         try:
-                            element = WebDriverWait(driver,10000).until(EC.element_to_be_clickable((By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{i-1}:'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
+                            print(row_dhl)
+                            element = WebDriverWait(driver,30).until(EC.element_to_be_clickable((By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':{row_dhl}:'][class*='ui-commandlink ui-widget'][onclick*='PrimeFaces']")))
                             driver.execute_script("arguments[0].click();", element)
+                            if row_dhl == 50:
+                                row_dhl = 0
+                            else:
+                                row_dhl += 1
+                                print(f"row DHL = {row_dhl}")
                             sleep(1.8)
                             refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
                             status_track = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][class*='TrackStatus']").text
                             track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails']").text
                             timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
                             receiver = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget d-lg-none']").text
-                            if file_len < 50:
-                                end = file_len
-                            else:
-                                end = 50
-                            if loop_times > 1:
-                                start = 50 * (loop_times - 1)
-                                end = 50 * loop_times
-                            else:
-                                start = 0
-                                end = 50
-                            ws1.cell(row=start+2, column=1).value = refid
-                            ws1.cell(row=start+2, column=2).value = status_track
-                            ws1.cell(row=start+2, column=3).value = receiver
-                            ws1.cell(row=start+2, column=4).value = track_details
-                            ws1.cell(row=start+2, column=5).value = timeanddate
-                            start += 1
+                            ws1.cell(row=i+2, column=1).value = refid
+                            ws1.cell(row=i+2, column=2).value = status_track
+                            ws1.cell(row=i+2, column=3).value = receiver
+                            ws1.cell(row=i+2, column=4).value = track_details
+                            ws1.cell(row=i+2, column=5).value = timeanddate
                             print([ws1.cell(row=i+2, column=1).value,ws1.cell(row=i+2, column=2).value,ws1.cell(row=i+2, column=3).value,ws1.cell(row=i+2, column=4).value,ws1.cell(row=i+2, column=5).value])
                             ### Go to excel row
                             ### for every cycle, take 50 and times with loop cycle amouth.
@@ -172,20 +179,26 @@ def tracker():
                             sleep(.4)
                             #quit = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:backbutton")))
                             #driver.execute("arguments[0].click();",quit)
-                            if i > 49:
-                                i = 0
+                            if row_dhl > 50:
                                 driver.refresh()
+                                driver.get("https://ecommerceportal.dhl.com/track/")
+                                WebDriverWait(driver,30).until(EC.element_to_be_clickable((By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']")))
                                 driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
+                                sleep(.7)
                                 break
                             elif i % file_len == 0 and i != 0:
                                 print('break')
                                 break
                             else:
                                 i += 1
-                                print(i)
+                                print(f"start : {i} | end {end}")
                                 continue
                         except NoSuchElementException as e:
                             print(e)
+                        except TimeoutException as er:
+                            print(er)
+                        finally:
+                            ws.save("get_data_dhl.xlsx")
                 get_data_to_Excel()
         ws.save("get_data_dhl.xlsx")
     retrievetrackingcode()
@@ -239,7 +252,8 @@ def test_room():
             for r in range(start,end): ##excel row
                 print(f'{r} / {end}' )
                 if r == 50:
-                    driver.refresh()
+                    driver.get("https://ecommerceportal.dhl.com/track/")
+                    WebDriverWait(driver,30).until(EC.element_to_be_clickable((By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']")))
                     driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
                     sleep(.7)
 
