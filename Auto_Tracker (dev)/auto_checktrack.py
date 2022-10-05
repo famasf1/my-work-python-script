@@ -1,7 +1,3 @@
-from logging import logProcesses
-from operator import le
-from re import L
-from turtle import right
 from selenium import webdriver
 from time import sleep
 import pyperclip
@@ -162,12 +158,12 @@ def tracker():
                             sleep(1.8)
                             refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
                             status_track = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][class*='TrackStatus']").text
-                            track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails']").text
+                            track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt157']").text
                             timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
-                            receiver = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget d-lg-none']").text
+                            weight = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt161']").text
                             ws1.cell(row=i+2, column=1).value = refid
                             ws1.cell(row=i+2, column=2).value = status_track
-                            ws1.cell(row=i+2, column=3).value = receiver
+                            ws1.cell(row=i+2, column=3).value = weight
                             ws1.cell(row=i+2, column=4).value = track_details
                             ws1.cell(row=i+2, column=5).value = timeanddate
                             print([ws1.cell(row=i+2, column=1).value,ws1.cell(row=i+2, column=2).value,ws1.cell(row=i+2, column=3).value,ws1.cell(row=i+2, column=4).value,ws1.cell(row=i+2, column=5).value])

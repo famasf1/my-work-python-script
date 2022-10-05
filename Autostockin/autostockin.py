@@ -88,6 +88,7 @@ def main(): #short for default behavior
 
     def start_in():
         for i in range(1, worksheet.max_row+1):
+            
             stockoutid = worksheet.cell(row=i, column=1).value
             if stockoutid:
                 nextStart(i)
