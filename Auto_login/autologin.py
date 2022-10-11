@@ -16,16 +16,16 @@ from subprocess import CREATE_NO_WINDOW
 #path_to_49ins = "C:\Program Files (x86)\Softbox\ITECINSURE_49\ITECStock2007.exe"
 #my_own_path = "C:\Program Files (x86)\Softbox\ITECInsurance_49\ITECStock2007.exe"
 #p_god_path = "C:\Program Files (x86)\Softbox\ITECINSURE_49\ITECStock2007.exe"
-p_dew_path = "C:\Program Files (x86)\Softbox\ITECInsurance\ITECStock2007.exe"
-#p_aek_path = "C:\Program Files (x86)\Softbox\ITECInsurance_49\ITECStock2007.exe"
+#p_dew_path = "C:\Program Files (x86)\Softbox\ITECInsurance\ITECStock2007.exe"
+p_aek_path = "C:\Program Files (x86)\Softbox\ITECInsurance_49\ITECStock2007.exe"
 p_mark_path = ""
 
 ### ITEC
 #p_god = 24021
 #p_dew = 22073
 p_aek = 23267
-user = "22073"
-pwd = "22073"
+user = str(p_aek)
+pwd = str(p_aek)
 
 ### TECH_TRADE
 username = "service"
@@ -65,8 +65,8 @@ def launch_49insure(amouth=0):
         soft_box = os.path.join(cwd, "Softbox")
         for roots, dirs, files in os.walk(soft_box):
             for filename in files:
-                if os.path.join(roots, filename) == str(p_dew_path):
-                    os.startfile(p_dew_path)
+                if os.path.join(roots, filename) == str(p_aek_path):
+                    os.startfile(p_aek_path)
 
         login()
         amouth += 1
@@ -85,7 +85,7 @@ def launch_browser():
     #พี่เอก - driver.get("https://docs.google.com/spreadsheets/d/1I72TCwCa6VMQccQSy5IpoSY-bZlk19m5SEmQlYYFsY8/edit#gid=0")
     #พี่ก็อต - driver.get("https://docs.google.com/spreadsheets/d/1E2FJwhY6WyyME4r44C2XIuGkgAaBG2dxxbpvBoBJ8MM/edit#gid=0")
     #พี่มาร์ค - driver.get("https://docs.google.com/spreadsheets/d/1lCRsY9KdTEDOMMYF4076gz5rVgv-y7tq0H1enm2eHuI/edit#gid=0")
-    driver.get("https://docs.google.com/spreadsheets/d/1lCRsY9KdTEDOMMYF4076gz5rVgv-y7tq0H1enm2eHuI/edit#gid=0")
+    driver.get("https://docs.google.com/spreadsheets/d/1I72TCwCa6VMQccQSy5IpoSY-bZlk19m5SEmQlYYFsY8/edit#gid=0")
     driver.switch_to.new_window('tab')
     driver.get("https://www.tradein-com7.com/TI/login.aspx")
     return driver

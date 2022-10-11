@@ -124,7 +124,9 @@ def tracker():
                         # * = contains
                         #Is this regex?
                     elif index_add_one % int(file_len) == 0 and index != 0:
+                        sleep(1)
                         driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+                        sleep(1)
                         break
                     else:
                         continue
@@ -158,9 +160,30 @@ def tracker():
                             sleep(1.8)
                             refid = driver.find_element(By.XPATH, "//h3[contains(@class, 'track-number-heading')]").text
                             status_track = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][class*='TrackStatus']").text
-                            track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt157']").text
-                            timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
-                            weight = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt161']").text
+                            sleep(1.8)
+                            try:
+                                track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt125']").text
+                                timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
+                                weight = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt129']").text
+                            except NoSuchElementException as e:
+                                try: 
+                                    track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt468']").text
+                                    timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
+                                    weight = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt472']").text
+                                except NoSuchElementException as e2:
+                                    try:
+                                        track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt478']").text
+                                        timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
+                                        weight = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt482']").text
+                                    except NoSuchElementException as e3:
+                                        try:
+                                            track_details = driver.find_element(By.CSS_SELECTOR,"[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt517']").text
+                                            timeanddate = driver.find_element(By.CSS_SELECTOR,f"[id^='trackItNowForm'][id*=':0:'][id*='dateandtime'][class*='TrackTimeAndDate']").text
+                                            weight = driver.find_element(By.CSS_SELECTOR, "[class*='ui-outputlabel ui-widget ShipmentDetails'][id*='trackItNowForm:j_idt521']").text
+                                        except NoSuchElementException as e4:
+                                            print(e4)
+                                            sleep(1.8)
+                                            continue
                             ws1.cell(row=i+2, column=1).value = refid
                             ws1.cell(row=i+2, column=2).value = status_track
                             ws1.cell(row=i+2, column=3).value = weight
@@ -176,7 +199,6 @@ def tracker():
                             #quit = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.ID,"trackItNowForm:backbutton")))
                             #driver.execute("arguments[0].click();",quit)
                             if row_dhl > 50:
-                                driver.refresh()
                                 driver.get("https://ecommerceportal.dhl.com/track/")
                                 WebDriverWait(driver,30).until(EC.element_to_be_clickable((By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']")))
                                 driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").clear()
@@ -200,7 +222,15 @@ def tracker():
     retrievetrackingcode()
     
 
-    
+def test_room_2():
+    driver = launch_browser().launch_browser_chrome()##change firefox to chrome to use chrome instead
+    driver.get("https://ecommerceportal.dhl.com/track/")
+    with open(r'D:\Workstuff\my-work-python-script\Auto_Tracker (dev)\retrieve_tracking.txt', 'r+') as text: #fetch all value
+        for index, value in enumerate(text): #iterate through all of them first
+            driver.find_element(By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']").send_keys(value)
+            driver.find_element(By.ID,'trackItNowForm:searchSkuBtn').click()
+            WebDriverWait(driver,30).until(EC.element_to_be_clickable((By.XPATH,"//textarea[@id='trackItNowForm:trackItNowSearchBox']")))
+            driver.refresh()
 
 
 def test_room():
@@ -260,3 +290,4 @@ if __name__ in "__main__":
     #retrievetrackingcode()
 
     #test_room()
+    #test_room_2()
