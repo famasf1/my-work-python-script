@@ -11,4 +11,7 @@ def one():
             continue
         pyg.moveTo(image)
 
-one()
+def two():
+    pyg.mouseInfo()
+
+two()
