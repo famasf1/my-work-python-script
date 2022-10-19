@@ -140,7 +140,7 @@ def Vat_start_here():
     pyg.sleep(0.5)
     pyperclip.copy(readData.supname)
     pyg.sleep(0.5)
-    pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.docdatedata}")
+    pyg.write(f"{pyg.hotkey('ctrl','v')} | Doc Date : {readData.docdatedata}")
     pyg.moveTo(124,233)
     pyg.leftClick()
     VATbot_Start()
@@ -204,7 +204,7 @@ def NOVAT_start_here():
     pyg.sleep(0.5)
     pyperclip.copy(readData.supname)
     pyg.sleep(0.5)
-    pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.docdatedata}")
+    pyg.write(f"{pyg.hotkey('ctrl','v')} | Doc Date : {readData.docdatedata}")
     pyg.moveTo(124,233)
     pyg.leftClick()
     bot_Start()
@@ -230,7 +230,7 @@ def number_Input():
             press_enter(1)
             pyg.sleep(0.56)
         else:
-            br
+            break
     notifyme('ใส่จำนวนสำเร็จแล้ว')
     root.state('normal')
 
@@ -249,7 +249,7 @@ def stock_to73():
     pyg.write(readData.com7rts)
     press_enter(2)
     pyperclip.copy(readData.supname)
-    pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.supcode} | {readData.docdatedata} ")
+    pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.supcode} | Doc Date : {readData.docdatedata} ")
     pyg.moveTo(231,216)
     pyg.leftClick()
     press_Again = 1
@@ -341,7 +341,7 @@ def stock_to73_Noserial():
     pyg.write(readData.com7rts)
     press_enter(2)
     pyperclip.copy(readData.supname)
-    pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.supcode} | {readData.docdatedata} ")
+    pyg.write(f"{pyg.hotkey('ctrl','v')} | {readData.supcode} | Doc Date : {readData.docdatedata} ")
     pyg.moveTo(231,216)
     pyg.leftClick()
     for i in range(readData.getnumRow, readData.data66.max_row+1):
