@@ -41,9 +41,9 @@ def main():
         pyg.press('tab',3)
         pyg.write(productcode)
         pyg.press('f12')
-        pyg.sleep(3)
+        pyg.sleep(1.5)
         pyg.press('enter',2)
-        pyg.sleep(3)
+        pyg.sleep(1.5)
         pyg.write('49')
         pyg.hotkey('alt','f')
         pyg.sleep(1)
@@ -59,6 +59,7 @@ def main():
             pyg.press('y')
             pyg.press('enter')
             default_sheet.cell(row=product, column=4).value = 'Success'
+        workbook.save(root.excel)
 
     only_first()
     #first loop for main page
@@ -78,7 +79,6 @@ def main():
         if productcode:
             aging_Cat()
         ###########################################################
-    workbook.save(root.excel)
     notifyme('Rotate finished!')
         #operation success. save it and break to start next iter
 
