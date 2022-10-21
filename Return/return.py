@@ -140,7 +140,7 @@ def Vat_start_here():
     pyg.sleep(0.5)
     pyperclip.copy(readData.supname)
     pyg.sleep(0.5)
-    pyg.write(f"{pyg.hotkey('ctrl','v')} | Doc Date : {readData.docdatedata}")
+    pyg.write(f"{pyg.hotkey('ctrl','v')} | Doc Date : {readData.docdatedata}".replace("None",""))
     pyg.moveTo(124,233)
     pyg.leftClick()
     VATbot_Start()
@@ -367,13 +367,14 @@ def restart_Bot():
         product_Code = readData.datasheet1.cell(row=i,column=2).value
         number = readData.datasheet1.cell(row=i,column=5).value
         billtype = readData.datasheet1.cell(row=i,column=23).value
+        serial = readData.datasheet1.cell(row=i, column=4).value
         if billtype == "18":
             pyg.sleep(0.50)
             pyg.write(str(product_Code))
             pyg.press('Down')
             pyg.press('Down')
             pyg.sleep(1)
-            if pyg.locateOnScreen('nothing_error.png', confidence=.9): 
+            if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\nothing_error.png', confidence=.9): 
                 pyg.press('Esc')
                 press_enter(1)
                 pyg.press('Down')
@@ -382,18 +383,19 @@ def restart_Bot():
             pyg.leftClick()
             press_enter(1)
             pyg.sleep(1)
-            if pyg.locateOnScreen('ret_error.png', grayscale=True):
+            if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error.png', grayscale=True):
                 print('error')
                 press_enter(1)
                 pyg.press('Up')
                 pyg.press('Down')
                 pyg.press('Down')
-            elif pyg.locateCenterOnScreen('ret_error2.png', grayscale=True):
+            elif pyg.locateCenterOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error2.png', grayscale=True):
                 pyg.press('Esc')
                 pyg.press('Esc')
                 pyg.press('Esc')
                 pyg.press('Down')
                 pyg.press('Down')
+    root.state('normal')   
 
 
 greeting = create_button_tkinter("Browse",readData,250,20)

@@ -14,4 +14,4 @@ def one():
 def two():
     pyg.mouseInfo()
 
-two()
+one()

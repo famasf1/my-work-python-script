@@ -41,14 +41,26 @@ def main():
         pyg.press('tab',3)
         pyg.write(productcode)
         pyg.press('f12')
-        pyg.sleep(3)
-        pyg.press('enter',2)
-        pyg.sleep(3)
+        pyg.sleep(1.5)
+        pyg.press('enter')
+        pyg.sleep(1.5)
+        if pyg.locateOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
+            pyg.press('enter')
+            default_sheet.cell(row=product, column=4).value = 'Failed'
+            pass
+        else:
+            pyg.press('enter')
+        pyg.sleep(1.5)
         pyg.write('49')
         pyg.hotkey('alt','f')
         pyg.sleep(1)
         pyg.press('tab',11)
-        pyg.write(number)
+        pyg.hotkey('ctrl','c')
+        val = pyperclip.paste()
+        if val != number:
+            pyg.write(str(number))
+        else:
+            pass
         pyg.hotkey('alt','s')
         pyg.sleep(2)
         if pyg.locateCenterOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
@@ -59,6 +71,7 @@ def main():
             pyg.press('y')
             pyg.press('enter')
             default_sheet.cell(row=product, column=4).value = 'Success'
+        workbook.save(root.excel)
 
     only_first()
     #first loop for main page
@@ -78,7 +91,6 @@ def main():
         if productcode:
             aging_Cat()
         ###########################################################
-    workbook.save(root.excel)
     notifyme('Rotate finished!')
         #operation success. save it and break to start next iter
 
@@ -104,8 +116,16 @@ def test_room():
                 print(i)
                 break
         
+def test_room2():
+    val = 7
+    number = 2
+    if pyperclip.paste() != number:
+        pyg.write(str(number))
+    else:
+        pass
+
 
 
 if __name__ in '__main__':
-    #test_room()
+    #test_room2()
     main()
