@@ -5,6 +5,7 @@ from tkinter import *
 import datetime
 import pyperclip
 import requests
+
 ###################### Part 1 : Start the variable process
 
 def startup():
@@ -234,8 +235,8 @@ def docref():
             id = ID33_Data.cell(row=i,column=12).value
             branch = ID33_Data.cell(row=i,column=13).value
             date = ID33_Data.cell(row=i, column=7).value
-            formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
-            ID33_Data.cell(row=i,column=15).value = formulae
+            #formulae = f"=ifna(VLOOKUP(M{i},Data!C:G,5,0),"")"
+            #ID33_Data.cell(row=i,column=15).value = formulae
             workbook.save('bitly+ready.xlsx')
             if out_sect:
                 

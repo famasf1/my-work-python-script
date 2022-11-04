@@ -20,6 +20,8 @@ def main():
         
         pyg.click(306,139) ##only for first time
         pyg.sleep(3)
+        pyg.click(1637,152)
+        pyg.write("2560")
         pyg.click(602,297)
 
     def aging_Cat():
@@ -55,15 +57,10 @@ def main():
         pyg.hotkey('alt','f')
         pyg.sleep(1)
         pyg.press('tab',11)
-        pyg.hotkey('ctrl','c')
-        val = pyperclip.paste()
-        if val != number:
-            pyg.write(str(number))
-        else:
-            pass
+        pyg.write(str(number))
         pyg.hotkey('alt','s')
         pyg.sleep(2)
-        if pyg.locateCenterOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
+        if pyg.locateOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
             pyg.press('enter')
             pyg.hotkey('alt','x')
             default_sheet.cell(row=product, column=4).value = 'Failed'

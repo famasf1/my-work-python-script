@@ -109,6 +109,7 @@ def docref():
         for i in range(2,Incomplete_DataSheet.max_row+1):
             id = Incomplete_DataSheet.cell(row=i, column=1).value
             branch = Incomplete_DataSheet.cell(row=i, column=2).value
+            reason = Incomplete_DataSheet.cell(row=i, column=3).value
             if id:
                 pyautogui.sleep(.7)
                 pyautogui.moveTo(278,87)
@@ -120,9 +121,9 @@ def docref():
                 function_ITEC().search_button()
                 pyautogui.press('enter')
                 function_ITEC().docref_button()
-                pyperclip.copy(receive)
+                pyperclip.copy(reason)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{getdate_Obj(str(datetime.datetime.today()))})")
+                pyautogui.typewrite(f" {getdate_Obj(str(datetime.datetime.today()))})")
                 pyautogui.press('tab')
                 pyautogui.press('enter')
                 pyautogui.press('enter')

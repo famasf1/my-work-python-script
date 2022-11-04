@@ -5,8 +5,6 @@
 mydayis = 1 #0 = today or 1 = yesterday or 2 = yesterday of yesterday
 ###############################
 
-import pstats
-import token
 import pandas as pd
 from tkinter import *
 from tkinter import filedialog
@@ -71,7 +69,10 @@ def insure_only():
     CCN_Insure = sheet[sheet["CCN"].str.contains(r"(^PHYIDINSURE.*)-(33-1)$",regex=True)]
     remove_word = CCN_Insure['CCN'].replace(['PHYIDINSURE'],'', regex=True).str.split('-')
     df_remove = pd.DataFrame(remove_word)
-    df_remove_as_table = df_remove[['ID','Branch','Box Num']] = pd.DataFrame(df_remove.CCN.to_list(), index=df_remove.index)
+    try:
+        df_remove_as_table = df_remove[['ID','Branch','Box Num']] = pd.DataFrame(df_remove.CCN.to_list(), index=df_remove.index)
+    except:
+        pass
     frames = [CCN_Insure, df_remove_as_table]
     sheet_insure_only = pd.concat(frames, axis=1)\
     
