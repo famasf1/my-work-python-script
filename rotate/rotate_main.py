@@ -20,6 +20,8 @@ def main():
         
         pyg.click(306,139) ##only for first time
         pyg.sleep(3)
+        pyg.click(1637,152)
+        pyg.write("2560")
         pyg.click(602,297)
 
     def aging_Cat():
@@ -42,16 +44,23 @@ def main():
         pyg.write(productcode)
         pyg.press('f12')
         pyg.sleep(1.5)
-        pyg.press('enter',2)
+        pyg.press('enter')
+        pyg.sleep(1.5)
+        if pyg.locateOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
+            pyg.press('enter')
+            default_sheet.cell(row=product, column=4).value = 'Failed'
+            pass
+        else:
+            pyg.press('enter')
         pyg.sleep(1.5)
         pyg.write('49')
         pyg.hotkey('alt','f')
         pyg.sleep(1)
         pyg.press('tab',11)
-        pyg.write(number)
+        pyg.write(str(number))
         pyg.hotkey('alt','s')
         pyg.sleep(2)
-        if pyg.locateCenterOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
+        if pyg.locateOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
             pyg.press('enter')
             pyg.hotkey('alt','x')
             default_sheet.cell(row=product, column=4).value = 'Failed'
@@ -104,8 +113,16 @@ def test_room():
                 print(i)
                 break
         
+def test_room2():
+    val = 7
+    number = 2
+    if pyperclip.paste() != number:
+        pyg.write(str(number))
+    else:
+        pass
+
 
 
 if __name__ in '__main__':
-    #test_room()
+    #test_room2()
     main()
