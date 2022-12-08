@@ -33,16 +33,15 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, มรกต, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ
+        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
         วรัญญู = Employeelist(1,'ครบ / ตั้ม', '24179')
-        มรกต = Employeelist(2,'ครบ / ปาน', '23947')
-        วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค','23800')
-        วรวุฒิ = Employeelist(4, 'ครบ / ดิว','22073')
-        กิตติคุณ = Employeelist(5,'ครบ / ก็อต', '24021')
-        สราวุธ = Employeelist(6,'ครบ / เอก','23267')
-        employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index]
+        วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค','23800')
+        วรวุฒิ = Employeelist(3, 'ครบ / ดิว','22073')
+        กิตติคุณ = Employeelist(4,'ครบ / ก็อต', '24021')
+        สราวุธ = Employeelist(5,'ครบ / เอก','23267')
+        employeelist_index = [จิรายุทธ.index, วรัญญู.index, วุฒิภัทร.index]
         ##########################################################################################
 
         root = Tk()
@@ -103,8 +102,6 @@ def main(): #short for default behavior
                     case 1:
                         pyg.typewrite(วรัญญู.staffid)
                     case 2:
-                        pyg.typewrite(มรกต.staffid)
-                    case 3:
                         pyg.typewrite(วุฒิภัทร.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
@@ -119,9 +116,6 @@ def main(): #short for default behavior
                         pyperclip.copy(วรัญญู.name)
                         pyg.hotkey('ctrl','v')
                     case 2:
-                        pyperclip.copy(มรกต.name)
-                        pyg.hotkey('ctrl','v')
-                    case 3:
                         pyperclip.copy(วุฒิภัทร.name)
                         pyg.hotkey('ctrl','v')
                 ##ready
@@ -181,9 +175,8 @@ def clickleft(numberoftimes):
 def test():
     จิรายุทธ = Employeelist(0,'ครบ / โบ้', 22608) 
     วรัญญู = Employeelist(1,'ครบ / ตั้ม', 24179)
-    มรกต = Employeelist(2,'ครบ / ปาน', 23947)
-    วุฒิภัทร = Employeelist(3,'ครบ / มาร์ค',23800)
-    employeelist_index = [จิรายุทธ.index, วรัญญู.index, มรกต.index, วุฒิภัทร.index]
+    วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค',23800)
+    employeelist_index = [จิรายุทธ.index, วรัญญู.index,วุฒิภัทร.index]
     r = random.choice(employeelist_index)
     print(r)
 

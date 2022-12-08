@@ -2,7 +2,7 @@
 
 ###############################
 # WHAT DAY IS TODAY?
-mydayis = 1 #0 = today or 1 = yesterday or 2 = yesterday of yesterday
+mydayis = 0 #0 = today or 1 = yesterday or 2 = yesterday of yesterday
 ###############################
 
 import pandas as pd
