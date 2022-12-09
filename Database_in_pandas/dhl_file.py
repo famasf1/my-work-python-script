@@ -77,18 +77,18 @@ def FCB_only():
     only_fcb = sheet[sheet["POD"].str.contains("^FCB", regex=True)]
     only_fcb_phyid = only_fcb["CCN"].replace(['PHYID'],'',regex=True).str.split('-')
 
-    only_fcb_out = sheet[sheet["Branch"].str.contains("(^2)...", regex=True, na=False)]
-    only_fcb_out_phyid = only_fcb_out["CCN"].replace(['PHYID'],'',regex=True).str.split('-')
+    #only_fcb_out = sheet[sheet["Branch"].str.contains("(^2)...", regex=True, na=False)]
+    #only_fcb_out_phyid = only_fcb_out["CCN"].replace(['PHYID'],'',regex=True).str.split('-')
 
     df_only_fcb = pd.DataFrame(only_fcb_phyid)
-    df_only_fcb_out = pd.DataFrame(only_fcb_out_phyid)
+    #df_only_fcb_out = pd.DataFrame(only_fcb_out_phyid)
 
     #try:
     #    df_only_fcb_as_table = df_only_fcb[['ID','Branch','Box Num']] = pd.DataFrame(df_only_fcb.CCN.to_list(), index=df_only_fcb.index)
     #except:
     #    pass
 
-    frames = [only_fcb, df_only_fcb, df_only_fcb_out]
+    frames = [only_fcb, df_only_fcb] #df_only_fcb_out]
     sheet_fcb_only = pd.concat(frames, axis=1)
 
 def FCB_only_out():
@@ -141,7 +141,7 @@ def bitly_api_activate():
     Get data from selected row where URL link is located. Then convert them into shortlinks.
     '''
 
-    bitly_connect = bitlyshortener.Shortener(tokens=list_token, max_cache_size=256)
+    dagd_connect = dagdshort.Shortener(user_agent_suffix='famasf1/dagd_shorten', max_cache_size=256)
 
     load_insure_wb = pyxl.load_workbook(fr'C:\Users\Comseven\Documents\DHL\Completed\{name}_INSURE_ONLY.xlsx', data_only=True)
     load_fcb_only = pyxl.load_workbook(fr'C:\Users\Comseven\Documents\DHL\Completed\{name}_FCB_ONLY.xlsx', data_only=True)
@@ -158,8 +158,9 @@ def bitly_api_activate():
             long_link = active_Sheet.cell(row=row, column=11).value
             long_link_list.append(long_link)
         
-            short_link = bitly_connect.shorten_urls(long_link_list)
-            active_Sheet.cell(row=row, column=15).value = str(short_link[0])
+            short_link = dagd_connect.shorten_urls(long_link_list)
+            short_link_result = list(short_link.values())
+            active_Sheet.cell(row=row, column=15).value = str(short_link_result[0])
             load_insure_wb.save(fr'C:\Users\Comseven\Documents\DHL\Completed\{name}_INSURE_ONLY_1.xlsx')
 
     #for fcb sheet
@@ -170,8 +171,9 @@ def bitly_api_activate():
             long_link = active_fcb_sheet.cell(row=row, column=11).value
             long_link_list.append(long_link)
         
-            short_link = bitly_connect.shorten_urls(long_link_list)
-            active_fcb_sheet.cell(row=row, column=15).value = str(short_link[0])
+            short_link = dagd_connect.shorten_urls(long_link_list)
+            short_link_result = list(short_link.values())
+            active_fcb_sheet.cell(row=row, column=15).value = str(short_link_result[0])
             load_fcb_only.save(fr'C:\Users\Comseven\Documents\DHL\Completed\{name}_FCB_ONLY_1.xlsx')
 
     customer_link()
@@ -205,6 +207,6 @@ def bitly_api_activate_once():
         load_insure_wb.save(fr"C:\Users\Comseven\Documents\DHL\Completed\11-65\All_Nov_FCB_1.xlsx")
 
 if __name__ in '__main__':
-    #read()
+    read()
 
-    bitly_api_activate_once()
+    #bitly_api_activate_once()

@@ -31,6 +31,7 @@ def edit_insure():
         pyautogui.sleep(.7)
         pyautogui.leftClick()
         pyautogui.sleep(10)
+        8809667656672
         pyautogui.moveTo(1753,192)
         pyautogui.leftClick()
         pyautogui.moveTo(1752,215)
