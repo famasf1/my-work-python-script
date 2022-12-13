@@ -1,14 +1,39 @@
-import sys
-
 from tkinter import filedialog, messagebox
 import pyautogui as pyg
 import openpyxl
 import pyperclip
 import tkinter as tk
-from line_notify_me.line_notify_sourcecode import notifyme
+import os
 
-isthisnull = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png")
-nothingleft = pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\nothing_error.png")
+not_null_asset_location = r"asset\NOT_NULL.png"
+nothing_error = r"asset\nothing_error.png"
+
+isthisnull = pyg.locateOnScreen(os.path.join(os.getcwd(),not_null_asset_location))
+nothingleft = pyg.locateOnScreen(os.path.join(os.getcwd(), nothing_error))
+
+
+import requests
+### Notify me when the script is completed to LINE.
+def notifyme(confirmtext):
+    """
+    LINE Notify - Send text to my own line.
+    parameter :
+    confirmtext: str (required)
+    """
+    
+    mytoken = 'kOcQyjPGgIAgTQ4qWjTlEJZFUj7GegzGefdDEiSsYJr'
+    url = 'https://notify-api.line.me/api/notify'
+    data = {
+        'message' : confirmtext
+    }
+    options = {
+        'Method' : 'POST',
+        'Content-Type' : 'application/x-www-form-urlencoded',
+        'Authorization' : f'Bearer {mytoken}',
+    }
+    response = requests.post(url=url, headers=options, data=data)
+    print(response.status_code)
+
 
 ### create label above entry
 def createlabel(text1,placex,placey):
@@ -118,11 +143,11 @@ def stock_out():
                         pyg.press('Right')
                         press_enter(1)
                         pyg.sleep(1.2)
-                        if pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.7, grayscale=True): #If image input value found and this is not null, add number of items by 1 then continues
+                        if pyg.locateOnScreen(fr"{os.path.join(os.getcwd(),not_null_asset_location)}", confidence=.7, grayscale=True): #If image input value found and this is not null, add number of items by 1 then continues
                             print('Image Found!')
                             press_enter(1)
                             pyg.sleep(1.3)
-                            if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\ret_error.png", grayscale=True, confidence=.9): #mean item already taken
+                            if pyg.locateCenterOnScreen(fr"{os.path.join(os.getcwd(), nothing_error)}", grayscale=True, confidence=.9): #mean item already taken
                                 print('There is nothing left!')
                                 itemalreadytakenException(press_Again)
                                 press_Again += 1
@@ -159,7 +184,7 @@ def stock_out():
                         #pyg.press('Left')  
                 else:
                     continue
-    notifyme('ตัดยอด 390 เสร็จสิ้น')
+    notifyme(f'ตัดยอด {readData.branch_to} เสร็จสิ้น')
     root.state('normal')
 
 def restart_out():
@@ -202,11 +227,11 @@ def restart_out():
                         pyg.press('Right')
                         press_enter(1)
                         pyg.sleep(1.2)
-                        if pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.7, grayscale=True): #If image input value found and this is not null, add number of items by 1 then continues
+                        if pyg.locateOnScreen(fr"{os.path.join(os.getcwd(),not_null_asset_location)}", confidence=.7, grayscale=True): #If image input value found and this is not null, add number of items by 1 then continues
                             print('Image Found!')
                             press_enter(1)
                             pyg.sleep(1.3)
-                            if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\ret_error.png", grayscale=True, confidence=.9): #mean item already taken
+                            if pyg.locateCenterOnScreen(fr"{os.path.join(os.getcwd(), nothing_error)}", grayscale=True, confidence=.9): #mean item already taken
                                 print('There is nothing left!')
                                 itemalreadytakenException(press_Again)
                                 press_Again += 1
@@ -254,4 +279,3 @@ restart = create_button_tkinter("เริ่มจากแถวเดิม",
 
 if __name__ == "__main__":
     root.mainloop()
-    

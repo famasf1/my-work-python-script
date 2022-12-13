@@ -59,6 +59,26 @@ def press_enter(number):
 def readexcelAgain():
     openpyxl.load_workbook(readData.directoryhere, data_only=True)
 
+def Load_Sup_SummaryReport():
+    try:
+        root.state('iconic')
+        directory = filedialog.askopenfilename(title="เลือกไฟล์ Excel ที่มีข้อมูล", filetypes=(("Excel","*.xlsx"),('All Files','*.*')))
+        root.state('normal')
+    except Exception as e:
+        messagebox.showerror(title="Error!", message=f"{e}")
+        root.state('normal')
+    data = openpyxl.load_workbook(directory, data_only=True)
+    data_sheetname = data.sheetnames
+    report_mainsheet = data[data_sheetname[0]]
+    com7rtsnumber = report_mainsheet['C8'].value
+    suppliercode = report_mainsheet['C9'].value
+    suppliername = report_mainsheet['C10'].value
+    docdate = report_mainsheet['G9'].value
+    sup_code.insert(0, suppliercode)
+    sup_name.insert(0, suppliername)
+    doc_Date.insert(0, docdate)
+    getRTS.insert(0, com7rtsnumber)
+
 def readData():
     try:
         root.state('iconic')
@@ -397,15 +417,14 @@ def restart_Bot():
                 pyg.press('Down')
     root.state('normal')   
 
-
+readReport = create_button_tkinter("โหลดไฟล์เอกสารส่งคืน",Load_Sup_SummaryReport,100,20)
 greeting = create_button_tkinter("Browse",readData,250,20)
 vatstart = create_button_tkinter("เริ่ม (มี VAT)",Vat_start_here,25,190)
 novat_start = create_button_tkinter("เริ่ม (ไม่มี VAT)",NOVAT_start_here,110,190)
 number_times = create_button_tkinter("ใส่จำนวนที่คืน",number_Input,205,190)
 stock_out_73 = create_button_tkinter("โอนบิล 66 ไป 73",stock_to73,300,190)
-stock_out_73_noserialize = create_button_tkinter("โอนบิล 66 ไป 73 (ไม่มี Serial)",stock_to73_Noserial,300,150)
 clear_all = create_button_tkinter("เคลียร์ช่อง",clear_all_entry,405,190)
-renew = create_button_tkinter("Custom Row",restart_Bot,475,190)
+renew = create_button_tkinter("Custom Row",restart_Bot,475,190) #LEGACY UNUSED
 
 if __name__ == "__main__":
     root.mainloop()
