@@ -50,6 +50,7 @@ def main():
                         rf"D:\Workstuff\my-work-python-script\Print Barcode (dev)\result\{col3_tolist[0]}.png".replace("/00", "-00"))
                     img1.height = 100.9
                     img1.width = 182.1
+                    sticker_front._images = []
                     sticker_front.add_image(img1, 'A3')
                 except TypeError:
                     pass
