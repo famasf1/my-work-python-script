@@ -2,15 +2,16 @@ import openpyxl as pyxl
 from tkinter import Tk, filedialog
 import pyautogui
 from line_notify_me.line_notify_sourcecode import notifyme
+import pyperclip
+import datetime
 
 root = Tk()
 root.excel = filedialog.askopenfilename(title="เลือกไฟล์ Excel", filetypes=(('Excel Files','*.xlsx'),('All Files', '*.*')))
 root.withdraw()
 wb = pyxl.load_workbook(root.excel, data_only=True)
 ws = wb.sheetnames
-main_sheet = wb[ws[0]]
-
-
+main_sheet = wb[ws[1]]
+receive = 'รับ'
 
 class function_ITEC:
     def search_button(self):
@@ -45,10 +46,12 @@ def edit_insure():
 
     start()
     for row in range(2, main_sheet.max_row+1):
-        bitly_link = main_sheet.cell(row=row, column=15).value
+        date = main_sheet.cell(row=row, column=7).value
+        out_sect = main_sheet.cell(row=row, column=15).value
         id = main_sheet.cell(row=row, column=12).value
         branch = main_sheet.cell(row=row, column=13).value
-        if bitly_link:
+        
+        if out_sect:
             pyautogui.sleep(.7)
             pyautogui.moveTo(288,88)
             pyautogui.sleep(.7)
@@ -59,12 +62,48 @@ def edit_insure():
             function_ITEC().search_button()
             pyautogui.press('enter')
             function_ITEC().docref_button()
-            pyautogui.typewrite(f"{bitly_link}")
+            pyautogui.hotkey('ctrl','c')
+            readData = pyperclip.paste()
+            if "SVCOM7" in str(readData):
+                pyperclip.copy('')
+                pass
+            elif "svcom7" in str(readData):
+                pyperclip.copy('')
+                pass
+            else:
+                pyperclip.copy(receive)
+                pyautogui.hotkey('ctrl','v')
+                pyautogui.typewrite(f"{getdate_Obj(str(date))}| {out_sect}")
             pyautogui.press('tab')
             pyautogui.press('enter')
             pyautogui.press('enter')
         else: break
     notifyme('Docref for Insure is finished!')
+
+
+### Converting Date
+def getdate_Obj(dateData):
+    try:
+        date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S.%f")
+    except:
+        try:
+            date_obj = datetime.datetime.strptime(dateData, "%Y-%m-%d %H:%M:%S")
+        except:
+            try:
+                date_obj = datetime.datetime.strptime(dateData, "%d-%m-%Y %H:%M:%S")
+            except:
+                try:
+                    date_obj = datetime.datetime.strptime(dateData, "%d/%m/%Y")
+                except:
+                    try:
+                        date_obj = datetime.datetime.strptime(dateData, "%d/%m/%Y, %H:%m:%S")
+                    except Exception as e:
+                        print(e)
+                
+    return date_obj.strftime('%d/%m/%y')
+
+
+
 
 if __name__ in '__main__':
     edit_insure()

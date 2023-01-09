@@ -1,5 +1,5 @@
 import sys
-
+from datetime import datetime
 from tkinter import filedialog, messagebox
 import pyautogui as pyg
 import openpyxl
@@ -73,7 +73,7 @@ def Load_Sup_SummaryReport():
     com7rtsnumber = report_mainsheet['C8'].value
     suppliercode = report_mainsheet['C9'].value
     suppliername = report_mainsheet['C10'].value
-    docdate = report_mainsheet['G9'].value
+    docdate = report_mainsheet['G9'].value.strftime('%d/%m/%Y')
     sup_code.insert(0, suppliercode)
     sup_name.insert(0, suppliername)
     doc_Date.insert(0, docdate)

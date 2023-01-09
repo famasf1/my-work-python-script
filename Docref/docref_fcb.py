@@ -64,7 +64,7 @@ def edit_insure():
             pyautogui.press('enter')
             pyautogui.press('enter')
         else: break
-    notifyme('Docref for Insure is finished!')
+    notifyme('Docref for FCB is finished!')
 
 if __name__ in '__main__':
     edit_insure()
