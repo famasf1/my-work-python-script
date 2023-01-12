@@ -36,25 +36,31 @@ def main():
     # after divided it by 8 (barcode have only 8 slots)
     # stop the operation.
     # But if the row is less than 8, do a match case.
-    rownumber = all_data.max_row
-    match all_data.max_row:
+    rownumber = all_data.max_row % 8
+
+    match rownumber:
         case 1:
-            rownumber = all_data.max_row + 7
+            rownumber = all_data.max_row + 8
         case 2:
-            rownumber = all_data.max_row + 6
+            rownumber = all_data.max_row + 7
         case 3:
-            rownumber = all_data.max_row + 5
+            rownumber = all_data.max_row + 6
         case 4:
-            rownumber = all_data.max_row + 4
+            rownumber = all_data.max_row + 5
         case 5:
-            rownumber = all_data.max_row + 3
+            rownumber = all_data.max_row + 4
         case 6:
+            rownumber = all_data.max_row + 3
+        case 7:
             rownumber = all_data.max_row + 2
-        case other:
+        case _:
+            print("wildcard")
             rownumber = all_data.max_row + 1
 
+        
+
     print(rownumber)
-    for val in range(1, rownumber + 1):
+    for val in range(1, rownumber):
         
         col1 = all_data.cell(row=val, column=1).value
         col1 = f'No.{col1}'
@@ -87,6 +93,7 @@ def main():
                     sticker_front['B2'].value = 'None'
                     sticker_front['B3'].value = 'None'
                     worksheet.save(root.excel)
+                    pass
 
         def template_front2():  # top right
             if len(col1_tolist) % 8 == 2:
@@ -106,6 +113,7 @@ def main():
                     sticker_front['E2'].value = 'None'
                     sticker_front['E3'].value = 'None'
                     worksheet.save(root.excel)
+                    pass
 
         def template_front3():  # 2nd left
             if len(col1_tolist) % 8 == 3:
@@ -125,6 +133,7 @@ def main():
                     sticker_front['B6'].value = 'None'
                     sticker_front['B7'].value = 'None'
                     worksheet.save(root.excel)
+                    pass
 
         def template_front4():  # 2nd left
             if len(col1_tolist) % 8 == 4:
@@ -144,6 +153,7 @@ def main():
                     sticker_front['E6'].value = 'None'
                     sticker_front['E7'].value = 'None'                    
                     worksheet.save(root.excel)
+                    pass
 
         def template_front5():  # 3rd left
             if len(col1_tolist) % 8 == 5:
@@ -163,6 +173,7 @@ def main():
                     sticker_front['B10'].value = 'None'
                     sticker_front['B11'].value = 'None'
                     worksheet.save(root.excel)
+                    pass
 
         def template_front6():  # 3rd left
             if len(col1_tolist) % 8 == 6:
@@ -182,6 +193,7 @@ def main():
                     sticker_front['E10'].value = 'None'
                     sticker_front['E11'].value = 'None'
                     worksheet.save(root.excel)
+                    pass
 
         def template_front7():  # bottom left
             if len(col1_tolist) % 8 == 7:
@@ -201,6 +213,7 @@ def main():
                     sticker_front['B14'].value = 'None'
                     sticker_front['B15'].value = 'None'
                     worksheet.save(root.excel)
+                    pass
 
         def template_front_final():  # bottom right
             if len(col1_tolist) % 8 == 0:

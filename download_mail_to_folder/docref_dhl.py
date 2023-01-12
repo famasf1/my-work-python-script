@@ -47,7 +47,7 @@ def edit_docref():
 
     start()
     # CHANGE DATE HERE
-    day = date.today() - timedelta(days=2)
+    day = date.today() - timedelta(days=1)
     day = day.strftime("%d/%m/%y")
 
     for row in range(2, main_sheet.max_row+1):

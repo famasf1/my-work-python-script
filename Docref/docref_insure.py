@@ -11,7 +11,7 @@ root.withdraw()
 wb = pyxl.load_workbook(root.excel, data_only=True)
 ws = wb.sheetnames
 main_sheet = wb[ws[1]]
-receive = 'รับ'
+receive = 'พัสดุถึง '
 
 class function_ITEC:
     def search_button(self):
@@ -47,11 +47,10 @@ def edit_insure():
     start()
     for row in range(2, main_sheet.max_row+1):
         date = main_sheet.cell(row=row, column=7).value
-        out_sect = main_sheet.cell(row=row, column=15).value
         id = main_sheet.cell(row=row, column=12).value
         branch = main_sheet.cell(row=row, column=13).value
         
-        if out_sect:
+        if id:
             pyautogui.sleep(.7)
             pyautogui.moveTo(288,88)
             pyautogui.sleep(.7)
@@ -73,7 +72,7 @@ def edit_insure():
             else:
                 pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
-                pyautogui.typewrite(f"{getdate_Obj(str(date))}| {out_sect}")
+                pyautogui.typewrite(f"{getdate_Obj(str(date))} ")
             pyautogui.press('tab')
             pyautogui.press('enter')
             pyautogui.press('enter')
@@ -100,7 +99,7 @@ def getdate_Obj(dateData):
                     except Exception as e:
                         print(e)
                 
-    return date_obj.strftime('%d/%m/%y')
+    return date_obj.strftime('%d/%m/%y | %H:%M')
 
 
 
