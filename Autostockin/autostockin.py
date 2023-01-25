@@ -5,7 +5,7 @@ from tkinter import *
 import pyautogui as pyg
 import openpyxl
 import pyperclip
-import random
+import numpy as np
 ############### CLASS ################
 
 ### List all employee ###
@@ -33,15 +33,17 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ
+        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ, กิติคุณ, ไพรินทร์
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
-        วรัญญู = Employeelist(1,'ครบ / ตั้ม', '24179')
+        วรัญญู = Employeelist(1,'ครบ / ตั้ม', '25175')
         วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค','23800')
         วรวุฒิ = Employeelist(3, 'ครบ / ดิว','22073')
         กิตติคุณ = Employeelist(4,'ครบ / ก็อต', '24021')
         สราวุธ = Employeelist(5,'ครบ / เอก','23267')
-        employeelist_index = [จิรายุทธ.index, วรัญญู.index, วุฒิภัทร.index]
+        กิติคุณ = Employeelist(6, 'ครบ / กิต', '25120')
+        ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
+        employeelist_index = [ไพรินทร์.index, วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
         ##########################################################################################
 
         root = Tk()
@@ -95,20 +97,32 @@ def main(): #short for default behavior
                 print('Start Stock In')
 
                 #pick staff id
-                r = random.choice(employeelist_index)
-                match r:
+                r = np.random.default_rng()
+                #[ไพรินทร์.index, วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index]
+                rng = r.choice(employeelist_index, p=[0.075, 0.175, 0.175, 0.175, 0.075, 0.075, 0.075, 0.075])
+                match rng:
                     case 0:
                         pyg.typewrite(จิรายุทธ.staffid)
                     case 1:
                         pyg.typewrite(วรัญญู.staffid)
                     case 2:
                         pyg.typewrite(วุฒิภัทร.staffid)
+                    case 3:
+                        pyg.typewrite(วรวุฒิ.staffid)
+                    case 4:
+                        pyg.typewrite(กิตติคุณ.staffid)
+                    case 5:
+                        pyg.typewrite(สราวุธ.staffid)
+                    case 6:
+                        pyg.typewrite(กิติคุณ.staffid)
+                    case 7:
+                        pyg.typewrite(ไพรินทร์.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
                 pressenter(2)
 
                 #name
-                match r:
+                match rng:
                     case 0:
                         pyperclip.copy(จิรายุทธ.name)
                         pyg.hotkey('ctrl','v')
@@ -118,6 +132,22 @@ def main(): #short for default behavior
                     case 2:
                         pyperclip.copy(วุฒิภัทร.name)
                         pyg.hotkey('ctrl','v')
+                    case 3:
+                        pyperclip.copy(วรวุฒิ.name)
+                        pyg.hotkey('ctrl', 'v')
+                    case 4:
+                        pyperclip.copy(กิตติคุณ.name)
+                        pyg.hotkey('ctrl', 'v')
+                    case 5:
+                        pyperclip.copy(สราวุธ.name)
+                        pyg.hotkey('ctrl', 'v')
+                    case 6:
+                        pyperclip.copy(กิติคุณ.name)
+                        pyg.hotkey('ctrl', 'v')
+                    case 7:
+                        pyperclip.copy(ไพรินทร์.name)
+                        pyg.hotkey('ctrl', 'v')
+                        
                 ##ready
                 ##now check if value exist
                 pyg.hotkey('alt','f')

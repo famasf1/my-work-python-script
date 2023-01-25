@@ -66,7 +66,7 @@ def edit_docref():
             function_ITEC().search_button()
             pyautogui.press('enter')
             function_ITEC().docref_button()
-            copy("DHL เข้า: ")
+            copy("DHL เข้ารับ: ")
             pyautogui.hotkey('ctrl','v')
             pyautogui.typewrite(f"{day} | {time}")
             pyautogui.press('tab')
