@@ -12,6 +12,7 @@ wb = pyxl.load_workbook(root.excel, data_only=True)
 ws = wb.sheetnames
 main_sheet = wb[ws[0]]
 receive = 'พัสดุถึง '
+receive_retdup = 'พัสดุ RET ถึง'
 
 class function_ITEC:
     def search_button(self):
@@ -49,6 +50,8 @@ def edit_insure():
         date = main_sheet.cell(row=row, column=7).value
         id = main_sheet.cell(row=row, column=12).value
         branch = main_sheet.cell(row=row, column=13).value
+        checkretdup = main_sheet.cell(row=row, column=14).value
+
         
         if id:
             pyautogui.sleep(.7)
@@ -70,7 +73,10 @@ def edit_insure():
                 pyperclip.copy('')
                 pass
             else:
-                pyperclip.copy(receive)
+                if checkretdup == "RETDUP":
+                    pyperclip.copy(receive_retdup)
+                else:
+                    pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.typewrite(f"{getdate_Obj(str(date))} ")
             pyautogui.press('tab')

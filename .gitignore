@@ -6,3 +6,6 @@ build/
 Database_in_pandas/token.py
 download_mail_to_folder/xlsx/
 download_mail_to_folder/Result_archiev/
+*.xlsx
+*.xlsm
+*.rar

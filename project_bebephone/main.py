@@ -4,29 +4,41 @@ from tkinter import Tk, filedialog
 import itertools
 import natsort as ns
 
-asset_directory = os.path.join(r"C:\Users\jambo\OneDrive\เดสก์ท็อป\Workspaces\my-work-python-script\project_bebephone", r"Asset")
+asset_directory = os.path.join(r"D:\Workstuff\my-work-python-script\project_bebephone", r"Asset")
 
 root = Tk()
-#get data
-get_wb = filedialog.askopenfilename(title="เลือกไฟล์ข้อมูล Excel", filetypes=([("*Excel Files", "*.xlsx"), ("All Files", "*.*")]))
-data_wb = openpyxl.load_workbook(get_wb, data_only=True)
-data_sheet = data_wb.sheetnames
-get_sheet = data_wb[data_sheet[0]]
 
 try:
     os.mkdir("PRINT")
 except FileExistsError:
     pass
 
-class generate_block:
+def grouper(Stringname, number): #https://stackoverflow.com/questions/12559055/for-every-x-number-of-files-create-new-directory-and-move-files-using-python
+        '''
+        Params:\n
+        Stringname = filename\n
+        number = number of file per folder
+        '''
+        iterator = iter(Stringname)
+        while True:
+            item = list(itertools.islice(iterator, number))
+            print(item)
+            if len(item) == 0:
+                break
+            yield item
+
+
+
+def main():
     #get data
     get_wb = filedialog.askopenfilename(title="เลือกไฟล์ข้อมูล Excel", filetypes=([("*Excel Files", "*.xlsx"), ("All Files", "*.*")]))
     data_wb = openpyxl.load_workbook(get_wb, data_only=True)
     data_sheet = data_wb.sheetnames
-    get_sheet = data_wb[data_sheet[1]]
+    get_sheet = data_wb[data_sheet[0]]
     def block90():
         #get asset
         PRINT_dir = r"D:\Workstuff\my-work-python-script\project_bebephone\PRINT"
+        os.chdir(PRINT_dir)
         asset_dir_90 = os.path.join(asset_directory, r"block90template.xlsm")
         block90_wb = openpyxl.load_workbook(asset_dir_90, data_only=True, keep_vba=True)
         block90_ws = block90_wb.sheetnames
@@ -41,10 +53,12 @@ class generate_block:
         com7barcode_endrow = 75
         com7barcodetext_endrow = 76
         start_col = 2
+        end_col = 17
         col_gap = 3
         #end setting
 
-        for row in range(3,get_sheet.max_row + 1):
+
+        for row in range(2,get_sheet.max_row + 1):
             bebecode = get_sheet.cell(row=row, column=2).value
             com7barcode = get_sheet.cell(row=row, column=3).value
             #calculate column needed
@@ -65,8 +79,7 @@ class generate_block:
                     block90.cell(row=com7barcodetextrow, column=col).value = com7barcode
             
             block90_wb.save(f"{bebecode}.xlsm")
-            break
-
+    #block90()
 
     def block56():
         #get asset
@@ -75,10 +88,20 @@ class generate_block:
         block56_wb = openpyxl.load_workbook(asset_dir_56, data_only=True, keep_vba=True)
         block56_ws = block56_wb.sheetnames
         block56 = block56_wb[block56_ws[0]]
-        #setting loop
-        bebecode_startrow = 4
-        com7barcode_startrow = 5
-        com7barcodetext_startrow = 6
+
+        #setting
+        bebecode_startrow = 2
+        com7barcode_startrow = 3
+        com7barcodetext_startrow = 4
+        row_gap = 4
+        bebecode_endrow = 74
+        com7barcode_endrow = 75
+        com7barcodetext_endrow = 76
+        start_col = 2
+        end_col = 17
+        col_gap = 3
+        #end setting
+
         for row in range(3,get_sheet.max_row + 1):
             bebecode = get_sheet.cell(row=row, column=2).value
             com7barcode = get_sheet.cell(row=row, column=3).value
@@ -103,4 +126,4 @@ class generate_block:
 
 
 if __name__ in "__main__":
-    generate_block.block90()
+    main()

@@ -43,19 +43,19 @@ def main():
         pyg.press('tab',3)
         pyg.write(productcode)
         pyg.press('f12')
-        pyg.sleep(1.5)
+        pyg.sleep(1.2)
         pyg.press('enter')
-        pyg.sleep(1.5)
+        pyg.sleep(1.2)
         if pyg.locateOnScreen(rf"D:\Workstuff\my-work-python-script\rotate\asset\ret_error.png",grayscale=True):
             pyg.press('enter')
             default_sheet.cell(row=product, column=4).value = 'Failed'
             pass
         else:
             pyg.press('enter')
-        pyg.sleep(1.5)
+        pyg.sleep(1.1)
         pyg.write('49')
         pyg.hotkey('alt','f')
-        pyg.sleep(1)
+        pyg.sleep(.9)
         pyg.press('tab',11)
         pyg.write(str(number))
         pyg.hotkey('alt','s')

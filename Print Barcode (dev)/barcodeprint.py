@@ -235,7 +235,7 @@ def main():
                     col2_tolist.clear()
                     col3_tolist.clear()
                     dispatcher = win32com.client.Dispatch('Excel.Application')
-                    dispatcher.visible = False
+                    dispatcher.Visible = False
                     wb = dispatcher.Workbooks.Open(str(root.excel))
                     getsheet = wb.Worksheets([1])
                     #getsheet.PageSetup.FitToPagesTall = 1
