@@ -2,7 +2,7 @@
 
 ###############################
 # WHAT DAY IS TODAY?
-mydayis = 1 #0 = today or 1 = custom date (referred to timedelta_date variable)
+mydayis = 0 #0 = today or 1 = custom date (referred to timedelta_date variable)
 timedelta_date = 1
 ###############################
 

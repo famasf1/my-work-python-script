@@ -33,17 +33,17 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ, กิติคุณ, ไพรินทร์
+        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ, กิติคุณ
         ###################################### LIST EMPLOYEE #####################################
-        จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
-        วรัญญู = Employeelist(1,'ครบ / ตั้ม', '25175')
-        วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค','23800')
-        วรวุฒิ = Employeelist(3, 'ครบ / ดิว','22073')
-        กิตติคุณ = Employeelist(4,'ครบ / ก็อต', '24021')
-        สราวุธ = Employeelist(5,'ครบ / เอก','23267')
-        กิติคุณ = Employeelist(6, 'ครบ / กิต', '25120')
-        ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
-        employeelist_index = [ไพรินทร์.index, วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+        จิรายุทธ = Employeelist(0,r'ครบ / โบ้ | ', '22608') 
+        วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
+        วุฒิภัทร = Employeelist(2,r'ครบ / มาร์ค | ','23800')
+        วรวุฒิ = Employeelist(3, r'ครบ / ดิว | ','22073')
+        กิตติคุณ = Employeelist(4,r'ครบ / ก็อต | ', '24021')
+        สราวุธ = Employeelist(5,r'ครบ / เอก | ','23267')
+        กิติคุณ = Employeelist(6, r'ครบ / กิต | ', '25120')
+        #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
+        employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
         ##########################################################################################
 
         root = Tk()
@@ -91,6 +91,8 @@ def main(): #short for default behavior
         for i in range(1, worksheet.max_row+1):
             
             stockoutid = worksheet.cell(row=i, column=1).value
+            date = worksheet.cell(row=i, column=3).value
+            etc = worksheet.cell(row=i, column=4).value
             if stockoutid:
                 nextStart(i)
                 firstStart(i)
@@ -99,7 +101,7 @@ def main(): #short for default behavior
                 #pick staff id
                 r = np.random.default_rng()
                 #[ไพรินทร์.index, วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index]
-                rng = r.choice(employeelist_index, p=[0.075, 0.175, 0.175, 0.175, 0.075, 0.075, 0.075, 0.075])
+                rng = r.choice(employeelist_index, p=[.200,.200,.300,.067,.067,.067,.099])
                 match rng:
                     case 0:
                         pyg.typewrite(จิรายุทธ.staffid)
@@ -115,8 +117,6 @@ def main(): #short for default behavior
                         pyg.typewrite(สราวุธ.staffid)
                     case 6:
                         pyg.typewrite(กิติคุณ.staffid)
-                    case 7:
-                        pyg.typewrite(ไพรินทร์.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
                 pressenter(2)
@@ -144,12 +144,17 @@ def main(): #short for default behavior
                     case 6:
                         pyperclip.copy(กิติคุณ.name)
                         pyg.hotkey('ctrl', 'v')
-                    case 7:
-                        pyperclip.copy(ไพรินทร์.name)
-                        pyg.hotkey('ctrl', 'v')
                         
                 ##ready
                 ##now check if value exist
+                pyg.sleep(1)
+                pyg.typewrite(f"Date : {date}")
+                pyg.sleep(1
+                )
+                if etc:
+                    pyperclip.copy(etc)
+                    pyg.typewrite(" | ")
+                    pyg.hotkey('ctrl', 'v')
                 pyg.hotkey('alt','f')
                 pyg.press('o')
                 pyg.sleep(5)
@@ -174,12 +179,13 @@ def main(): #short for default behavior
                             worksheet.cell(row=i, column=2).value = 'Success'
                             pressenter(4)
                             continue
+                    workbook.save(r"D:\Workstuff\my-work-python-script\Autostockin\stockin49_1.xlsx")
                 except Exception as e:
                     messagebox.showerror('Python Error', f'{e}')
+                    
             else: break
 
     start_in()
-    workbook.save(r"D:\Workstuff\my-work-python-script\Autostockin\stockin49_1.xlsx")
     notifyme('Stock In Complete!')
 
 ####################################################################
@@ -203,12 +209,17 @@ def clickleft(numberoftimes):
             break
 
 def test():
-    จิรายุทธ = Employeelist(0,'ครบ / โบ้', 22608) 
-    วรัญญู = Employeelist(1,'ครบ / ตั้ม', 24179)
-    วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค',23800)
-    employeelist_index = [จิรายุทธ.index, วรัญญู.index,วุฒิภัทร.index]
-    r = random.choice(employeelist_index)
-    print(r)
+
+    จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
+    วรัญญู = Employeelist(1,'ครบ / ตั้ม', '25175')
+    วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค','23800')
+    วรวุฒิ = Employeelist(3, 'ครบ / ดิว','22073')
+    กิตติคุณ = Employeelist(4,'ครบ / ก็อต', '24021')
+    สราวุธ = Employeelist(5,'ครบ / เอก','23267')
+    กิติคุณ = Employeelist(6, 'ครบ / กิต', '25120')
+    employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+    r = np.random.default_rng()
+    rng = r.choice(employeelist_index, p=[.200,.200,.200,.067,.067,.067,.199])
 
 try:
     #test()
