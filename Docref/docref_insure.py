@@ -50,6 +50,7 @@ def edit_insure():
         date = main_sheet.cell(row=row, column=7).value
         id = main_sheet.cell(row=row, column=12).value
         branch = main_sheet.cell(row=row, column=13).value
+        checkretdup = main_sheet.cell(row=row, column=14).value
         
         if id:
             pyautogui.sleep(.7)
@@ -71,7 +72,7 @@ def edit_insure():
                 pyperclip.copy('')
                 pass
             else:
-                if checkretdup == "RETDUP":
+                if checkretdup == "1RETDUP":
                     pyperclip.copy(receive_retdup)
                 else:
                     pyperclip.copy(receive)

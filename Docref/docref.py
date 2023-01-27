@@ -73,7 +73,7 @@ def edit_insure():
                 pyperclip.copy('')
                 pass
             else:
-                if checkretdup == "RETDUP":
+                if checkretdup == "1RETDUP":
                     pyperclip.copy(receive_retdup)
                 else:
                     pyperclip.copy(receive)
