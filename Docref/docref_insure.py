@@ -12,7 +12,7 @@ wb = pyxl.load_workbook(root.excel, data_only=True)
 ws = wb.sheetnames
 main_sheet = wb[ws[1]]
 receive = 'พัสดุถึง '
-receive_retdup = 'พัสดุ RET ถึง'
+receive_retdup = 'พัสดุตีคืน'
 
 class function_ITEC:
     def search_button(self):

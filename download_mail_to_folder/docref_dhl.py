@@ -2,7 +2,7 @@ import openpyxl as pyxl
 from tkinter import Tk, filedialog
 import pyautogui
 from line_notify_me.line_notify_sourcecode import notifyme
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 from pyperclip import copy
 
 root = Tk()
@@ -47,14 +47,15 @@ def edit_docref():
 
     start()
     # CHANGE DATE HERE
-    day = date.today() - timedelta(days=1)
-    day = day.strftime("%d/%m/%y")
 
     for row in range(2, main_sheet.max_row+1):
+        day = main_sheet.cell(row=row, column=2).value
         time = main_sheet.cell(row=row, column=3).value
         id = main_sheet.cell(row=row, column=4).value
         branch = main_sheet.cell(row=row, column=5).value
         isinsure = main_sheet.cell(row=row, column=6).value
+        day = datetime.strptime(day, "%b %d, %Y ")
+        dayformatted = day.strftime("%d/%m/%y")
         if isinsure == "Stockout":
             pyautogui.sleep(.7)
             pyautogui.moveTo(288,88)
@@ -68,7 +69,7 @@ def edit_docref():
             function_ITEC().docref_button()
             copy("DHL เข้ารับ: ")
             pyautogui.hotkey('ctrl','v')
-            pyautogui.typewrite(f"{day} | {time}")
+            pyautogui.typewrite(f"{dayformatted} | {time}")
             pyautogui.press('tab')
             pyautogui.press('enter')
             pyautogui.press('enter')

@@ -1,3 +1,9 @@
 {
-    "python.analysis.typeCheckingMode": "off"
+    "python.analysis.typeCheckingMode": "off",
+    "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.2,
+    "workbench.colorTheme": "Darcula Pycharm with Dark GUI",
+    "workbench.sideBar.location": "left",
+
 }

@@ -88,11 +88,11 @@ def main(): #short for default behavior
             pyg.press('i')
 
     def start_in():
-        for i in range(1, worksheet.max_row+1):
+        for i in range(2, worksheet.max_row+1):
             
             stockoutid = worksheet.cell(row=i, column=1).value
-            date = worksheet.cell(row=i, column=3).value
-            etc = worksheet.cell(row=i, column=4).value
+            date = worksheet.cell(row=i, column=2).value
+            etc = worksheet.cell(row=i, column=3).value
             if stockoutid:
                 nextStart(i)
                 firstStart(i)
@@ -100,8 +100,8 @@ def main(): #short for default behavior
 
                 #pick staff id
                 r = np.random.default_rng()
-                #[ไพรินทร์.index, วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index]
-                rng = r.choice(employeelist_index, p=[.200,.200,.300,.067,.067,.067,.099])
+                #[วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+                rng = r.choice(employeelist_index, p=[.200,.300,.200,.067,.067,.067,.099])
                 match rng:
                     case 0:
                         pyg.typewrite(จิรายุทธ.staffid)
@@ -161,7 +161,7 @@ def main(): #short for default behavior
                 try:
                     if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\asset\ret_error.png", grayscale=True):
                         pressenter(1)
-                        worksheet.cell(row=i, column=2).value = 'Failed'
+                        worksheet.cell(row=i, column=4).value = 'Failed'
                         pyg.press('esc')
                         pass
                     else:
@@ -176,7 +176,7 @@ def main(): #short for default behavior
                                 print(e)
                                 continue
                         if foundstockbill:
-                            worksheet.cell(row=i, column=2).value = 'Success'
+                            worksheet.cell(row=i, column=4).value = 'Success'
                             pressenter(4)
                             continue
                     workbook.save(r"D:\Workstuff\my-work-python-script\Autostockin\stockin49_1.xlsx")
