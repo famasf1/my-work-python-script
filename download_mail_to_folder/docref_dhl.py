@@ -13,6 +13,8 @@ ws = wb.sheetnames
 main_sheet = wb[ws[0]]
 
 
+191
+1,780
 
 class function_ITEC:
     def search_button(self):

@@ -8,6 +8,9 @@ import pyperclip
 import numpy as np
 ############### CLASS ################
 
+###MAKE SURE YOU CHECK CUSTOM EMPLOYEE VARIABLE FIRST
+
+
 ### List all employee ###
 class Employeelist:
     #เขียนครบ ตามด้วยไอดีพนักงาน
@@ -32,8 +35,8 @@ class Employeelist:
 
 def start_script():
     try:
-        global workbook, worksheet,readpicerrorfound, ok, employeelist_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ, กิติคุณ
+        global workbook, worksheet,readpicerrorfound, ok, employeelist_index, customemployee_index, employeelist_name, employeelist_id, checking
+        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,r'ครบ / โบ้ | ', '22608') 
         วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
@@ -41,9 +44,10 @@ def start_script():
         วรวุฒิ = Employeelist(3, r'ครบ / ดิว | ','22073')
         กิตติคุณ = Employeelist(4,r'ครบ / ก็อต | ', '24021')
         สราวุธ = Employeelist(5,r'ครบ / เอก | ','23267')
-        กิติคุณ = Employeelist(6, r'ครบ / กิต | ', '25120')
+        กิติพงษ์ = Employeelist(6, r'ครบ / กิต | ', '25120')
         #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
-        employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+        employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+        customemployee_index = [กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index,วรัญญู.index]
         ##########################################################################################
 
         root = Tk()
@@ -92,7 +96,8 @@ def main(): #short for default behavior
             
             stockoutid = worksheet.cell(row=i, column=1).value
             date = worksheet.cell(row=i, column=2).value
-            etc = worksheet.cell(row=i, column=3).value
+            custom = worksheet.cell(row=i, column=3).value
+            etc = worksheet.cell(row=i, column=4).value
             if stockoutid:
                 nextStart(i)
                 firstStart(i)
@@ -100,8 +105,18 @@ def main(): #short for default behavior
 
                 #pick staff id
                 r = np.random.default_rng()
+                ###### employeelist_index
                 #[วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
-                rng = r.choice(employeelist_index, p=[.200,.300,.200,.067,.067,.067,.099])
+                ###### customemployee_index
+
+                #### 02/03
+
+                #[กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index,วรัญญู.index]
+                if custom == "custom":
+                    ###If someone take a day off, customize this.
+                    rng = r.choice(customemployee_index, p=[.300,.100,.100,.100,.200,.200])
+                else:
+                    rng = r.choice(employeelist_index, p=[.200,.300,.200,.067,.067,.067,.099])
                 match rng:
                     case 0:
                         pyg.typewrite(จิรายุทธ.staffid)
@@ -116,7 +131,7 @@ def main(): #short for default behavior
                     case 5:
                         pyg.typewrite(สราวุธ.staffid)
                     case 6:
-                        pyg.typewrite(กิติคุณ.staffid)
+                        pyg.typewrite(กิติพงษ์.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
                 pressenter(2)
@@ -142,7 +157,7 @@ def main(): #short for default behavior
                         pyperclip.copy(สราวุธ.name)
                         pyg.hotkey('ctrl', 'v')
                     case 6:
-                        pyperclip.copy(กิติคุณ.name)
+                        pyperclip.copy(กิติพงษ์.name)
                         pyg.hotkey('ctrl', 'v')
                         
                 ##ready
