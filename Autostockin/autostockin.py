@@ -47,7 +47,7 @@ def start_script():
         กิติพงษ์ = Employeelist(6, r'ครบ / กิต | ', '25120')
         #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
         employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
-        customemployee_index = [กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index,วรัญญู.index]
+        customemployee_index = [กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, วุฒิภัทร.index]
         ##########################################################################################
 
         root = Tk()
@@ -99,7 +99,9 @@ def main(): #short for default behavior
             custom = worksheet.cell(row=i, column=3).value
             etc = worksheet.cell(row=i, column=4).value
             if stockoutid:
+
                 nextStart(i)
+                
                 firstStart(i)
                 print('Start Stock In')
 
@@ -109,14 +111,14 @@ def main(): #short for default behavior
                 #[วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
                 ###### customemployee_index
 
-                #### 02/03
+                #### 22/03
 
-                #[กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index,วรัญญู.index]
+                #[กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, วุฒิภัทร.index]
                 if custom == "custom":
                     ###If someone take a day off, customize this.
-                    rng = r.choice(customemployee_index, p=[.300,.100,.100,.100,.200,.200])
+                    rng = r.choice(customemployee_index, p=[.200,.100,.100,.100,.200,.300])
                 else:
-                    rng = r.choice(employeelist_index, p=[.200,.300,.200,.067,.067,.067,.099])
+                    rng = r.choice(employeelist_index, p=[.300,.200,.200,.067,.067,.067,.099])
                 match rng:
                     case 0:
                         pyg.typewrite(จิรายุทธ.staffid)
@@ -162,7 +164,7 @@ def main(): #short for default behavior
                         
                 ##ready
                 ##now check if value exist
-                pyg.sleep(1)
+                pyg.sleep(1.85)
                 pyg.typewrite(f"Date : {date}")
                 pyg.sleep(1
                 )

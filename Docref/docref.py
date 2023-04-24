@@ -4,15 +4,7 @@ import pyautogui
 from line_notify_me.line_notify_sourcecode import notifyme
 import pyperclip
 import datetime
-
-root = Tk()
-root.excel = filedialog.askopenfilename(title="เลือกไฟล์ Excel", filetypes=(('Excel Files','*.xlsx'),('All Files', '*.*')))
-root.withdraw()
-wb = pyxl.load_workbook(root.excel, data_only=True)
-ws = wb.sheetnames
-main_sheet = wb[ws[0]]
-receive = 'พัสดุถึง '
-receive_retdup = 'พัสดุ RET ถึง'
+import os
 
 class function_ITEC:
     def search_button(self):
@@ -22,6 +14,16 @@ class function_ITEC:
 
 
 def edit_insure():
+
+    root = Tk()
+    root.excel = filedialog.askopenfilename(title="เลือกไฟล์ Excel", filetypes=(('Excel Files','*.xlsx'),('All Files', '*.*')))
+    root.withdraw()
+    wb = pyxl.load_workbook(root.excel, data_only=True)
+    ws = wb.sheetnames
+    main_sheet = wb[ws[0]]
+    receive = 'พัสดุถึง '
+    receive_retdup = 'พัสดุ RET ถึง'
+
     '''
     start the operation.
     '''
@@ -79,8 +81,7 @@ def edit_insure():
                     pyperclip.copy(receive)
                 pyautogui.hotkey('ctrl','v')
                 pyautogui.typewrite(f"{getdate_Obj(str(date))} ")
-            pyautogui.press('tab')
-            pyautogui.press('enter')
+            pyautogui.hotkey('alt','o')
             pyautogui.press('enter')
         else: break
     notifyme('Docref is finished!')
@@ -105,10 +106,17 @@ def getdate_Obj(dateData):
                     except Exception as e:
                         print(e)
                 
-    return date_obj.strftime('%d/%m/%y | %H:%M')
+    return date_obj.strftime('%d/%m/%y')
+
+
 
 
 
 
 if __name__ in '__main__':
-    edit_insure()
+    try:
+        edit_insure()
+    except Exception as e:
+        notifyme("Docref Failed")
+        print(e)
+    #os.system("shutdown /s /t 1")

@@ -13,9 +13,6 @@ ws = wb.sheetnames
 main_sheet = wb[ws[0]]
 
 
-191
-1,780
-
 class function_ITEC:
     def search_button(self):
         pyautogui.press('f12')
@@ -56,6 +53,7 @@ def edit_docref():
         id = main_sheet.cell(row=row, column=4).value
         branch = main_sheet.cell(row=row, column=5).value
         isinsure = main_sheet.cell(row=row, column=6).value
+        count = main_sheet.cell(row=row, column=7).value
         day = datetime.strptime(day, "%b %d, %Y ")
         dayformatted = day.strftime("%d/%m/%y")
         if isinsure == "Stockout":
@@ -69,11 +67,13 @@ def edit_docref():
             function_ITEC().search_button()
             pyautogui.press('enter')
             function_ITEC().docref_button()
-            copy("DHL เข้ารับ: ")
+            copy("DHLเข้ารับ")
+            pyautogui.hotkey('ctrl','v')
+            pyautogui.typewrite(f"{count}")
+            copy("ก.")
             pyautogui.hotkey('ctrl','v')
             pyautogui.typewrite(f"{dayformatted} | {time}")
-            pyautogui.press('tab')
-            pyautogui.press('enter')
+            pyautogui.hotkey('alt', 'o')
             pyautogui.press('enter')
         else: continue
     notifyme('Docref for DHL Shipment is finished!')

@@ -105,7 +105,7 @@ def getdate_Obj(dateData):
                     except Exception as e:
                         print(e)
                 
-    return date_obj.strftime('%d/%m/%y | %H:%M')
+    return date_obj.strftime('%d/%m/%y')
 
 
 
