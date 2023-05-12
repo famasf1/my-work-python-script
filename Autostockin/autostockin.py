@@ -36,18 +36,17 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, customemployee_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, วุฒิภัทร, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์
+        global จิรายุทธ, วรัญญู, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,r'ครบ / โบ้ | ', '22608') 
         วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
-        วุฒิภัทร = Employeelist(2,r'ครบ / มาร์ค | ','23800')
-        วรวุฒิ = Employeelist(3, r'ครบ / ดิว | ','22073')
-        กิตติคุณ = Employeelist(4,r'ครบ / ก็อต | ', '24021')
-        สราวุธ = Employeelist(5,r'ครบ / เอก | ','23267')
-        กิติพงษ์ = Employeelist(6, r'ครบ / กิต | ', '25120')
+        วรวุฒิ = Employeelist(2, r'ครบ / ดิว | ','22073')
+        กิตติคุณ = Employeelist(3,r'ครบ / ก็อต | ', '24021')
+        สราวุธ = Employeelist(4,r'ครบ / เอก | ','23267')
+        กิติพงษ์ = Employeelist(5, r'ครบ / กิต | ', '25120')
         #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
-        employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
-        customemployee_index = [กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, วุฒิภัทร.index]
+        employeelist_index = [วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+        customemployee_index = [กิติพงษ์.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
         ##########################################################################################
 
         root = Tk()
@@ -108,31 +107,39 @@ def main(): #short for default behavior
                 #pick staff id
                 r = np.random.default_rng()
                 ###### employeelist_index
-                #[วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+                #[วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
                 ###### customemployee_index
 
-                #### 22/03
+                #### 2/04
 
-                #[กิติพงษ์.index,กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, วุฒิภัทร.index]
+                #[กิติพงษ์.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
                 if custom == "custom":
                     ###If someone take a day off, customize this.
-                    rng = r.choice(customemployee_index, p=[.200,.100,.100,.100,.200,.300])
+                    custom_prob = [.2,4,.1,.2,.1]
+                    custom_prob = np.array(custom_prob)
+                    custom_prob_sum = sum(custom_prob)
+                    a = 1/custom_prob_sum
+                    customprob_Scaled = [e*a for e in custom_prob]
+                    rng = r.choice(customemployee_index, p=customprob_Scaled)
                 else:
-                    rng = r.choice(employeelist_index, p=[.300,.200,.200,.067,.067,.067,.099])
+                    prob = [.25,.2,.1,.25,.1,.1]
+                    prob = np.array(prob)
+                    prob_sum = sum(prob)
+                    b = 1/prob_sum
+                    prob_Scaled = [e*b for e in prob]
+                    rng = r.choice(employeelist_index, p=prob_Scaled)
                 match rng:
                     case 0:
                         pyg.typewrite(จิรายุทธ.staffid)
                     case 1:
                         pyg.typewrite(วรัญญู.staffid)
                     case 2:
-                        pyg.typewrite(วุฒิภัทร.staffid)
-                    case 3:
                         pyg.typewrite(วรวุฒิ.staffid)
-                    case 4:
+                    case 3:
                         pyg.typewrite(กิตติคุณ.staffid)
-                    case 5:
+                    case 4:
                         pyg.typewrite(สราวุธ.staffid)
-                    case 6:
+                    case 5:
                         pyg.typewrite(กิติพงษ์.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
@@ -147,18 +154,15 @@ def main(): #short for default behavior
                         pyperclip.copy(วรัญญู.name)
                         pyg.hotkey('ctrl','v')
                     case 2:
-                        pyperclip.copy(วุฒิภัทร.name)
-                        pyg.hotkey('ctrl','v')
-                    case 3:
                         pyperclip.copy(วรวุฒิ.name)
                         pyg.hotkey('ctrl', 'v')
-                    case 4:
+                    case 3:
                         pyperclip.copy(กิตติคุณ.name)
                         pyg.hotkey('ctrl', 'v')
-                    case 5:
+                    case 4:
                         pyperclip.copy(สราวุธ.name)
                         pyg.hotkey('ctrl', 'v')
-                    case 6:
+                    case 5:
                         pyperclip.copy(กิติพงษ์.name)
                         pyg.hotkey('ctrl', 'v')
                         
@@ -229,14 +233,13 @@ def test():
 
     จิรายุทธ = Employeelist(0,'ครบ / โบ้', '22608') 
     วรัญญู = Employeelist(1,'ครบ / ตั้ม', '25175')
-    วุฒิภัทร = Employeelist(2,'ครบ / มาร์ค','23800')
     วรวุฒิ = Employeelist(3, 'ครบ / ดิว','22073')
     กิตติคุณ = Employeelist(4,'ครบ / ก็อต', '24021')
     สราวุธ = Employeelist(5,'ครบ / เอก','23267')
     กิติคุณ = Employeelist(6, 'ครบ / กิต', '25120')
-    employeelist_index = [วรัญญู.index, วุฒิภัทร.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+    employeelist_index = [วรัญญู.index, กิติคุณ.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
     r = np.random.default_rng()
-    rng = r.choice(employeelist_index, p=[.200,.200,.200,.067,.067,.067,.199])
+    #rng = r.choice(employeelist_index, p=[.200,.200,.200,.067,.067,.067,.199])
 
 try:
     #test()
