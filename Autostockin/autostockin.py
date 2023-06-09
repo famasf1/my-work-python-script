@@ -36,7 +36,7 @@ class Employeelist:
 def start_script():
     try:
         global workbook, worksheet,readpicerrorfound, ok, employeelist_index, customemployee_index, employeelist_name, employeelist_id, checking
-        global จิรายุทธ, วรัญญู, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์
+        global จิรายุทธ, วรัญญู, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์, ณัฐพงษ์
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,r'ครบ / โบ้ | ', '22608') 
         วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
@@ -44,8 +44,9 @@ def start_script():
         กิตติคุณ = Employeelist(3,r'ครบ / ก็อต | ', '24021')
         สราวุธ = Employeelist(4,r'ครบ / เอก | ','23267')
         กิติพงษ์ = Employeelist(5, r'ครบ / กิต | ', '25120')
+        ณัฐพงษ์ = Employeelist(6, r'ครบ / เพรช | ', '26181' )
         #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
-        employeelist_index = [วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+        employeelist_index = [วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
         customemployee_index = [กิติพงษ์.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
         ##########################################################################################
 
@@ -107,7 +108,7 @@ def main(): #short for default behavior
                 #pick staff id
                 r = np.random.default_rng()
                 ###### employeelist_index
-                #[วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index]
+                #employeelist_index = [วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
                 ###### customemployee_index
 
                 #### 2/04
@@ -122,7 +123,7 @@ def main(): #short for default behavior
                     customprob_Scaled = [e*a for e in custom_prob]
                     rng = r.choice(customemployee_index, p=customprob_Scaled)
                 else:
-                    prob = [.25,.2,.1,.25,.1,.1]
+                    prob = [.2,.15,.1,.2,.1,.1,.15]
                     prob = np.array(prob)
                     prob_sum = sum(prob)
                     b = 1/prob_sum
@@ -141,6 +142,8 @@ def main(): #short for default behavior
                         pyg.typewrite(สราวุธ.staffid)
                     case 5:
                         pyg.typewrite(กิติพงษ์.staffid)
+                    case 6:
+                        pyg.typewrite(ณัฐพงษ์.staffid)
                 pressenter(2)
                 pyg.typewrite(str(stockoutid)) #stockout
                 pressenter(2)
@@ -164,6 +167,9 @@ def main(): #short for default behavior
                         pyg.hotkey('ctrl', 'v')
                     case 5:
                         pyperclip.copy(กิติพงษ์.name)
+                        pyg.hotkey('ctrl', 'v')
+                    case 6:
+                        pyperclip.copy(ณัฐพงษ์.name)
                         pyg.hotkey('ctrl', 'v')
                         
                 ##ready

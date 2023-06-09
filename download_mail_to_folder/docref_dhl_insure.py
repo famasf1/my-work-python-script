@@ -17,6 +17,7 @@ main_sheet = wb[ws[0]]
 class function_ITEC:
     def search_button(self):
         pyautogui.press('f12')
+        
 
     def docref_button(self):
         pyautogui.press('f5')

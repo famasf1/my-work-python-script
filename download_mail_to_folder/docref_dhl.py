@@ -73,7 +73,7 @@ def edit_docref():
             copy("ก.")
             pyautogui.hotkey('ctrl','v')
             pyautogui.typewrite(f"{dayformatted} | {time}")
-            pyautogui.sleep(1)
+            pyautogui.sleep(.4)
             pyautogui.hotkey('alt', 'o')
             pyautogui.press('enter')
         else: continue
