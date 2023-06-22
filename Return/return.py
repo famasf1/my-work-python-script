@@ -136,7 +136,6 @@ def Vat_start_here():
                 press_enter(1)
                 pyg.sleep(1)
                 if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error.png', grayscale=True):
-                    print('error')
                     press_enter(1)
                     pyg.press('Up')
                     pyg.press('Down')
@@ -200,7 +199,6 @@ def NOVAT_start_here():
                 press_enter(1)
                 pyg.sleep(1)
                 if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error.png', grayscale=True):
-                    print('error')
                     press_enter(1)
                     pyg.press('Up')
                     pyg.press('Down')
@@ -297,10 +295,8 @@ def stock_to73():
                 pyg.press('Right')
                 press_enter(1)
                 pyg.sleep(0.5)
-                print(number_Item)
                 continue
             else:
-                print(f'Start {product_Name} {number_Item_sofar}/{number_Item}' )
                 pyg.sleep(0.5)
                 while number_Item_sofar <= number_Item: ## while number of total item and number of item so far is not 0, press time start at 1
                     try: #write product code, press right and then enter
@@ -309,31 +305,21 @@ def stock_to73():
                         press_enter(1)
                         pyg.sleep(1.2)
                         if pyg.locateOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\NOT_NULL.png", confidence=.7, grayscale=True): #If image input value found and this is not null, add number of items by 1 then continues
-                            print('Image Found!')
                             press_enter(1)
                             pyg.sleep(1.3)
                             if pyg.locateCenterOnScreen(r"D:\Workstuff\my-work-python-script\Return\asset\ret_error.png", grayscale=True, confidence=.9): #mean item already taken
-                                print('There is nothing left!')
                                 itemalreadytakenException(press_Again)
                                 press_Again += 1
                                 number_Item_sofar += 1
-                                print(f"Select another list completed. Currently i have to press down {press_Again} times")
-                                print(f'Continues {number_Item_sofar}/{number_Item}' )
                                 if number_Item_sofar > number_Item: #if number of items so far is more than total number, reset.
-                                    print('Resetting back to 1')
                                     number_Item_sofar = 1
                                     press_Again = 1
                                     break
                             else:
                                 number_Item_sofar += 1
-                                print('Enter | Pass')
-                                print(f'Continues {number_Item_sofar}/{number_Item}' )
                         else:
                             number_Item_sofar += 1
-                            print(f'Continues {number_Item_sofar}/{number_Item}' )
-                            print('Operation Completed! Continues...')
                             if number_Item_sofar > number_Item: #if number of items so far is more than total number, reset.
-                                print('Resetting back to 1')
                                 number_Item_sofar = 1
                                 press_Again = 1
                                 break
@@ -405,7 +391,6 @@ def restart_Bot():
             press_enter(1)
             pyg.sleep(1)
             if pyg.locateOnScreen(r'D:\Workstuff\my-work-python-script\Return\asset\ret_error.png', grayscale=True):
-                print('error')
                 press_enter(1)
                 pyg.press('Up')
                 pyg.press('Down')
