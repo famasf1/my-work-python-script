@@ -39,15 +39,15 @@ def start_script():
         global จิรายุทธ, วรัญญู, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์, ณัฐพงษ์
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,r'ครบ / โบ้ | ', '22608') 
-        วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
+        #วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
         วรวุฒิ = Employeelist(2, r'ครบ / ดิว | ','22073')
         กิตติคุณ = Employeelist(3,r'ครบ / ก็อต | ', '24021')
         สราวุธ = Employeelist(4,r'ครบ / เอก | ','23267')
-        กิติพงษ์ = Employeelist(5, r'ครบ / กิต | ', '25120')
+        #กิติพงษ์ = Employeelist(5, r'ครบ / กิต | ', '25120')
         ณัฐพงษ์ = Employeelist(6, r'ครบ / เพรช | ', '26181' )
         #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
-        employeelist_index = [วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
-        customemployee_index = [กิติพงษ์.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
+        employeelist_index = [กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
+        customemployee_index = [สราวุธ.index, วรวุฒิ.index, กิตติคุณ.index]
         ##########################################################################################
 
         root = Tk()
@@ -108,22 +108,22 @@ def main(): #short for default behavior
                 #pick staff id
                 r = np.random.default_rng()
                 ###### employeelist_index
-                #employeelist_index = [วรัญญู.index, กิติพงษ์.index, กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
+                #employeelist_index = [กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
                 ###### customemployee_index
 
                 #### 2/04
 
-                #[กิติพงษ์.index, สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
+                #[สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
                 if custom == "custom":
                     ###If someone take a day off, customize this.
-                    custom_prob = [.2,4,.1,.2,.1]
+                    custom_prob = [.2,.3,.2,.1,.2]
                     custom_prob = np.array(custom_prob)
                     custom_prob_sum = sum(custom_prob)
                     a = 1/custom_prob_sum
                     customprob_Scaled = [e*a for e in custom_prob]
                     rng = r.choice(customemployee_index, p=customprob_Scaled)
                 else:
-                    prob = [.2,.15,.1,.2,.1,.1,.15]
+                    prob = [.2,.3,.2,.1,.2]
                     prob = np.array(prob)
                     prob_sum = sum(prob)
                     b = 1/prob_sum

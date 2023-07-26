@@ -31,7 +31,7 @@ def edit_docref():
         pyautogui.moveTo(45,255)
         pyautogui.sleep(.7)
         pyautogui.leftClick()
-        pyautogui.sleep(10)
+        pyautogui.sleep(15)
         pyautogui.moveTo(1753,192)
         pyautogui.leftClick()
         pyautogui.moveTo(1752,215)

@@ -2,7 +2,7 @@
 
 ###############################
 # WHAT DAY IS TODAY?
-timedelta_date = 0
+timedelta_date = 1
 ###############################
 
 import pandas as pd
