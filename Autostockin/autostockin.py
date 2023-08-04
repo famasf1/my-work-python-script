@@ -1,4 +1,5 @@
 from operator import index
+from random import *
 from line_notify_me.line_notify_sourcecode import notifyme
 from tkinter import filedialog, messagebox
 from tkinter import *
@@ -14,7 +15,7 @@ import numpy as np
 ### List all employee ###
 class Employeelist:
     #เขียนครบ ตามด้วยไอดีพนักงาน
-    def __init__(self,index, name, staffid=str):
+    def __init__(self, index, name, staffid=str):
         self.name = name
         self.staffid = staffid
         self.index = index
@@ -39,15 +40,15 @@ def start_script():
         global จิรายุทธ, วรัญญู, วรวุฒิ, กิตติคุณ, สราวุธ, กิติพงษ์, ณัฐพงษ์
         ###################################### LIST EMPLOYEE #####################################
         จิรายุทธ = Employeelist(0,r'ครบ / โบ้ | ', '22608') 
-        #วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '25175')
+        วรัญญู = Employeelist(1,r'ครบ / ตั้ม | ', '26425')
         วรวุฒิ = Employeelist(2, r'ครบ / ดิว | ','22073')
         กิตติคุณ = Employeelist(3,r'ครบ / ก็อต | ', '24021')
         สราวุธ = Employeelist(4,r'ครบ / เอก | ','23267')
-        #กิติพงษ์ = Employeelist(5, r'ครบ / กิต | ', '25120')
+        กิติพงษ์ = Employeelist(5, r'ครบ / กิต | ', '26308')
         ณัฐพงษ์ = Employeelist(6, r'ครบ / เพรช | ', '26181' )
         #ไพรินทร์ = Employeelist(7, 'ครบ / ไพริน', '1815')
-        employeelist_index = [กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
-        customemployee_index = [สราวุธ.index, วรวุฒิ.index, กิตติคุณ.index]
+        employeelist_index = [กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, ณัฐพงษ์.index, วรัญญู.index, กิติพงษ์.index]
+        customemployee_index = [จิรายุทธ.index]
         ##########################################################################################
 
         root = Tk()
@@ -108,7 +109,7 @@ def main(): #short for default behavior
                 #pick staff id
                 r = np.random.default_rng()
                 ###### employeelist_index
-                #employeelist_index = [กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, จิรายุทธ.index, ณัฐพงษ์.index]
+                #employeelist_index = [กิตติคุณ.index, สราวุธ.index, วรวุฒิ.index, ณัฐพงษ์.index, วรัญญู.index, กิติพงษ์.index]
                 ###### customemployee_index
 
                 #### 2/04
@@ -116,14 +117,14 @@ def main(): #short for default behavior
                 #[สราวุธ.index, วรวุฒิ.index, วรัญญู.index, กิตติคุณ.index]
                 if custom == "custom":
                     ###If someone take a day off, customize this.
-                    custom_prob = [.2,.3,.2,.1,.2]
-                    custom_prob = np.array(custom_prob)
-                    custom_prob_sum = sum(custom_prob)
-                    a = 1/custom_prob_sum
-                    customprob_Scaled = [e*a for e in custom_prob]
-                    rng = r.choice(customemployee_index, p=customprob_Scaled)
+                    #custom_prob = [.1,.25,.1,.15,.25,.15]
+                    #custom_prob = np.array(custom_prob)
+                    #custom_prob_sum = sum(custom_prob)
+                    #a = 1/custom_prob_sum
+                    #customprob_Scaled = [e*a for e in custom_prob]
+                    rng = r.choice(customemployee_index,)# p=customprob_Scaled)
                 else:
-                    prob = [.2,.3,.2,.1,.2]
+                    prob = [.15,.3,.15,.2,.15,.15]
                     prob = np.array(prob)
                     prob_sum = sum(prob)
                     b = 1/prob_sum
@@ -250,6 +251,7 @@ def test():
 try:
     #test()
     main()
+
 except Exception as e:
     messagebox.showerror('Python Error', f'{e}')
     exit()
